@@ -1,0 +1,36 @@
+========================================================================
+CENTRAL DE APOSTILAS E CONTEÚDOS DE ESTUDO
+========================================================================
+
+Como funciona:
+1. Coloque aqui os PDFs ou arquivos de texto (.pdf, .txt, .md) de cada matéria
+   dentro da respectiva pasta de disciplina e período.
+
+2. Estrutura recomendada de nomes de arquivos para cada tema:
+   Exemplos:
+   - Tema 1 - Conceitos Iniciais.pdf
+   - Tema 2 - Arquitetura e Protocolos.pdf
+   - Tema 3 - Exercicios e Pratica.pdf
+
+3. Assim que você colocar as apostilas em uma pasta, avise o assistente
+   (ex: "coloquei as apostilas de Redes na pasta"), e o assistente fará
+   a leitura automática e gerará todo o conteúdo dentro do aplicativo:
+   - Resumo Rápido
+   - Conteúdo Completo
+   - Fórmulas e Regras de Ouro
+   - Questões Interativas de Treino
+   - Flashcards para Memorização
+
+========================================================================
+Disciplinas do 1º Período:
+- 01_matematica_e_logica (Já com as apostilas dos Temas 2 a 8!)
+- 02_fundamentos_de_redes_de_computadores
+- 03_computacao_em_nuvem
+- 04_introducao_a_seguranca_da_informacao
+- 05_introducao_a_programacao_de_computadores
+========================================================================
+NOTA SOBRE CONTROLE DE VERSÃO E DIREITOS AUTORAIS:
+Arquivos .pdf de apostilas são de uso pessoal/acadêmico e são ignorados
+pelo Git (.gitignore), garantindo que nenhum documento com direitos
+autorais seja enviado para repositórios públicos.
+========================================================================
