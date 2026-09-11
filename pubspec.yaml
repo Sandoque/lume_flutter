@@ -1,0 +1,30 @@
+name: poc_flutter
+description: "Lume — Luz e clareza para seus estudos. Aplicativo acadêmico para gestão de disciplinas, resumos inteligentes, flashcards e simulados."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_markdown: ^0.7.4+1
+  shared_preferences: ^2.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/data/
+    - assets/data/disciplinas/matematica_logica/
+    - assets/data/disciplinas/redes_computadores/
+    - assets/data/disciplinas/computacao_nuvem/
+    - assets/data/disciplinas/seguranca_informacao/
+    - assets/data/disciplinas/programacao_computadores/
+    - assets/images/
