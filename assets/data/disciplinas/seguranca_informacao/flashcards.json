@@ -1,0 +1,104 @@
+[
+  {
+    "id": "fc_seg₁",
+    "tema": "Módulo 1",
+    "front": "Quais são os 3 pilares fundamentais da Tríade CID?",
+    "back": "Confidencialidade (acesso apenas a autorizados), Integridade (exatidão e proteção contra alteração) e Disponibilidade (acesso garantido sob demanda)."
+  },
+  {
+    "id": "fc_seg₂",
+    "tema": "Módulo 1",
+    "front": "O que caracteriza o princípio do Não-Repúdio (Irretratabilidade)?",
+    "back": "Impossibilidade de o autor de uma ação digital negar com sucesso que realizou a transação (garantido por criptografia assimétrica e logs auditáveis)."
+  },
+  {
+    "id": "fc_seg₃",
+    "tema": "Módulo 1",
+    "front": "Quais são as 5 fases do ciclo de vida da informação?",
+    "back": "1. Criação/Coleta, 2. Armazenamento, 3. Manuseio/Processamento, 4. Compartilhamento/Transmissão e 5. Descarte/Destruição Segura."
+  },
+  {
+    "id": "fc_seg₄",
+    "tema": "Módulo 1",
+    "front": "Quais são os 3 fatores fundamentais de autenticação?",
+    "back": "1. Algo que você sabe (senha/PIN), 2. Algo que você tem (token/smartcard), 3. Algo que você é (biometria)."
+  },
+  {
+    "id": "fc_seg₅",
+    "tema": "Módulo 2",
+    "front": "Qual a diferença conceitual entre Vulnerabilidade e Ameaça?",
+    "back": "Vulnerabilidade é a fraqueza/brecha existente no ativo; Ameaça é o agente ou evento potencial que pode explorar essa fraqueza para causar dano."
+  },
+  {
+    "id": "fc_seg₆",
+    "tema": "Módulo 2",
+    "front": "Como opera um Cavalo de Troia (Trojan)?",
+    "back": "Apresenta-se como um software aparentemente útil/inofensivo, mas executa ações maliciosas ocultas ao ser aberto pela vítima, abrindo portas dos fundos (backdoors)."
+  },
+  {
+    "id": "fc_seg₇",
+    "tema": "Módulo 2",
+    "front": "O que caracteriza um ataque de Ransomware?",
+    "back": "Criptografa os arquivos do sistema e sequestra os dados da vítima, exigindo o pagamento de resgate (geralmente em criptomoedas) para fornecer a chave."
+  },
+  {
+    "id": "fc_seg₈",
+    "tema": "Módulo 3",
+    "front": "Qual a diferença essencial entre as normas ISO/IEC 27001 e 27002?",
+    "back": "A 27001 estabelece os requisitos auditáveis do SGSI (gerando certificação formal); a 27002 é o código de prática que detalha como implementar os controles."
+  },
+  {
+    "id": "fc_seg₉",
+    "tema": "Módulo 3",
+    "front": "O que é a Declaração de Aplicabilidade (SoA)?",
+    "back": "Documento formal da ISO 27001 que lista todos os controles selecionados para adoção e justifica detalhadamente eventuais exclusões de controles."
+  },
+  {
+    "id": "fc_seg₁0",
+    "tema": "Módulo 3",
+    "front": "Quais são os 4 temas de controles da ISO/IEC 27002:2022?",
+    "back": "Organizacional (37 controles), Pessoas (8 controles), Físico (14 controles) e Tecnológico (34 controles), totalizando 93 controles."
+  },
+  {
+    "id": "fc_seg₁1",
+    "tema": "Módulo 4",
+    "front": "O que estabelece a regra 3-2-1 de cópias de segurança (backup)?",
+    "back": "3 cópias dos dados, armazenadas em 2 tipos de mídias diferentes, com pelo menos 1 cópia mantida fora da empresa (off-site ou nuvem)."
+  },
+  {
+    "id": "fc_seg₁2",
+    "tema": "Módulo 4",
+    "front": "Qual a diferença prática entre criptografia simétrica e assimétrica?",
+    "back": "Simétrica usa uma única chave secreta para cifrar/decifrar (rápida, ex: AES). Assimétrica usa par de chaves pública e privada (ideal para autenticação, ex: RSA)."
+  },
+  {
+    "id": "fc_seg₁3",
+    "tema": "Módulo 4",
+    "front": "O que determinam as políticas de Mesa Limpa e Tela Limpa?",
+    "back": "Mesa Limpa: não deixar papéis sensíveis expostos na mesa. Tela Limpa: bloquear a tela da estação de trabalho automaticamente após inatividade."
+  },
+  {
+    "id": "fc_seg₁4",
+    "tema": "Módulo 5",
+    "front": "Como é calculado o risco financeiro de Perda Anualizada (ALE)?",
+    "back": "ALE = SLE x ARO, onde SLE é o prejuízo de uma única ocorrência (AV x EF) e ARO é a taxa anual de ocorrências da ameaça."
+  },
+  {
+    "id": "fc_seg₁5",
+    "tema": "Módulo 5",
+    "front": "Quais são as 4 opções formais de tratamento de risco?",
+    "back": "1. Mitigar (aplicar controles), 2. Transferir (seguro/terceirização), 3. Evitar (descontinuar a atividade) e 4. Aceitar (tolerar o risco residual)."
+  },
+  {
+    "id": "fc_seg₁6",
+    "tema": "Módulo 6",
+    "front": "Qual a diferença entre RTO e RPO na continuidade de negócios?",
+    "back": "RTO é o tempo máximo tolerável para restabelecer o serviço (downtime); RPO é o volume de dados tolerável para perda medido em tempo desde o último backup."
+  },
+  {
+    "id": "fc_seg₁7",
+    "tema": "Módulo 6",
+    "front": "Qual a diferença entre Hot Site, Warm Site e Cold Site?",
+    "back": "Hot Site: ativo e replicado em tempo real (minutos). Warm Site: servidores presentes, mas exige restaurar backup (horas). Cold Site: apenas espaço físico (dias/semanas)."
+  }
+]

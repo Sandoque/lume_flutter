@@ -1,0 +1,146 @@
+[
+  {
+    "id": "fc_redes₀1",
+    "tema": "Módulo 1",
+    "titulo": "As Três Partes da Internet",
+    "frente": "Quais são os 3 componentes macro que formam a infraestrutura da Internet?",
+    "verso": "1. Sistemas Finais (Borda/Hosts): Clientes e servidores onde rodam as aplicações.\n2. Redes de Acesso: Tecnologias (FTTH, Wi-Fi, 4G/5G, Ethernet) que ligam o host ao primeiro roteador.\n3. Núcleo da Rede (Core): Malha de roteadores interconectados responsáveis pela comutação de pacotes.",
+    "dica": "Borda (quem fala) + Acesso (como chega) + Núcleo (para onde vai)."
+  },
+  {
+    "id": "fc_redes₀2",
+    "tema": "Módulo 1",
+    "titulo": "Atraso Nodal: Transmissão vs. Propagação",
+    "frente": "Qual a diferença matemática e conceitual entre Atraso de Transmissão e Atraso de Propagação?",
+    "verso": "• Transmissão (d_trans = L / R): Tempo para empurrar todos os L bits do pacote para o enlace de taxa R bps (depende do tamanho do pacote e velocidade do enlace).\n• Propagação (dₚrop = d / s): Tempo para 1 bit viajar fisicamente pelo meio a uma velocidade s (depende apenas da distância d e da velocidade da luz no meio).",
+    "dica": "Transmissão = largura da torneira (L/R). Propagação = comprimento da mangueira (d/s)."
+  },
+  {
+    "id": "fc_redes₀3",
+    "tema": "Módulo 1",
+    "titulo": "As 7 Camadas do Modelo OSI",
+    "frente": "Quais são as 7 camadas do modelo OSI em ordem da mais alta (7) para a mais baixa (1)?",
+    "verso": "7. Aplicação\n6. Apresentação\n5. Sessão\n4. Transporte\n3. Rede\n2. Enlace\n1. Física",
+    "dica": "Mnemônico: 'A Arte Sempre Tem Respostas Em Filosofia'."
+  },
+  {
+    "id": "fc_redes₀4",
+    "tema": "Módulo 2",
+    "titulo": "Serviço vs. Protocolo vs. Interface",
+    "frente": "O que diferencia um Serviço, um Protocolo e uma Interface em camadas de rede?",
+    "verso": "• Serviço: Operações que uma camada oferece à camada acima dela (vertical).\n• Interface: Pontos de acesso ao serviço (SAP) que definem parâmetros e chamadas.\n• Protocolo: Regras e formatos de mensagens trocadas entre entidades pares na mesma camada (horizontal).",
+    "dica": "Serviço é vertical (cima/baixo). Protocolo é horizontal (entre máquinas pares)."
+  },
+  {
+    "id": "fc_redes₀5",
+    "tema": "Módulo 2",
+    "titulo": "PDUs em Cada Camada",
+    "frente": "Qual é o nome formal da PDU (Protocol Data Unit) em cada camada?",
+    "verso": "• Aplicação: Mensagem\n• Transporte: Segmento (TCP) / Datagrama de Usuário (UDP)\n• Rede: Datagrama ou Pacote\n• Enlace: Quadro (Frame)\n• Física: Bits",
+    "dica": "Mensagem -> Segmento -> Datagrama/Pacote -> Quadro -> Bits."
+  },
+  {
+    "id": "fc_redes₀6",
+    "tema": "Módulo 2",
+    "titulo": "OSI (7 camadas) vs. TCP/IP (4 camadas)",
+    "frente": "Como as 7 camadas do OSI mapeiam para o modelo clássico TCP/IP de 4 camadas?",
+    "verso": "• Aplicação, Apresentação e Sessão (OSI) ➔ Camada de Aplicação (TCP/IP)\n• Transporte (OSI) ➔ Camada de Transporte (TCP/IP)\n• Rede (OSI) ➔ Camada de Internet (TCP/IP)\n• Enlace e Física (OSI) ➔ Camada de Acesso à Rede ou Host-Rede (TCP/IP)",
+    "dica": "No TCP/IP, criptografia e sessão são feitas diretamente dentro da aplicação."
+  },
+  {
+    "id": "fc_redes₀7",
+    "tema": "Módulo 3",
+    "titulo": "TCP vs. UDP (Resumo Comparativo)",
+    "frente": "Quais as principais diferenças entre TCP e UDP?",
+    "verso": "• TCP: Orientado à conexão (3-way handshake), confiável (ACKs, retransmissão), ordenado, controle de fluxo (rwnd) e congestionamento (cwnd). Cabeçalho de 20 bytes.\n• UDP: Sem conexão (zero setup), não confiável (melhor esforço), sem garantias de ordem ou taxa. Cabeçalho de 8 bytes. Ideal para DNS, VoIP e jogos online.",
+    "dica": "TCP valoriza precisão; UDP valoriza velocidade e tempo real."
+  },
+  {
+    "id": "fc_redes₀8",
+    "tema": "Módulo 3",
+    "titulo": "Three-Way Handshake do TCP",
+    "frente": "Como funciona o aperto de mão de três vias do TCP para abrir uma conexão?",
+    "verso": "1. Cliente envia SYN (seq = x)\n2. Servidor responde SYN-ACK (seq = y, ack = x + 1)\n3. Cliente confirma com ACK (seq = x + 1, ack = y + 1)",
+    "dica": "SYN -> SYN-ACK -> ACK. Apenas o 3º pacote pode transportar dados de aplicação."
+  },
+  {
+    "id": "fc_redes₀9",
+    "tema": "Módulo 3",
+    "titulo": "Portas Padrão Frequentes",
+    "frente": "Quais são as portas de transporte dos protocolos fundamentais da Internet?",
+    "verso": "• HTTP: 80 (TCP)\n• HTTPS: 443 (TCP)\n• DNS: 53 (UDP prioritário / TCP)\n• SSH: 22 (TCP)\n• SMTP: 25 / 587 (TCP)\n• IMAP: 143 / 993 (TCP)\n• DHCP: 67 (Servidor) e 68 (Cliente) (UDP)",
+    "dica": "As portas de 0 a 1023 são as Well-Known Ports (Portas Bem Conhecidas)."
+  },
+  {
+    "id": "fc_redes₁0",
+    "tema": "Módulo 4",
+    "titulo": "Cálculo de Hosts em Notação CIDR",
+    "frente": "Como calcular a quantidade de hosts disponíveis em uma sub-rede /x?",
+    "verso": "Fórmula: Total de Hosts = 2^(32 - x) - 2\n• Subtrai-se 2 porque o primeiro endereço é o da REDE (tudo 0 no host) e o último é o BROADCAST (tudo 1 no host).\nExemplos:\n• /24: 32 - 24 = 8 bits -> 2⁸ - 2 = 254 hosts.\n• /26: 32 - 26 = 6 bits -> 2⁶ - 2 = 62 hosts.\n• /30: 32 - 30 = 2 bits -> 2² - 2 = 2 hosts (ponto a ponto).",
+    "dica": "Memorize: /24 = 254; /25 = 126; /26 = 62; /27 = 30; /28 = 14; /29 = 6; /30 = 2."
+  },
+  {
+    "id": "fc_redes₁1",
+    "tema": "Módulo 4",
+    "titulo": "Ciclo DORA do Protocolo DHCP",
+    "frente": "O que significam as quatro etapas D-O-R-A do protocolo DHCP?",
+    "verso": "1. Discover: Cliente emite broadcast (255.255.255.255) procurando servidor DHCP.\n2. Offer: Servidor oferece um IP temporário (lease).\n3. Request: Cliente solicita formalmente aquele IP oferecido.\n4. Acknowledgment (ACK): Servidor confirma a concessão e entrega gateway e DNS.",
+    "dica": "DORA: Discover -> Offer -> Request -> ACK."
+  },
+  {
+    "id": "fc_redes₁2",
+    "tema": "Módulo 4",
+    "titulo": "Roteamento: Link-State vs. Distance-Vector",
+    "frente": "Qual a diferença entre protocolos de Estado de Enlace e Vetor de Distância?",
+    "verso": "• Link-State (ex: OSPF): Cada roteador conhece a topologia inteira da rede (mapa global) e executa o algoritmo de Dijkstra para calcular o caminho mais curto.\n• Distance-Vector (ex: RIP): Cada roteador conhece apenas os custos informados pelos seus vizinhos diretos (fofoca de vizinho), usando Bellman-Ford. Limite de 15 saltos no RIP.",
+    "dica": "OSPF/Dijkstra = mapa global. RIP/Bellman-Ford = vetor do vizinho."
+  },
+  {
+    "id": "fc_redes₁3",
+    "tema": "Módulo 5",
+    "titulo": "CSMA/CD vs. CSMA/CA",
+    "frente": "Onde são usados o CSMA/CD e o CSMA/CA e como operam?",
+    "verso": "• CSMA/CD (Collision Detection): Usado no Ethernet com cabo. Escuta o meio antes e durante o envio. Se houver colisão de voltagem, aborta e aplica Binary Exponential Backoff.\n• CSMA/CA (Collision Avoidance): Usado no Wi-Fi (802.11). Como antenas de rádio não conseguem detectar colisão enquanto transmitem, ele evita colisões com tempos de espera (IFS/DIFS) e reserva opcional RTS/CTS.",
+    "dica": "Cabo = CD (Detecta). Wi-Fi = CA (Evita)."
+  },
+  {
+    "id": "fc_redes₁4",
+    "tema": "Módulo 5",
+    "titulo": "Endereço MAC vs. Endereço IP & Papel do ARP",
+    "frente": "Qual a diferença entre endereço MAC e IP, e como o ARP atua entre eles?",
+    "verso": "• Endereço MAC: 48 bits (6 bytes em hexadecimal), gravado na placa (físico/local), imutável.\n• Endereço IP: 32 bits (IPv4), lógico/hierárquico, muda conforme a rede onde o host está conectado.\n• ARP (Address Resolution Protocol): Traduz um IP da mesma rede local no endereço MAC correspondente via broadcast de consulta.",
+    "dica": "IP leva o pacote entre redes (globais). MAC move o quadro dentro do enlace local."
+  },
+  {
+    "id": "fc_redes₁5",
+    "tema": "Módulo 5",
+    "titulo": "Hub vs. Switch na Camada de Enlace",
+    "frente": "Qual a diferença de operação entre um Hub e um Switch?",
+    "verso": "• Hub (Camada 1 - Física): Repetidor elétrico 'burro'. Qualquer sinal que chega em uma porta é replicado em broadcast para todas as outras. Compartilha 1 único domínio de colisão.\n• Switch (Camada 2 - Enlace): Dispositivo inteligente. Lê o cabeçalho Ethernet (MAC) e encaminha apenas para a porta de destino. Cada porta do switch é um domínio de colisão isolado.",
+    "dica": "Switch segmenta domínios de colisão e suporta comunicação full-duplex sem colisão."
+  },
+  {
+    "id": "fc_redes₁6",
+    "tema": "Módulo 6",
+    "titulo": "A Tríade CIA da Segurança",
+    "frente": "O que definem os 3 pilares da Tríade CIA?",
+    "verso": "• Confidencialidade: Proteção contra leitura não autorizada (criptografia, controle de acesso).\n• Integridade: Proteção contra modificação indevida de dados (hashes, assinaturas digitais).\n• Disponibilidade: Garantia de que serviços e dados estejam acessíveis quando necessários (redundância, proteção anti-DDoS, nobreaks).",
+    "dica": "C.I.A.: Confidencialidade, Integridade e Disponibilidade."
+  },
+  {
+    "id": "fc_redes₁7",
+    "tema": "Módulo 6",
+    "titulo": "Zona Desmilitarizada (DMZ)",
+    "frente": "O que é uma DMZ e quais servidores devem ficar nela?",
+    "verso": "Uma DMZ é uma sub-rede perimetral posicionada entre a internet externa e a rede corporativa interna protegida por firewalls.\n• Ficam na DMZ: Servidores com acesso público (Web, DNS externo, Servidor de E-mail).\n• NUNCA ficam na DMZ: Bancos de dados com dados de clientes, servidores de folha de pagamento ou estações de trabalho de usuários.",
+    "dica": "Se a DMZ for hackeada, o firewall impede que o invasor alcance a rede interna."
+  },
+  {
+    "id": "fc_redes₁8",
+    "tema": "Módulo 6",
+    "titulo": "Protocolo SNMP (Gerência de Redes)",
+    "frente": "Como funciona o SNMP e o que é uma Trap?",
+    "verso": "Arquitetura SNMP:\n• NMS (Gerente): Estação que monitora a rede.\n• Agente SNMP: Processo rodando nos switches/roteadores.\n• MIB: Base de dados de variáveis do equipamento (CPU, portas, tráfego).\n• Trap: Mensagem de alarme assíncrona enviada espontaneamente pelo Agente para o Gerente quando ocorre um evento crítico (ex: porta caiu, fonte falhou).",
+    "dica": "Get/Set = Gerente pergunta/altera. Trap = Agente avisa no susto sem ser perguntado."
+  }
+]

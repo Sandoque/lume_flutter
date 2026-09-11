@@ -1,0 +1,62 @@
+[
+  {
+    "id": "fcₚrog₁",
+    "tema": "Módulo 1",
+    "front": "Para que serve a biblioteca <stdio.h> em programas C?",
+    "back": "Standard Input/Output: fornece as declarações e protótipos de funções fundamentais de entrada e saída no terminal, como printf() e scanf()."
+  },
+  {
+    "id": "fcₚrog₂",
+    "tema": "Módulo 1",
+    "front": "Qual a diferença de uso do operador & no scanf para inteiros vs strings?",
+    "back": "Tipos primitivos (int, float) exigem & para passar o endereço de memória (&x). Strings (char[]) já são ponteiros por natureza e NÃO usam &."
+  },
+  {
+    "id": "fcₚrog₃",
+    "tema": "Módulo 1",
+    "front": "O que é Type Casting explícito e por que é vital na divisão?",
+    "back": "É a conversão manual temporária de tipos: (float) a / b. Impede que o C faça divisão inteira truncando as casas decimais se 'a' e 'b' forem inteiros."
+  },
+  {
+    "id": "fcₚrog₄",
+    "tema": "Módulo 1",
+    "front": "O que faz o modificador 'unsigned' em uma variável inteira?",
+    "back": "Elimina a representação de números negativos, permitindo dobrar o valor positivo máximo que a variável consegue armazenar na memória."
+  },
+  {
+    "id": "fcₚrog₅",
+    "tema": "Módulo 2",
+    "front": "Qual a regra inversa da Densidade Demográfica no Super Trunfo?",
+    "back": "Na maioria dos atributos (população, PIB, área) vence o maior valor. Na Densidade Demográfica vence a carta com o MENOR valor!"
+  },
+  {
+    "id": "fcₚrog₆",
+    "tema": "Módulo 2",
+    "front": "Qual o perigo de esquecer o comando 'break;' em um switch-case?",
+    "back": "Provoca o 'fall-through': o programa continua executando indevidamente todos os blocos de cases seguintes até encontrar um break ou o fim do switch."
+  },
+  {
+    "id": "fcₚrog₇",
+    "tema": "Módulo 2",
+    "front": "Qual a diferença entre o operador '=' e o operador '==' em C?",
+    "back": "O operador '=' é de ATRIBUIÇÃO de valores (x = 5). O operador '==' é de COMPARAÇÃO de igualdade condicional (x == 5)."
+  },
+  {
+    "id": "fcₚrog₈",
+    "tema": "Módulo 3",
+    "front": "Qual a diferença de avaliação entre os laços 'while' e 'do-while'?",
+    "back": "O 'while' testa a condição antes do bloco (pode rodar 0 vezes). O 'do-while' testa a condição após o bloco (garante no mínimo 1 execução)."
+  },
+  {
+    "id": "fcₚrog₉",
+    "tema": "Módulo 3",
+    "front": "O que diferencia os comandos 'break' e 'continue' dentro de um loop?",
+    "back": "'break' interrompe e sai do loop imediatamente. 'continue' pula apenas o restante da iteração atual e avança para a próxima iteração."
+  },
+  {
+    "id": "fcₚrog₁0",
+    "tema": "Módulo 3",
+    "front": "Como são modelados movimentos complexos como o 'L' do Cavalo?",
+    "back": "Utilizando Loops Aninhados (Nested Loops) com condições que orquestram o deslocamento de 2 casas em um eixo e 1 casa no eixo perpendicular."
+  }
+]

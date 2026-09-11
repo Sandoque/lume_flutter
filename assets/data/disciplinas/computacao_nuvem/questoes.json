@@ -1,0 +1,302 @@
+[
+  {
+    "id": "nuvem_mod1_q1",
+    "themeId": "mod1",
+    "themeName": "Módulo 1: Fundamentos de Computação em Nuvem",
+    "enunciado": "De acordo com o conceito de virtualização e a evolução tecnológica da computação em nuvem, selecione a alternativa correta:",
+    "options": [
+      "A tecnologia de virtualização é uma inovação exclusiva dos últimos anos com a chegada dos smartphones.",
+      "A virtualização é responsável pela configuração física de vários servidores instalados nos datacenters das empresas.",
+      "A virtualização é um conceito central da computação em nuvem, pois permite desacoplar o sistema operacional e os aplicativos do hardware físico subjacente através de um hipervisor.",
+      "A virtualização só pode ser aplicada a servidores com sistema operacional Windows Server.",
+      "A virtualização elimina completamente a necessidade de memória RAM e processadores físicos."
+    ],
+    "correctIndex": 2,
+    "explanation": "A virtualização é o alicerce da computação em nuvem moderna. Por meio de uma camada de abstração (o hipervisor), múltiplos sistemas operacionais e ambientes isolados podem compartilhar o mesmo hardware físico de forma dinâmica e eficiente."
+  },
+  {
+    "id": "nuvem_mod1_q2",
+    "themeId": "mod1",
+    "themeName": "Módulo 1: Fundamentos de Computação em Nuvem",
+    "enunciado": "O NIST (National Institute of Standards and Technology) estabelece cinco características essenciais para a computação em nuvem. Qual alternativa apresenta apenas características genuínas desse padrão?",
+    "options": [
+      "Hardware dedicado, acesso local via cabo serial e cobrança anual fixa.",
+      "Autoatendimento sob demanda, amplo acesso à rede, pool de recursos multi-inquilino, rápida elasticidade e serviço mensurado.",
+      "Virtualização obrigatória de desktops, armazenamento local em fita magnética e IP público obrigatório.",
+      "Cobrança baseada em CapEx, dependência de suporte humano presencial para cada máquina e data center privado.",
+      "Manutenção manual de hipervisores, ausência de APIs e conectividade limitada a redes locais."
+    ],
+    "correctIndex": 1,
+    "explanation": "As cinco características essenciais definidas no NIST SP 800-145 são: On-demand self-service, Broad network access, Resource pooling, Rapid elasticity e Measured service."
+  },
+  {
+    "id": "nuvem_mod1_q3",
+    "themeId": "mod1",
+    "themeName": "Módulo 1: Fundamentos de Computação em Nuvem",
+    "enunciado": "Uma empresa contratou um serviço de computação em nuvem onde não precisa gerenciar o hardware nem o sistema operacional, sendo responsável apenas por desenvolver o código de sua aplicação e conectar aos bancos de dados gerenciados. Esse modelo de serviço é classificado como:",
+    "options": [
+      "IaaS (Infrastructure as a Service)",
+      "PaaS (Platform as a Service)",
+      "SaaS (Software as a Service)",
+      "DaaS (Desktop as a Service)",
+      "BaaS (Backend as a Service)"
+    ],
+    "correctIndex": 1,
+    "explanation": "No modelo PaaS (Plataforma como Serviço), o provedor gerencia servidores físicos, rede, sistema operacional, patches e runtime. O desenvolvedor fica livre para focar exclusivamente na lógica do aplicativo e nas regras de negócio."
+  },
+  {
+    "id": "nuvem_mod1_q4",
+    "themeId": "mod1",
+    "themeName": "Módulo 1: Fundamentos de Computação em Nuvem",
+    "enunciado": "Em relação aos modelos de implantação de nuvem, assinale a opção que descreve corretamente o modelo de Nuvem Híbrida:",
+    "options": [
+      "É uma nuvem exclusiva para órgãos governamentais sem conexão com a internet.",
+      "Combina e integra infraestruturas públicas e privadas (on-premises), permitindo o compartilhamento seguro de dados e aplicativos entre elas.",
+      "É uma nuvem onde múltiplos clientes compartilham o mesmo servidor físico sem nenhum isolamento lógico.",
+      "Refere-se ao uso de dois provedores públicos diferentes sem qualquer conexão com o data center local.",
+      "É um ambiente operado unicamente por ONGs e instituições de caridade."
+    ],
+    "correctIndex": 1,
+    "explanation": "A Nuvem Híbrida conecta a infraestrutura local (nuvem privada / data center próprio) à nuvem pública por meio de conexões de alta segurança, viabilizando estratégias como Cloud Bursting e transição gradual de sistemas."
+  },
+  {
+    "id": "nuvem_mod2_q1",
+    "themeId": "mod2",
+    "themeName": "Módulo 2: Arquitetura de Computação em Nuvem",
+    "enunciado": "A empresa Blashell, que opera diversas refinarias de petróleo, possui ativos de dados altamente confidenciais e estratégicos. O comitê de TI decidiu manter as bases de dados essenciais em seu data center próprio seguro, mas migrar os portais de atendimento ao cliente para a nuvem pública elástica. Esse arranjo arquitetural caracteriza uma:",
+    "options": [
+      "Nuvem pública pura.",
+      "Nuvem híbrida.",
+      "Nuvem comunitária fechada.",
+      "Nuvem distribuída ad-hoc.",
+      "Nuvem isolada monolítica."
+    ],
+    "correctIndex": 1,
+    "explanation": "A união de infraestrutura privada local (armazenando dados ultrassensíveis) com recursos elásticos de nuvem pública (atendendo usuários externos) é a definição prática de uma arquitetura de Nuvem Híbrida."
+  },
+  {
+    "id": "nuvem_mod2_q2",
+    "themeId": "mod2",
+    "themeName": "Módulo 2: Arquitetura de Computação em Nuvem",
+    "enunciado": "Qual é a principal vantagem da Escalabilidade Horizontal (Scale-Out) sobre a Escalabilidade Vertical (Scale-Up) em arquiteturas de nuvem resilientes?",
+    "options": [
+      "A escala horizontal exige máquinas com processadores mais potentes e caros do mercado.",
+      "A escala horizontal adiciona novas instâncias em paralelo sem necessidade de desligar servidores existentes e sem limite físico de expansão, eliminando pontos únicos de falha.",
+      "A escala horizontal reduz a necessidade de balanceadores de carga.",
+      "A escala horizontal só funciona para sistemas monolíticos legados.",
+      "A escala horizontal requer intervenção manual constante de operadores de rede."
+    ],
+    "correctIndex": 1,
+    "explanation": "A escala horizontal adiciona instâncias idênticas em paralelo, permitindo que a aplicação cresça de forma transparente e tolere a queda de instâncias individuais sem que o serviço saia do ar."
+  },
+  {
+    "id": "nuvem_mod2_q3",
+    "themeId": "mod2",
+    "themeName": "Módulo 2: Arquitetura de Computação em Nuvem",
+    "enunciado": "Em uma arquitetura de nuvem desacoplada, dois microsserviços se comunicam por meio de uma fila de mensageria assíncrona. Qual é o benefício dessa abordagem?",
+    "options": [
+      "Se o microsserviço de destino sofrer lentidão ou interrupção temporária, as mensagens permanecem salvas na fila sem perda de dados para o usuário.",
+      "Elimina a necessidade de bancos de dados relacionais em toda a empresa.",
+      "Obriga os dois serviços a executarem no mesmo servidor físico sob o mesmo sistema operacional.",
+      "Reduz a segurança da aplicação ao permitir acessos diretos sem autenticação.",
+      "Aumenta a dependência síncrona de chamadas HTTP entre as pontas."
+    ],
+    "correctIndex": 0,
+    "explanation": "O desacoplamento assíncrono via filas (como SQS, Service Bus ou RabbitMQ) isola os componentes, impedindo que falhas em cadeia paralisem o sistema produtivo."
+  },
+  {
+    "id": "nuvem_mod3_q1",
+    "themeId": "mod3",
+    "themeName": "Módulo 3: Segurança em Computação em Nuvem",
+    "enunciado": "No Modelo de Responsabilidade Compartilhada da computação em nuvem para um serviço do tipo IaaS (Infraestrutura como Serviço), qual elemento é de inteira responsabilidade do CLIENTE?",
+    "options": [
+      "Segurança física das instalações do data center e geradores de energia.",
+      "Instalação, atualização de patches de segurança e configuração do Sistema Operacional convidado na máquina virtual.",
+      "Manutenção do hardware dos servidores físicos e switches de rede física.",
+      "Integridade e atualizações do hipervisor bare-metal do provedor.",
+      "Destruição física de discos rígidos danificados na fábrica."
+    ],
+    "correctIndex": 1,
+    "explanation": "Em IaaS, o provedor garante a segurança física e a camada de virtualização; o cliente é o único responsável pela instalação, configuração e aplicação contínua de patches no sistema operacional de suas VMs."
+  },
+  {
+    "id": "nuvem_mod3_q2",
+    "themeId": "mod3",
+    "themeName": "Módulo 3: Segurança em Computação em Nuvem",
+    "enunciado": "O princípio fundamental de segurança que determina que cada usuário, aplicativo ou serviço deve receber apenas as permissões estritamente necessárias para desempenhar sua função específica é conhecido como:",
+    "options": [
+      "Princípio da Ampla Delegação.",
+      "Princípio do Menor Privilégio (Principle of Least Privilege - PoLP).",
+      "Princípio da Autenticação Monofatorial.",
+      "Princípio da Confiança Implícita de Rede.",
+      "Princípio da Anonimização Irreversível."
+    ],
+    "correctIndex": 1,
+    "explanation": "O Princípio do Menor Privilégio (PoLP) impede que o comprometimento de uma credencial comum resulte no controle total da infraestrutura em nuvem da organização."
+  },
+  {
+    "id": "nuvem_mod3_q3",
+    "themeId": "mod3",
+    "themeName": "Módulo 3: Segurança em Computação em Nuvem",
+    "enunciado": "Qual dispositivo de segurança opera na Camada 7 (Aplicação) inspecionando requisições HTTP/HTTPS para proteger serviços em nuvem contra ataques de Injeção de SQL (SQLi) e Cross-Site Scripting (XSS)?",
+    "options": [
+      "Roteador de Borda BGP",
+      "Web Application Firewall (WAF)",
+      "Switch de Camada 2",
+      "Servidor DHCP Local",
+      "Cabo de Fibra Óptica Monomodo"
+    ],
+    "correctIndex": 1,
+    "explanation": "O WAF (Web Application Firewall) analisa o conteúdo de requisições web no nível de aplicação (L7) filtrando padrões maliciosos mapeados no OWASP Top 10."
+  },
+  {
+    "id": "nuvem_mod4_q1",
+    "themeId": "mod4",
+    "themeName": "Módulo 4: Microsoft Azure",
+    "enunciado": "Qual recurso do Microsoft Azure permite associar metadados em formato chave-valor aos recursos em nuvem para organizar e controlar despesas por centro de custos ou projetos?",
+    "options": [
+      "Marcas (Tags)",
+      "Marcadores de Página",
+      "Impressões Digitais",
+      "Anexos Lógicos",
+      "Cotas de Disco"
+    ],
+    "correctIndex": 0,
+    "explanation": "As Marcas (Tags) são essenciais para governança financeira e faturamento consolidado no Azure, permitindo categorizar recursos como 'Ambiente: Producao' ou 'CentroDeCusto: TI'."
+  },
+  {
+    "id": "nuvem_mod4_q2",
+    "themeId": "mod4",
+    "themeName": "Módulo 4: Microsoft Azure",
+    "enunciado": "No Microsoft Azure, qual opção de redundância de armazenamento fornece o mais alto grau de durabilidade, oferecendo 16 noves (99,99999999999999%) através da replicação de dados entre regiões emparelhadas?",
+    "options": [
+      "LRS (Armazenamento com redundância local)",
+      "ZRS (Armazenamento com redundância de zona)",
+      "GRS (Armazenamento com redundância geográfica)",
+      "Armazenamento Efêmero sem réplica",
+      "RAID 0 em disco único"
+    ],
+    "correctIndex": 2,
+    "explanation": "O GRS (Geo-Redundant Storage) mantém 3 cópias na região primária e replica assincronamente os dados para a região emparelhada a centenas de quilômetros de distância, totalizando 6 cópias e 16 noves de durabilidade."
+  },
+  {
+    "id": "nuvem_mod4_q3",
+    "themeId": "mod4",
+    "themeName": "Módulo 4: Microsoft Azure",
+    "enunciado": "Qual é a principal vantagem de adotar o Serviço de Aplicativo do Azure (Azure App Service) em vez de criar e configurar máquinas virtuais dedicadas?",
+    "options": [
+      "Possui custo fixo muito mais elevado.",
+      "É um serviço PaaS totalmente gerenciado pela Microsoft, que cuida da infraestrutura, patches do sistema operacional, certificados SSL e escalabilidade automática.",
+      "Permite modificar o código do kernel do Linux diretamente.",
+      "Não oferece conexão com a internet pública.",
+      "Obriga a empresa a comprar servidores físicos e licenças do Windows em caixinha."
+    ],
+    "correctIndex": 1,
+    "explanation": "O Azure App Service abstrai toda a manutenção do sistema operacional e hardware, permitindo aos times publicar código e escalar com alta disponibilidade em minutos."
+  },
+  {
+    "id": "nuvem_mod5_q1",
+    "themeId": "mod5",
+    "themeName": "Módulo 5: Amazon Web Services (AWS)",
+    "enunciado": "Dentre as opções a seguir, quais famílias de instâncias do Amazon EC2 são classificadas oficialmente pela AWS como instâncias de 'Propósito Geral' (General Purpose)?",
+    "options": [
+      "c6g, c5a, c4",
+      "r5, r6g, r4",
+      "t4g, m6i, m5",
+      "p4d, g5, trn1",
+      "i3en, d3, i4i"
+    ],
+    "correctIndex": 2,
+    "explanation": "As famílias iniciadas por 't' e 'm' (como t4g, m6i, m5) são de uso geral, oferecendo equilíbrio perfeito entre capacidade de CPU, memória RAM e desempenho de rede para a maioria dos sistemas corporativos."
+  },
+  {
+    "id": "nuvem_mod5_q2",
+    "themeId": "mod5",
+    "themeName": "Módulo 5: Amazon Web Services (AWS)",
+    "enunciado": "Qual é o SLA oficial de durabilidade de dados projetado para o armazenamento de objetos no Amazon S3?",
+    "options": [
+      "99,9%",
+      "99,99%",
+      "9,99%",
+      "99,999999999% (11 noves)",
+      "100% à prova de qualquer evento cósmico"
+    ],
+    "correctIndex": 3,
+    "explanation": "O Amazon S3 foi desenvolvido para fornecer 11 noves de durabilidade (99,999999999%), o que significa que a perda estatística de um objeto armazenado levaria milhares de anos."
+  },
+  {
+    "id": "nuvem_mod5_q3",
+    "themeId": "mod5",
+    "themeName": "Módulo 5: Amazon Web Services (AWS)",
+    "enunciado": "Em uma sub-rede IPv4 criada em uma VPC da AWS com o bloco CIDR 10.0.0.0/24, quantos endereços IP são compulsoriamente reservados pela AWS e NÃO podem ser atribuídos a instâncias EC2?",
+    "options": [
+      "Nenhum endereço é reservado.",
+      "Apenas 2 endereços (o de rede e o de broadcast).",
+      "5 endereços (.0 de rede, .1 de roteador, .2 de DNS, .3 para expansão futura e .255 de broadcast).",
+      "10 endereços aleatórios.",
+      "Mais da metade dos endereços disponíveis."
+    ],
+    "correctIndex": 2,
+    "explanation": "A AWS reserva rigorosamente os primeiros 4 endereços (.0, .1, .2, .3) e o último endereço (.255) em cada sub-rede criada, restando 251 IPs atribuíveis aos recursos."
+  },
+  {
+    "id": "nuvem_mod5_q4",
+    "themeId": "mod5",
+    "themeName": "Módulo 5: Amazon Web Services (AWS)",
+    "enunciado": "Para obter Alta Disponibilidade (HA) real em uma arquitetura de rede na AWS VPC, quantas Zonas de Disponibilidade (AZs) no mínimo devem conter sub-redes ativas e instâncias computacionais?",
+    "options": [
+      "Uma AZ é suficiente.",
+      "No mínimo Duas Zonas de Disponibilidade (AZs).",
+      "Obrigatoriamente Cinco AZs.",
+      "Dez AZs em continentes distintos.",
+      "Não se utilizam AZs na nuvem pública."
+    ],
+    "correctIndex": 1,
+    "explanation": "Alta disponibilidade em nuvem requer redundância de falhas físicas. Ter instâncias distribuídas em no mínimo duas Zonas de Disponibilidade garante que a queda total de um data center não derrube a aplicação."
+  },
+  {
+    "id": "nuvem_mod6_q1",
+    "themeId": "mod6",
+    "themeName": "Módulo 6: Google Cloud Platform (GCP)",
+    "enunciado": "Qual é um dos principais diferenciais arquiteturais da Virtual Private Cloud (VPC) no Google Cloud (GCP) quando comparada à maioria dos outros provedores de nuvem?",
+    "options": [
+      "A VPC do GCP só suporta conexões discadas via modem.",
+      "A VPC do GCP é Global por padrão, permitindo que sub-redes em continentes diferentes compartilhem a mesma rede privada sem necessidade de VPN ou túneis adicionais.",
+      "A VPC do GCP não permite a criação de sub-redes privadas.",
+      "A VPC do GCP exige a compra de licenças físicas para cada porta de rede utilizada.",
+      "A VPC do GCP só opera em redes Wi-Fi públicas."
+    ],
+    "correctIndex": 1,
+    "explanation": "A VPC Global do Google Cloud é um divisor de águas: você cria uma única rede corporativa mundial e conecta recursos em São Paulo, Iowa e Frankfurt usando IPs privados diretamente pela fibra óptica global do Google."
+  },
+  {
+    "id": "nuvem_mod6_q2",
+    "themeId": "mod6",
+    "themeName": "Módulo 6: Google Cloud Platform (GCP)",
+    "enunciado": "Qual serviço do Google Cloud entrega um data warehouse corporativo analítico petabyte-scale, totalmente serverless e com consultas ultrarrápidas utilizando linguagem SQL padrão?",
+    "options": [
+      "Cloud Storage",
+      "BigQuery",
+      "Cloud Memorystore",
+      "Google Drive",
+      "Cloud TPU"
+    ],
+    "correctIndex": 1,
+    "explanation": "O BigQuery é o data warehouse analítico gerenciado do Google. Ele processa terabytes de informações em segundos sem exigir configuração de servidores, discos ou índices."
+  },
+  {
+    "id": "nuvem_mod6_q3",
+    "themeId": "mod6",
+    "themeName": "Módulo 6: Google Cloud Platform (GCP)",
+    "enunciado": "Qual banco de dados do Google Cloud combina a consistência estrita transacional (ACID) de bancos de dados relacionais com a escala horizontal e replicação síncrona mundial com 99,999% de disponibilidade?",
+    "options": [
+      "Cloud SQL",
+      "Cloud Spanner",
+      "Cloud Firestore",
+      "SQLite Local",
+      "Access 97"
+    ],
+    "correctIndex": 1,
+    "explanation": "O Cloud Spanner utiliza hardware proprietário e relógios atômicos (TrueTime) para fornecer consistência global estrita em bancos de dados relacionais distribuídos."
+  }
+]

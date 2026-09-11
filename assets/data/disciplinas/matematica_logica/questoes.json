@@ -1,0 +1,1046 @@
+[
+  {
+    "id": "q01",
+    "themeId": "mod1",
+    "themeName": "Módulo 1: Conjuntos e Contagem",
+    "title": "Interseção de Intervalos Reais",
+    "statement": "Considere os intervalos reais A = (-1; 3] e B = (-∞; 1). Qual é a interseção A ∩ B?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "[-1; 1]"
+      },
+      {
+        "letter": "B",
+        "text": "(-1; 1)"
+      },
+      {
+        "letter": "C",
+        "text": "(-1; 1]"
+      },
+      {
+        "letter": "D",
+        "text": "[-1; 3]"
+      }
+    ],
+    "correct": "B",
+    "explanation": "A interseção A ∩ B contém todos os números reais x que pertencem simultaneamente a A e a B.\n- Pertencer a A significa: -1 < x ≤ 3.\n- Pertencer a B significa: x < 1.\nCombinando ambas as condições simultâneas: -1 < x < 1.\nComo -1 não pertence a A (parêntese aberto), ele não entra na interseção. Como 1 não pertence a B (parêntese aberto), ele também não entra. Logo, A ∩ B = (-1; 1).",
+    "examTip": "Atenção aos extremos: colchete [ ou ] inclui o extremo (bolinha cheia); parêntese ( ou ) exclui o extremo (bolinha vazia). Na interseção, o extremo só é incluído se estiver presente em AMBOS os conjuntos.",
+    "concept": "Intervalos Reais e Operação de Interseção"
+  },
+  {
+    "id": "q02",
+    "themeId": "mod1",
+    "themeName": "Módulo 1: Conjuntos e Contagem",
+    "title": "Diferença entre Elemento e Subconjunto",
+    "statement": "Seja o conjunto A = { 1, 2, {3, 4}, 5, ∅ }. Analise as afirmativas:\nI. ∅ ∈ A\nII. {3, 4} ⊆ A\nIII. {1, 2} ⊆ A\nIV. 3 ∈ A\nEstão corretas apenas:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "I e III"
+      },
+      {
+        "letter": "B",
+        "text": "I, II e III"
+      },
+      {
+        "letter": "C",
+        "text": "II e IV"
+      },
+      {
+        "letter": "D",
+        "text": "I e IV"
+      }
+    ],
+    "correct": "A",
+    "explanation": "Vamos analisar cada item com base na definição estrita de pertinência (∈) e inclusão (⊆):\n- I. Verdadeira: O elemento ∅ está explicitamente listado como membro de A, logo ∅ ∈ A.\n- II. Falsa: O objeto {3, 4} é um ELEMENTO de A ({3, 4} ∈ A). Para ser subconjunto ({3, 4} ⊆ A), seus elementos individuais 3 e 4 deveriam pertencer a A, mas nem 3 nem 4 pertencem a A isoladamente.\n- III. Verdadeira: Os números 1 e 2 são elementos de A (1 ∈ A e 2 ∈ A), portanto o conjunto {1, 2} é subconjunto de A ({1, 2} ⊆ A).\n- IV. Falsa: O número 3 está empacotado dentro do elemento {3, 4}; ele não é elemento direto de A (3 ∉ A).",
+    "examTip": "Pegadinha clássica de prova: 'Um conjunto pode ser elemento de outro'. Um elemento empacotado entre chaves dentro de outro conjunto não transfere seus membros individuais para o conjunto maior.",
+    "concept": "Pertinência (∈) vs. Inclusão (⊆)"
+  },
+  {
+    "id": "q03",
+    "themeId": "mod1",
+    "themeName": "Módulo 1: Conjuntos e Contagem",
+    "title": "Número de Subconjuntos (Conjunto das Partes)",
+    "statement": "Seja o conjunto A = {x ∈ ℤ | x² < 9}. Quantos subconjuntos possui o conjunto A?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "8"
+      },
+      {
+        "letter": "B",
+        "text": "16"
+      },
+      {
+        "letter": "C",
+        "text": "32"
+      },
+      {
+        "letter": "D",
+        "text": "64"
+      }
+    ],
+    "correct": "C",
+    "explanation": "Primeiro encontramos os elementos de A nos números inteiros:\nx² < 9 ⇒ -3 < x < 3 ⇒ x ∈ {-2, -1, 0, 1, 2}.\nO conjunto A possui n = 5 elementos.\nO número de subconjuntos de qualquer conjunto com n elementos é dado por 2ⁿ:\n2⁵ = 32 subconjuntos (incluindo o conjunto vazio ∅ e o próprio conjunto A).",
+    "examTip": "Não se esqueça do zero ao listar números inteiros! Se esquecer o zero, contaria apenas 4 elementos e erraria marcando 2⁴ = 16.",
+    "concept": "Representação de Conjuntos e Regra de Subconjuntos 2ⁿ"
+  },
+  {
+    "id": "q04",
+    "themeId": "mod1",
+    "themeName": "Módulo 1: Conjuntos e Contagem",
+    "title": "Agrupamento: Comissão sem Cargos vs. com Cargos",
+    "statement": "Uma comissão de trabalho sem cargos específicos será formada escolhendo-se 3 pessoas entre 8 candidatos disponíveis. Quantas comissões distintas podem ser formadas?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "24"
+      },
+      {
+        "letter": "B",
+        "text": "56"
+      },
+      {
+        "letter": "C",
+        "text": "336"
+      },
+      {
+        "letter": "D",
+        "text": "512"
+      }
+    ],
+    "correct": "B",
+    "explanation": "Como a comissão NÃO tem cargos (a ordem dos membros escolhidos não altera a comissão), trata-se de uma Combinação Simples:\nC(8, 3) = 8! / [3! · (8 - 3)!] = (8 · 7 · 6) / (3 · 2 · 1) = 336 / 6 = 56.\nSe a questão atribuísse cargos distintos (ex: presidente, secretário e tesoureiro), a ordem importaria e o cálculo seria Arranjo Simples: A(8, 3) = 8 · 7 · 6 = 336.",
+    "examTip": "Regra de ouro: A ordem dos elementos muda o resultado? Se NÃO muda (grupo, comissão, equipe sem cargos) = COMBINAÇÃO. Se SIM muda (cargos, senhas, pódios, filas) = ARRANJO ou PERMUTAÇÃO.",
+    "concept": "Combinação Simples vs. Arranjo Simples"
+  },
+  {
+    "id": "q05",
+    "themeId": "mod1",
+    "themeName": "Módulo 1: Conjuntos e Contagem",
+    "title": "Contagem com Restrições Obrigatórias",
+    "statement": "Deseja-se criar uma senha de 4 dígitos distintos escolhidos entre os algarismos de 1 a 9. A regra exige que os dígitos 2 e 5 estejam obrigatoriamente presentes na senha. Quantas senhas diferentes atendem a essa condição?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "504"
+      },
+      {
+        "letter": "B",
+        "text": "840"
+      },
+      {
+        "letter": "C",
+        "text": "2.184"
+      },
+      {
+        "letter": "D",
+        "text": "3.024"
+      }
+    ],
+    "correct": "A",
+    "explanation": "Resolução em duas etapas lógicas:\n1. Escolha dos dígitos adicionais: Os dígitos 2 e 5 já estão obrigatoriamente garantidos (2 dígitos). Precisamos escolher mais 2 dígitos entre os 7 algarismos restantes do conjunto {1, 3, 4, 6, 7, 8, 9}:\n C(7, 2) = (7 · 6) / (2 · 1) = 21 modos de escolher os outros dois dígitos.\n2. Ordenação na senha: Temos 4 dígitos distintos escolhidos para dispor em 4 posições na senha:\n P(4) = 4! = 4 · 3 · 2 · 1 = 24 modos de ordenar.\nMultiplicando as etapas pelo Princípio Fundamental da Contagem:\nTotal = 21 · 24 = 504 senhas.",
+    "examTip": "Cuidado com o distrator 2.184: ele resulta de calcular senhas que possuem 'pelo menos um' dos dígitos, em vez de 'ambos os dígitos obrigatoriamente'.",
+    "concept": "Princípio Multiplicativo com Restrição Obrigatória"
+  },
+  {
+    "id": "q06",
+    "themeId": "mod1",
+    "themeName": "Módulo 1: Conjuntos e Contagem",
+    "title": "Princípio da Casa dos Pombos e Pior Caso",
+    "statement": "Uma urna opaca contém 30 bolas verdes e 20 bolas azuis, idênticas no tato. Qual é o número mínimo de bolas que devem ser retiradas sucessivamente e sem reposição para garantir, com certeza absoluta, que foram sorteadas pelo menos 2 bolas azuis?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "2"
+      },
+      {
+        "letter": "B",
+        "text": "22"
+      },
+      {
+        "letter": "C",
+        "text": "31"
+      },
+      {
+        "letter": "D",
+        "text": "32"
+      }
+    ],
+    "correct": "D",
+    "explanation": "Para garantir uma condição com 100% de certeza ('garantia absoluta'), devemos considerar o PIOR CENÁRIO POSSÍVEL (azar máximo):\n- No pior caso, saem sucessivamente todas as 30 bolas verdes antes de sair a segunda azul.\n- Mesmo que a 1ª bola sorteada fosse azul, as 30 seguintes poderiam ser todas verdes (totalizando 31 bolas com apenas 1 azul).\n- Ao retirar a 32ª bola, como todas as 30 verdes já foram esgotadas, essa bola será necessariamente azul, completando com certeza pelo menos 2 bolas azuis.\nPortanto, o número mínimo de retiradas é 30 + 2 = 32.",
+    "examTip": "Garantia não é probabilidade! Em questões de 'número mínimo para garantir', pense sempre: e se ocorrer tudo de indesejado primeiro? Esgote os casos indesejados e adicione a quantidade necessária da meta.",
+    "concept": "Princípio da Casa dos Pombos e Análise do Pior Caso"
+  },
+  {
+    "id": "q07",
+    "themeId": "mod2",
+    "themeName": "Módulo 2: Gráficos e Interpretações",
+    "title": "Vértice de Parábola e Alcance Horizontal",
+    "statement": "A trajetória de um projétil é descrita pela função quadrática y = -5x² + 100x, onde y representa a altura (em metros) e x representa o deslocamento horizontal (em metros). O lançamento ocorre na origem (0; 0) e o projétil atinge o solo no ponto (20; 0). Qual é o par ordenado (altura máxima; alcance horizontal)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "(10; 500)"
+      },
+      {
+        "letter": "B",
+        "text": "(500; 10)"
+      },
+      {
+        "letter": "C",
+        "text": "(20; 500)"
+      },
+      {
+        "letter": "D",
+        "text": "(500; 20)"
+      }
+    ],
+    "correct": "D",
+    "explanation": "Calculando as grandezas físicas a partir da função:\n1. Vértice da parábola:\n - x_v = -b / (2a) = -100 / (2 · (-5)) = -100 / -10 = 10 metros.\n - y_v = -5(10)² + 100(10) = -500 + 1000 = 500 metros (altura máxima).\n2. Alcance horizontal:\n - O projétil atinge o solo quando y = 0:\n -5x(x - 20) = 0 ⇒ x = 0 (lançamento) ou x = 20 (queda no solo).\n - O alcance horizontal total é 20 metros.\n3. Atenção à ordem expressa no enunciado:\n O enunciado pede explicitamente o par '(altura máxima; alcance horizontal)'.\n Portanto: (500; 20).",
+    "examTip": "Muita atenção à ordem exigida no enunciado! O vértice padrão é (x_v; y_v) = (10; 500), mas a questão pediu (altura máxima; alcance), ou seja, (y_v; alcance) = (500; 20). Inverter a ordem do par é um distrator frequente.",
+    "concept": "Parábola, Vértice e Interpretação Gráfica"
+  },
+  {
+    "id": "q08",
+    "themeId": "mod2",
+    "themeName": "Módulo 2: Gráficos e Interpretações",
+    "title": "Taxa de Variação Média e Inclinação da Reta",
+    "statement": "Em um experimento físico, a temperatura T(t) de um fluido (em °C) varia linearmente com o tempo t (em minutos). Sabe-se que no instante t = 2 min a temperatura é 14 °C e no instante t = 6 min a temperatura atinge 38 °C. Qual é a taxa de variação da temperatura em relação ao tempo?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "4 °C/min"
+      },
+      {
+        "letter": "B",
+        "text": "6 °C/min"
+      },
+      {
+        "letter": "C",
+        "text": "8 °C/min"
+      },
+      {
+        "letter": "D",
+        "text": "12 °C/min"
+      }
+    ],
+    "correct": "B",
+    "explanation": "A taxa de variação média de uma função linear corresponde ao coeficiente angular (inclinação m) da reta que passa pelos pontos (2; 14) e (6; 38):\nm = ΔT / Δt = (T₂ - T₁) / (t₂ - t₁) = (38 - 14) / (6 - 2) = 24 / 4 = 6 °C/min.\nIsso significa que a cada 1 minuto decorrido, a temperatura aumenta exatamente 6 °C.",
+    "examTip": "A taxa de variação linear é sempre Δy / Δx. Em gráficos de reta, se a inclinação m > 0 a função é estritamente crescente; se m < 0 é decrescente; se m = 0 é constante.",
+    "concept": "Taxa de Variação e Coeficiente Angular"
+  },
+  {
+    "id": "q09",
+    "themeId": "mod2",
+    "themeName": "Módulo 2: Gráficos e Interpretações",
+    "title": "Localização de Pontos e Quadrantes",
+    "statement": "No plano cartesiano ortogonal, considere o ponto P(a, b). Se a < 0 e b > 0, o ponto P e seu ponto simétrico em relação à origem dos eixos estão localizados, respectivamente, em quais quadrantes?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "2º Quadrante e 4º Quadrante"
+      },
+      {
+        "letter": "B",
+        "text": "2º Quadrante e 3º Quadrante"
+      },
+      {
+        "letter": "C",
+        "text": "3º Quadrante e 1º Quadrante"
+      },
+      {
+        "letter": "D",
+        "text": "4º Quadrante e 2º Quadrante"
+      }
+    ],
+    "correct": "A",
+    "explanation": "1. Ponto P(a, b) com a < 0 (abscissa negativa) e b > 0 (ordenada positiva):\n - Está situado no 2º Quadrante (x < 0, y > 0).\n2. Simetria em relação à origem:\n - O simétrico de (a, b) em relação à origem (0, 0) é o ponto P'(-a, -b).\n - Como a < 0, então -a > 0.\n - Como b > 0, então -b < 0.\n - O ponto P'(-a, -b) possui x > 0 e y < 0, localizando-se no 4º Quadrante.\nLogo, respectivamente: 2º Quadrante e 4º Quadrante.",
+    "examTip": "Lembre-se dos 4 quadrantes:\n- 1º Q: (+, +)\n- 2º Q: (-, +)\n- 3º Q: (-, -)\n- 4º Q: (+, -)\nA simetria em relação à origem inverte os dois sinais simultaneamente.",
+    "concept": "Plano Cartesiano, Quadrantes e Simetrias"
+  },
+  {
+    "id": "q10",
+    "themeId": "mod2",
+    "themeName": "Módulo 2: Gráficos e Interpretações",
+    "title": "Interpretação de Gráficos e Crescimento",
+    "statement": "Uma função contínua f: ℝ → ℝ possui gráfico que corta o eixo x nos pontos x = -2, x = 1 e x = 5. Sabe-se que f(x) > 0 apenas nos intervalos (-2; 1) e (5; +∞). Pode-se afirmar corretamente que:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "f(0) < 0"
+      },
+      {
+        "letter": "B",
+        "text": "f(3) < 0"
+      },
+      {
+        "letter": "C",
+        "text": "f(-3) > 0"
+      },
+      {
+        "letter": "D",
+        "text": "f(6) < 0"
+      }
+    ],
+    "correct": "B",
+    "explanation": "Análise dos sinais da função com base nos intervalos dados:\n- No intervalo (-2; 1): f(x) > 0. Como 0 ∈ (-2; 1), temos f(0) > 0 (elimina A).\n- No intervalo (1; 5): f(x) < 0 (pois a função só é positiva em (-2; 1) e (5; +∞)). Como 3 ∈ (1; 5), temos f(3) < 0. Portanto, a alternativa B é verdadeira.\n- No intervalo (-∞; -2): f(x) < 0. Como -3 ∈ (-∞; -2), temos f(-3) < 0 (elimina C).\n- No intervalo (5; +∞): f(x) > 0. Como 6 ∈ (5; +∞), temos f(6) > 0 (elimina D).",
+    "examTip": "Ao analisar estudo de sinais por raízes em gráficos, marque na reta numérica os intervalos onde a função está acima do eixo x (positiva) e abaixo (negativa).",
+    "concept": "Estudo de Sinais e Interseções com o Eixo x"
+  },
+  {
+    "id": "q11",
+    "themeId": "mod3",
+    "themeName": "Módulo 3: Aprofundamento de Funções",
+    "title": "Domínio com Raiz no Denominador",
+    "statement": "Qual é o domínio real da função f(x) = 1 / √(x - 3)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "[3; +∞)"
+      },
+      {
+        "letter": "B",
+        "text": "ℝ - {3}"
+      },
+      {
+        "letter": "C",
+        "text": "(3; +∞)"
+      },
+      {
+        "letter": "D",
+        "text": "(-∞; 3)"
+      }
+    ],
+    "correct": "C",
+    "explanation": "Para encontrar o domínio real de f(x) = 1 / √(x - 3), precisamos analisar duas restrições simultâneas:\n1. Radicando de índice par: Deve ser não-negativo, ou seja, x - 3 ≥ 0.\n2. Denominador de fração: Não pode ser nulo, ou seja, √(x - 3) ≠ 0 ⇒ x - 3 ≠ 0.\nUnindo ambas as exigências, a desigualdade torna-se estrita:\nx - 3 > 0 ⇒ x > 3.\nEm notação de intervalo: Dom(f) = (3; +∞) ou ]3; +∞[.",
+    "examTip": "Se a raiz de índice par estivesse no NUMERADOR, o valor 3 seria permitido ([3; +∞)). Como ela está no DENOMINADOR, a divisão por zero proíbe o 3, tornando o intervalo estritamente aberto em 3.",
+    "concept": "Condições de Existência e Domínio Real"
+  },
+  {
+    "id": "q12",
+    "themeId": "mod3",
+    "themeName": "Módulo 3: Aprofundamento de Funções",
+    "title": "Classificação: Injetora, Sobrejetora e Bijetora",
+    "statement": "Considere a função linear E: [0; 16] → [200; 1000] definida por E(t) = 1000 - 50t. Quanto à sua classificação, a função E é:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Sobrejetora, mas não injetora."
+      },
+      {
+        "letter": "B",
+        "text": "Bijetora."
+      },
+      {
+        "letter": "C",
+        "text": "Injetora, mas não sobrejetora."
+      },
+      {
+        "letter": "D",
+        "text": "Nem injetora nem sobrejetora."
+      }
+    ],
+    "correct": "B",
+    "explanation": "1. Injetividade: Como E(t) é uma função afim de coeficiente angular -50 < 0, ela é estritamente decrescente em todo o seu domínio. Logo, se t₁ ≠ t₂, então E(t₁) ≠ E(t₂). Portanto, é INJETORA.\n2. Sobrejetividade:\n - Para t = 0: E(0) = 1000 - 0 = 1000.\n - Para t = 16: E(16) = 1000 - 50(16) = 1000 - 800 = 200.\n - Como a função é contínua e monótona decrescente no intervalo fechado [0; 16], sua imagem é exatamente o intervalo [200; 1000].\n - O contradomínio declarado é exatamente CD = [200; 1000]. Como Imagem = Contradomínio, ela é SOBREJETORA.\nSendo simultaneamente injetora e sobrejetora, a função é BIJETORA.",
+    "examTip": "Toda função bijetora admite função inversa! A sobrejetividade depende crucialmente do contradomínio declarado no cabeçalho da função (A → B).",
+    "concept": "Injetora, Sobrejetora e Bijeção"
+  },
+  {
+    "id": "q13",
+    "themeId": "mod3",
+    "themeName": "Módulo 3: Aprofundamento de Funções",
+    "title": "Imagem de Função Quadrática com Domínio Restrito",
+    "statement": "Dada a função quadrática f(x) = x² - 4x + 8 definida exclusivamente no domínio restrito D = [-2; 0], o conjunto imagem Im(f) é:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "[4; +∞)"
+      },
+      {
+        "letter": "B",
+        "text": "[4; 8]"
+      },
+      {
+        "letter": "C",
+        "text": "[8; 20]"
+      },
+      {
+        "letter": "D",
+        "text": "[-2; 0]"
+      }
+    ],
+    "correct": "C",
+    "explanation": "Completando quadrados:\nf(x) = (x - 2)² + 4.\nO vértice da parábola situa-se em x_v = 2, com y_v = 4.\nNo entanto, o domínio dado é D = [-2; 0]. Observe atentamente que o vértice x = 2 está FORA do intervalo [-2; 0]!\nComo x_v = 2 > 0 e a parábola tem concavidade para cima, a função é estritamente DECRESCENTE ao longo de todo o intervalo [-2; 0]:\n- f(-2) = (-2)² - 4(-2) + 8 = 4 + 8 + 8 = 20 (valor máximo no domínio).\n- f(0) = 0² - 4(0) + 8 = 8 (valor mínimo no domínio).\nPortanto, a imagem no intervalo restrito é Im(f) = [8; 20].",
+    "examTip": "Cuidado supremo em provas! Não saia calculando automaticamente y_v = -Δ/(4a) sem antes checar se o x_v pertence ao domínio considerado. Se x_v estiver fora, os extremos da imagem ocorrerão nos limites do intervalo.",
+    "concept": "Imagem em Domínio Restrito e Vértice Fora do Intervalo"
+  },
+  {
+    "id": "q14",
+    "themeId": "mod3",
+    "themeName": "Módulo 3: Aprofundamento de Funções",
+    "title": "Funções Periódicas e Múltiplos do Período",
+    "statement": "Seja f: ℝ → ℝ uma função periódica de período fundamental P = 4, satisfazendo f(x + 4) = f(x) para todo x real. Sabendo que f(2) = 5, qual é o valor de f(14)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "2"
+      },
+      {
+        "letter": "B",
+        "text": "4"
+      },
+      {
+        "letter": "C",
+        "text": "14"
+      },
+      {
+        "letter": "D",
+        "text": "5"
+      }
+    ],
+    "correct": "D",
+    "explanation": "Por definição de função periódica com período P = 4, somar ou subtrair qualquer múltiplo inteiro de 4 do argumento não altera o valor da função:\nf(x + k · P) = f(x), para todo k ∈ ℤ.\nPara avaliar f(14):\n14 = 2 + 12 = 2 + 3 · 4.\nLogo: f(14) = f(2 + 3 · 4) = f(2).\nComo o enunciado informou que f(2) = 5, segue imediatamente que f(14) = 5.",
+    "examTip": "Não tente inventar uma fórmula para f(x)! Em funções periódicas, divida o argumento pelo período e use o resto: 14 dividido por 4 dá quociente 3 e resto 2, logo f(14) = f(2).",
+    "concept": "Periodicidade e Redução por Múltiplos do Período"
+  },
+  {
+    "id": "q15",
+    "themeId": "mod3",
+    "themeName": "Módulo 3: Aprofundamento de Funções",
+    "title": "Função Inversa e Relação com a Identidade",
+    "statement": "Seja a função bijetora f: ℝ - {2} → ℝ - {1} dada por f(x) = (x + 3) / (x - 2). Qual é a lei da sua função inversa f⁻¹(x)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "f⁻¹(x) = (2x + 3) / (x - 1)"
+      },
+      {
+        "letter": "B",
+        "text": "f⁻¹(x) = (x - 2) / (x + 3)"
+      },
+      {
+        "letter": "C",
+        "text": "f⁻¹(x) = (2x - 3) / (x + 1)"
+      },
+      {
+        "letter": "D",
+        "text": "f⁻¹(x) = (3x + 1) / (x - 2)"
+      }
+    ],
+    "correct": "A",
+    "explanation": "Para encontrar a função inversa, colocamos y = (x + 3) / (x - 2) e isolamos x em termos de y:\ny(x - 2) = x + 3\nyx - 2y = x + 3\nyx - x = 2y + 3\nx(y - 1) = 2y + 3\nx = (2y + 3) / (y - 1).\nTrocando as variáveis x e y:\nf⁻¹(x) = (2x + 3) / (x - 1).",
+    "examTip": "Para testar rapidamente a inversa em uma prova: aplique um valor simples. Por exemplo, em f(3) = (3+3)/(3-2) = 6. Na inversa correta, f⁻¹(6) deve retornar 3: f⁻¹(6) = (2·6 + 3)/(6 - 1) = 15/5 = 3! Isso confirma a resposta sem sombra de dúvida.",
+    "concept": "Cálculo e Propriedades da Função Inversa"
+  },
+  {
+    "id": "q16",
+    "themeId": "mod4",
+    "themeName": "Módulo 4: Cálculo Proposicional",
+    "title": "Tabela-Verdade da Condicional e Tautologia",
+    "statement": "Dadas as proposições p com valor-verdade V (Verdadeiro) e q com valor-verdade F (Falso), avalie o valor-verdade da sentença S = p → q. Além disso, classifique a fórmula proposicional T = p ∨ ¬p considerando todas as suas valorações possíveis.",
+    "options": [
+      {
+        "letter": "A",
+        "text": "S é V; T é contingência."
+      },
+      {
+        "letter": "B",
+        "text": "S é F; T é tautologia."
+      },
+      {
+        "letter": "C",
+        "text": "S é F; T é contradição."
+      },
+      {
+        "letter": "D",
+        "text": "S é V; T é tautologia."
+      }
+    ],
+    "correct": "B",
+    "explanation": "1. Avaliação de S = p → q:\n A condicional p → q só é FALSA em um único caso: quando a premissa é verdadeira e a conclusão é falsa (V → F). Como p = V e q = F, temos que S = F.\n2. Avaliação de T = p ∨ ¬p:\n - Se p = V, então ¬p = F, e V ∨ F = V.\n - Se p = F, então ¬p = V, e F ∨ V = V.\n Como a fórmula T resulta em V em todas as linhas possíveis de sua tabela-verdade (Princípio do Terceiro Excluído), T é uma TAUTOLOGIA.",
+    "examTip": "Memorize os termos de prova:\n- Tautologia: sempre V em todas as linhas.\n- Contradição: sempre F em todas as linhas.\n- Contingência: pode ser V ou F dependendo dos valores atribuídos.",
+    "concept": "Tabela-Verdade, Condicional e Tautologia"
+  },
+  {
+    "id": "q17",
+    "themeId": "mod4",
+    "themeName": "Módulo 4: Cálculo Proposicional",
+    "title": "Negação da Condicional (Regra do MANE)",
+    "statement": "Qual é a negação lógica correta da proposição: 'Se chove, então eu levo o guarda-chuva'?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Se não chove, então eu levo o guarda-chuva."
+      },
+      {
+        "letter": "B",
+        "text": "Se chove, então eu não levo o guarda-chuva."
+      },
+      {
+        "letter": "C",
+        "text": "Chove e eu não levo o guarda-chuva."
+      },
+      {
+        "letter": "D",
+        "text": "Não chove e eu não levo o guarda-chuva."
+      }
+    ],
+    "correct": "C",
+    "explanation": "Seja p: 'Chove' e q: 'Eu levo o guarda-chuva'. A proposição é p → q.\nA regra lógica de negação da condicional é:\n¬(p → q) ≡ p ∧ ¬q.\nEm palavras: Para desmentir uma promessa condicional, a hipótese deve acontecer (p) E a consequência prometida NÃO deve se cumprir (¬q).\nTraduzindo: 'Chove e eu não levo o guarda-chuva'.",
+    "examTip": "Regra do MANE: MAntém a primeira (p) E NEga a segunda (¬q). A negação de uma condicional NUNCA é outra condicional do tipo 'se... então'!",
+    "concept": "Negação Lógica da Condicional"
+  },
+  {
+    "id": "q18",
+    "themeId": "mod4",
+    "themeName": "Módulo 4: Cálculo Proposicional",
+    "title": "Leis de De Morgan e Equivalência Notável",
+    "statement": "Dada a proposição composta: 'Não é verdade que João é médico e Pedro é advogado', qual das seguintes sentenças expressa uma forma logicamente equivalente?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "João não é médico e Pedro não é advogado."
+      },
+      {
+        "letter": "B",
+        "text": "João não é médico ou Pedro não é advogado."
+      },
+      {
+        "letter": "C",
+        "text": "Se João não é médico, então Pedro não é advogado."
+      },
+      {
+        "letter": "D",
+        "text": "João é médico ou Pedro é advogado."
+      }
+    ],
+    "correct": "B",
+    "explanation": "Seja p: 'João é médico' e q: 'Pedro é advogado'.\nA frase diz: ¬(p ∧ q).\nPela 1ª Lei de De Morgan:\n¬(p ∧ q) ≡ ¬p ∨ ¬q.\nTraduzindo para linguagem natural:\n'João não é médico OU Pedro não é advogado'.",
+    "examTip": "Leis de De Morgan:\n- ¬(p ∧ q) ≡ ¬p ∨ ¬q (a negação do 'E' vira 'OU' com as partes negadas);\n- ¬(p ∨ q) ≡ ¬p ∧ ¬q (a negação do 'OU' vira 'E' com as partes negadas).",
+    "concept": "Leis de De Morgan"
+  },
+  {
+    "id": "q19",
+    "themeId": "mod4",
+    "themeName": "Módulo 4: Cálculo Proposicional",
+    "title": "Equivalência da Condicional e Contrapositiva",
+    "statement": "A proposição condicional p → q é logicamente equivalente a:\nI. ¬p ∨ q\nII. ¬q → ¬p\nIII. ¬p → ¬q\nEstão corretas apenas:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "I e II"
+      },
+      {
+        "letter": "B",
+        "text": "Apenas I"
+      },
+      {
+        "letter": "C",
+        "text": "Apenas II"
+      },
+      {
+        "letter": "D",
+        "text": "II e III"
+      }
+    ],
+    "correct": "A",
+    "explanation": "As duas equivalências fundamentais da condicional cobradas em provas são:\n1. Equivalência com a Disjunção: p → q ≡ ¬p ∨ q (para o condicional ser verdadeiro, ou a hipótese falha ¬p ou a conclusão se cumpre q).\n2. Contrapositiva: p → q ≡ ¬q → ¬p (inverte as proposições e nega ambas).\nO item III (¬p → ¬q) é a proposição INVERSA, que NÃO é equivalente a p → q (cometeria a falácia da negação do antecedente).\nPortanto, estão corretas apenas I e II.",
+    "examTip": "Muito cobrado em concurso e faculdade: A contrapositiva (¬q → ¬p) tem rigorosamente a mesma tabela-verdade de p → q. Já a recíproca (q → p) e a inversa (¬p → ¬q) não são equivalentes.",
+    "concept": "Equivalência da Condicional e Contrapositiva"
+  },
+  {
+    "id": "q20",
+    "themeId": "mod4",
+    "themeName": "Módulo 4: Cálculo Proposicional",
+    "title": "Regras de Inferência: Modus Ponens, Tollens e Silogismo Disjuntivo",
+    "statement": "Considere o seguinte conjunto de premissas verdadeiras:\n1. A ∨ C\n2. J → ¬B\n3. C → B\n4. J\nQual conclusão lógica é dedutível de forma válida a partir desse conjunto de premissas?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "C ∨ B"
+      },
+      {
+        "letter": "B",
+        "text": "A ∧ B"
+      },
+      {
+        "letter": "C",
+        "text": "¬A ∧ C"
+      },
+      {
+        "letter": "D",
+        "text": "A ∧ ¬C"
+      }
+    ],
+    "correct": "D",
+    "explanation": "Vamos aplicar a cadeia direta de inferências lógicas:\n1. Das premissas 4 (J) e 2 (J → ¬B), por Modus Ponens, concluímos: ¬B.\n2. Da premissa 3 (C → B) e de ¬B, por Modus Tollens, concluímos: ¬C.\n3. Da premissa 1 (A ∨ C) e de ¬C, por Silogismo Disjuntivo, concluímos: A.\n4. Juntando as conclusões obtidas: A é verdadeira e ¬C é verdadeira, logo A ∧ ¬C é uma conclusão válida.",
+    "examTip": "Não precisa montar tabela-verdade com 16 linhas! Identifique uma premissa simples (como J) e desencadeie as deduções usando Modus Ponens (p, p→q ⊢ q), Modus Tollens (¬q, p→q ⊢ ¬p) e Silogismo Disjuntivo (p∨q, ¬p ⊢ q).",
+    "concept": "Regras de Inferência e Dedução Formal"
+  },
+  {
+    "id": "q21",
+    "themeId": "mod4",
+    "themeName": "Módulo 4: Cálculo Proposicional",
+    "title": "Álgebra Booleana e Precedência de Operadores",
+    "statement": "Na álgebra booleana, considere a expressão da saída lógica S = A + B · C, onde '+' denota a porta OR e '·' denota a porta AND. Sabendo que as entradas são A = 1, B = 0 e C = 0, qual é o valor de S e qual regra de precedência foi aplicada?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "S = 1, pois a operação AND (·) tem precedência sobre OR (+)."
+      },
+      {
+        "letter": "B",
+        "text": "S = 0, pois a operação OR (+) é realizada da esquerda para a direita."
+      },
+      {
+        "letter": "C",
+        "text": "S = 2, pois o símbolo + representa adição da aritmética decimal."
+      },
+      {
+        "letter": "D",
+        "text": "S = 0, pois a presença de zeros na entrada anula a saída."
+      }
+    ],
+    "correct": "A",
+    "explanation": "Na álgebra booleana e nos circuitos lógicos:\n1. A operação AND (produto booleano ·) possui precedência natural sobre a operação OR (soma booleana +), exatamente análogo à multiplicação e adição na álgebra comum (a menos que haja parênteses forçando outra ordem).\n2. Primeiro calcula-se: B · C = 0 · 0 = 0.\n3. Em seguida calcula-se: A + 0 = 1 + 0 = 1.\nPortanto, S = 1.",
+    "examTip": "Ordem de precedência booleana: 1º NOT (inversor/barra), 2º AND (·), 3º OR (+). Se a questão quisesse que somasse primeiro, deveria escrever (A + B) · C.",
+    "concept": "Álgebra Booleana e Circuitos Lógicos"
+  },
+  {
+    "id": "q22",
+    "themeId": "mod5",
+    "themeName": "Módulo 5: Cálculo de Predicados",
+    "title": "Negação de Proposições Quantificadas",
+    "statement": "No universo de todos os aldeões de uma determinada aldeia, seja D(x) o predicado 'x dorme a sesta'. A proposição ¬∀x ¬D(x) é logicamente equivalente a qual afirmação?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Nenhum aldeão dorme a sesta."
+      },
+      {
+        "letter": "B",
+        "text": "Pelo menos um aldeão dorme a sesta."
+      },
+      {
+        "letter": "C",
+        "text": "Todos os aldeões dormem a sesta."
+      },
+      {
+        "letter": "D",
+        "text": "Exatamente um aldeão dorme a sesta."
+      }
+    ],
+    "correct": "B",
+    "explanation": "Aplicando as regras de negação de quantificadores:\n1. A negação do quantificador universal universaliza um existencial: ¬∀x P(x) ≡ ∃x ¬P(x).\n2. Substituindo P(x) por ¬D(x):\n ¬∀x ¬D(x) ≡ ∃x ¬(¬D(x)).\n3. Pela eliminação da dupla negação (¬¬D(x) ≡ D(x)):\n ∃x D(x).\n4. Em linguagem natural, ∃x D(x) significa: 'Existe pelo menos um aldeão que dorme a sesta'.",
+    "examTip": "Negação de quantificadores: 'Não é todo mundo que não faz' significa 'Existe alguém que faz'. O quantificador existencial ∃ garante 'pelo menos um', não necessariamente 'exatamente um' nem 'todos'.",
+    "concept": "Quantificadores e Equivalência de Negação"
+  },
+  {
+    "id": "q23",
+    "themeId": "mod5",
+    "themeName": "Módulo 5: Cálculo de Predicados",
+    "title": "Variáveis Livres vs. Ligadas e Ordem de Quantificadores",
+    "statement": "Julgue as seguintes afirmações sobre cálculo de predicados:\nI. Na fórmula aberta ∃x (x + y < 5), a variável x é ligada e a variável y é livre.\nII. No universo dos números inteiros ℤ, a sentença ∀x ∃y (x < y) é verdadeira.\nIII. No universo dos números inteiros ℤ, a sentença ∃y ∀x (x < y) é verdadeira.\nEstão corretas apenas as afirmações:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Somente I"
+      },
+      {
+        "letter": "B",
+        "text": "Somente II"
+      },
+      {
+        "letter": "C",
+        "text": "Somente I e II"
+      },
+      {
+        "letter": "D",
+        "text": "I, II e III"
+      }
+    ],
+    "correct": "C",
+    "explanation": "Análise minuciosa de cada item:\n- I. Verdadeira: O quantificador ∃x vincula a variável x; a variável y não está sob o escopo de nenhum quantificador, sendo, portanto, livre.\n- II. Verdadeira: Afirma que 'para qualquer inteiro x, existe um inteiro y maior do que x'. Basta escolher, por exemplo, y = x + 1 para cada x dado.\n- III. Falsa: Afirma que 'existe um único inteiro fixo y que é estritamente maior do que TODOS os inteiros x do universo'. Isso é manifestamente falso, pois ℤ não possui limite superior (se escolhermos x = y, temos x < y falso).",
+    "examTip": "A ordem dos quantificadores importa dramaticamente! ∀x ∃y significa que o y pode depender do x escolhido. Já ∃y ∀x exige que o MESMO y funcione para todos os x simultaneamente.",
+    "concept": "Escopo de Variáveis e Ordem de Quantificadores"
+  },
+  {
+    "id": "q24",
+    "themeId": "mod5",
+    "themeName": "Módulo 5: Cálculo de Predicados",
+    "title": "Conjunto-Verdade de Sentenças Abertas com Disjunção",
+    "statement": "No universo dos números reais ℝ, considere as sentenças abertas:\np(x): x² - 6x + 5 = 0\nq(x): x² - 13x + 36 = 0\nO conjunto-verdade da sentença composta p(x) ∨ q(x) é dado por:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "{1; 4; 5; 9}"
+      },
+      {
+        "letter": "B",
+        "text": "{1; 5}"
+      },
+      {
+        "letter": "C",
+        "text": "{4; 9}"
+      },
+      {
+        "letter": "D",
+        "text": "∅"
+      }
+    ],
+    "correct": "A",
+    "explanation": "1. Conjunto-verdade Vₚ da sentença p(x):\n x² - 6x + 5 = 0 ⇒ (x - 1)(x - 5) = 0 ⇒ Vₚ = {1, 5}.\n2. Conjunto-verdade V_q da sentença q(x):\n x² - 13x + 36 = 0 ⇒ (x - 4)(x - 9) = 0 ⇒ V_q = {4, 9}.\n3. Operação lógica entre as sentenças:\n A disjunção lógica ∨ corresponde à UNIÃO dos conjuntos-verdade:\n V_{p ∨ q} = Vₚ ∪ V_q = {1, 5} ∪ {4, 9} = {1, 4, 5, 9}.\nSe a operação fosse a conjunção ∧, o resultado seria a interseção {1, 5} ∩ {4, 9} = ∅.",
+    "examTip": "Conexão fundamental entre Lógica e Teoria dos Conjuntos:\n- Disjunção (p ∨ q) ⇔ União (Vₚ ∪ V_q)\n- Conjunção (p ∧ q) ⇔ Interseção (Vₚ ∩ V_q)\n- Negação (¬p) ⇔ Complementar (U - Vₚ).",
+    "concept": "Conjuntos-Verdade e Operações Lógicas"
+  },
+  {
+    "id": "q25",
+    "themeId": "mod5",
+    "themeName": "Módulo 5: Cálculo de Predicados",
+    "title": "Prolog: Sintaxe de Fatos e Sistemas Baseados em Conhecimento",
+    "statement": "Na programação em lógica (Prolog), como deve ser redigido um fato para expressar que 'carlos é pai de mario' e a qual categoria de sistema especialista pertence a tarefa de 'deduzir conclusões ou falhas a partir de sintomas observados'?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Pai(carlos, mario). e Monitoramento"
+      },
+      {
+        "letter": "B",
+        "text": "pai(Carlos, Mario). e Projeto"
+      },
+      {
+        "letter": "C",
+        "text": "pai(carlos, Mario). e Predição"
+      },
+      {
+        "letter": "D",
+        "text": "pai(carlos, mario). e Diagnóstico"
+      }
+    ],
+    "correct": "D",
+    "explanation": "1. Sintaxe em Prolog:\n - Predicados e constantes/átomos iniciam obrigatoriamente com letras MINÚSCULAS: 'pai(carlos, mario).'\n - Letras maiúsculas (como X, Carlos) são reservadas para VARIÁVEIS.\n2. Categorias de Sistemas Especialistas do material:\n - Diagnóstico: infere mau funcionamento ou conclusões a partir de dados observados (sintomas).\n - Predição: infere consequências prováveis a partir de dados temporais/históricos.\n - Monitoramento: compara dados contínuos com limites operacionais.\n - Projeto: desenvolve configurações sob restrições especificadas.",
+    "examTip": "Em Prolog: nomes com letra minúscula = átomos (constantes). Nomes com letra MAIÚSCULA = variáveis. Não confunda diagnóstico (explicar sintomas observados) com monitoramento (vigiar dados em tempo real).",
+    "concept": "Programação em Lógica (Prolog) e Sistemas Especialistas"
+  },
+  {
+    "id": "q26",
+    "themeId": "mod5",
+    "themeName": "Módulo 5: Cálculo de Predicados",
+    "title": "Quantificador com Condição Restritiva",
+    "statement": "No universo dos números reais ℝ, considere a afirmação: 'Todo número real diferente de zero possui um inverso multiplicativo'. A formalização simbólica correta no cálculo de predicados é:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "∀x (x ≠ 0 ∧ ∃y (x · y = 1))"
+      },
+      {
+        "letter": "B",
+        "text": "∀x (x ≠ 0 → ∃y (x · y = 1))"
+      },
+      {
+        "letter": "C",
+        "text": "∃x (x ≠ 0 → ∀y (x · y = 1))"
+      },
+      {
+        "letter": "D",
+        "text": "∀x ∃y (x · y = 1)"
+      }
+    ],
+    "correct": "B",
+    "explanation": "A estrutura de uma sentença universal restrita 'Todo A tem a propriedade B' é sempre traduzida por uma condicional sob o quantificador universal:\n∀x (A(x) → B(x)).\n- A(x): x ≠ 0\n- B(x): existe um número y tal que x · y = 1, ou seja, ∃y (x · y = 1).\nLogo: ∀x (x ≠ 0 → ∃y (x · y = 1)).\nSe usássemos o conectivo '∧' (como na alternativa A), afirmaríamos falsamente que TODOS os números reais são diferentes de zero, o que é falso para x = 0.",
+    "examTip": "Regra canônica de tradução:\n- Universal com restrição: ∀x (P(x) → Q(x)) (usa CONDICIONAL);\n- Existencial com restrição: ∃x (P(x) ∧ Q(x)) (usa CONJUNÇÃO).",
+    "concept": "Formalização de Linguagem Natural no Cálculo de Predicados"
+  },
+  {
+    "id": "q27",
+    "themeId": "mod6",
+    "themeName": "Módulo 6: Métodos de Demonstração",
+    "title": "Demonstração Trivial vs. Demonstração por Vacuidade",
+    "statement": "No universo dos números reais ℝ, considere as duas implicações lógicas:\nI. 'Se x < 0, então x² + 1 > 0.'\nII. 'Se x² < 0, então x = 7.'\nOs métodos de demonstração mais imediatos para provar I e II são, respectivamente:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Prova por Vacuidade e Prova Trivial"
+      },
+      {
+        "letter": "B",
+        "text": "Prova Direta e Indução Finita"
+      },
+      {
+        "letter": "C",
+        "text": "Prova Trivial e Prova por Vacuidade"
+      },
+      {
+        "letter": "D",
+        "text": "Prova por Absurdo e Indução Forte"
+      }
+    ],
+    "correct": "C",
+    "explanation": "Ambas as demonstrações exploram casos extremos da tabela-verdade do condicional p → q:\n1. Em I (p: x < 0, q: x² + 1 > 0):\n Para todo x real, x² ≥ 0, logo x² + 1 ≥ 1 > 0 é SEMPRE VERDADEIRO (a tese q é sempre V independentemente de x). Quando a tese q é verdadeira por si só, a implicação é demonstrada de forma TRIVIAL.\n2. Em II (p: x² < 0, q: x = 7):\n No universo dos reais, não existe nenhum número cujo quadrado seja negativo (x² ≥ 0 para todo x ∈ ℝ). Logo, a hipótese p é SEMPRE FALSA. Pela tabela do condicional, quando a premissa é Falsa (F → q), a proposição condicional é automaticamente VERDADEIRA por VACUIDADE.",
+    "examTip": "Não confunda:\n- Prova Trivial: a tese T é sempre Verdadeira (p → V ≡ V);\n- Prova por Vacuidade: a hipótese H é sempre Falsa (F → q ≡ V).",
+    "concept": "Métodos Especiais de Demonstração: Trivial e Vacuidade"
+  },
+  {
+    "id": "q28",
+    "themeId": "mod6",
+    "themeName": "Módulo 6: Métodos de Demonstração",
+    "title": "Demonstração por Contraposição (Contrapositiva)",
+    "statement": "Deseja-se provar o teorema: 'Se 3n + 2 é um número ímpar, então n é um número ímpar' (onde n ∈ ℤ). Ao optar pelo método de demonstração por contraposição, qual é a estrutura lógica assumida como hipótese e o que se deve deduzir como tese?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Supor que 3n + 2 é ímpar e deduzir que n é par."
+      },
+      {
+        "letter": "B",
+        "text": "Supor que n é par e deduzir que 3n + 2 é par."
+      },
+      {
+        "letter": "C",
+        "text": "Supor que n é ímpar e deduzir que 3n + 2 é ímpar."
+      },
+      {
+        "letter": "D",
+        "text": "Supor que 3n + 2 é par e n é ímpar para obter uma contradição."
+      }
+    ],
+    "correct": "B",
+    "explanation": "O teorema tem a forma H → T:\n- Hipótese H: '3n + 2 é ímpar'\n- Tese T: 'n é ímpar'\nNa prova por CONTRAPOSIÇÃO (contrapositiva), provamos a implicação equivalente ¬T → ¬H:\n- Negação da tese (¬T): 'n é par' (assumida como ponto de partida / nova hipótese);\n- Negação da hipótese (¬H): '3n + 2 é par' (conclusão a ser deduzida).\nDesenvolvimento: se n é par, n = 2k (k ∈ ℤ). Então 3n + 2 = 3(2k) + 2 = 6k + 2 = 2(3k + 1) = 2m (par), provando perfeitamente o teorema.",
+    "examTip": "A contraposição é extraordinariamente útil quando a tese original é simples (como 'n é ímpar') e a hipótese original é complexa ('3n + 2 é ímpar'). Trabalhar partindo de n = 2k é muito mais fácil do que tentar isolar n a partir de 3n + 2 = 2k + 1.",
+    "concept": "Demonstração por Contraposição"
+  },
+  {
+    "id": "q29",
+    "themeId": "mod6",
+    "themeName": "Módulo 6: Métodos de Demonstração",
+    "title": "Demonstração por Redução ao Absurdo (Contradição)",
+    "statement": "Qual afirmativa descreve com exatidão o procedimento metodológico de uma demonstração por Redução ao Absurdo (reductio ad absurdum) de um teorema H → T?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Assume-se H como verdadeira e T como verdadeira para verificar a validade."
+      },
+      {
+        "letter": "B",
+        "text": "Assume-se simultaneamente a hipótese H verdadeira e a negação da tese ¬T verdadeira, deduzindo uma contradição lógica da forma C ∧ ¬C."
+      },
+      {
+        "letter": "C",
+        "text": "Testa-se um conjunto exaustivo de exemplos numéricos para verificar se a tese falha em algum ponto."
+      },
+      {
+        "letter": "D",
+        "text": "Nega-se a hipótese ¬H para demonstrar que a tese T torna-se indefensável."
+      }
+    ],
+    "correct": "B",
+    "explanation": "Na prova por redução ao absurdo (contradição):\n1. Deseja-se provar H → T.\n2. Assume-se o oposto da verdade do teorema, ou seja, que a hipótese ocorre sem que a tese seja cumprida: H ∧ ¬T (suposição provisória de falsidade).\n3. A partir de H e ¬T, por deduções rigorosas passo a passo, chega-se a uma afirmação logicamente impossível (uma contradição, como 0 = 1, ou um número ser par e ímpar simultaneamente: C ∧ ¬C).\n4. Como a matemática não admite contradições, a suposição inicial de que ¬T poderia ocorrer deve ser descartada, concluindo-se obrigatoriamente que T é verdadeira.",
+    "examTip": "Exemplo clássico: prova de que √2 é irracional. Supõe-se por absurdo que √2 é racional (a/b irredutível) e deduz-se que a e b são ambos pares, contradizendo a irredutibilidade da fração.",
+    "concept": "Demonstração por Redução ao Absurdo"
+  },
+  {
+    "id": "q30",
+    "themeId": "mod6",
+    "themeName": "Módulo 6: Métodos de Demonstração",
+    "title": "Princípio da Indução Finita (Passo Indutivo)",
+    "statement": "Deseja-se provar por indução matemática que a soma dos primeiros n inteiros positivos é 1 + 2 + ... + n = n(n + 1)/2 para todo n ≥ 1. Assumindo a hipótese indutiva P(k): 1 + 2 + ... + k = k(k + 1)/2, qual expressão algébrica demonstra a validade do passo indutivo P(k + 1)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "k(k + 2) / 2"
+      },
+      {
+        "letter": "B",
+        "text": "(k + 1)(k + 2) / 2"
+      },
+      {
+        "letter": "C",
+        "text": "(k + 1)² / 2"
+      },
+      {
+        "letter": "D",
+        "text": "k(k + 1) / 2 + k"
+      }
+    ],
+    "correct": "B",
+    "explanation": "Queremos deduzir P(k + 1), que afirma que a soma até o termo k + 1 deve resultar na fórmula avaliada em k + 1: [(k + 1)((k + 1) + 1)] / 2 = (k + 1)(k + 2) / 2.\nDemonstração passo a passo:\n1 + 2 + ... + k + (k + 1) = [1 + 2 + ... + k] + (k + 1)\nSubstituindo a hipótese de indução no bloco entre colchetes:\n= [k(k + 1) / 2] + (k + 1)\nColocando sobre o mesmo denominador comum 2:\n= [k(k + 1) + 2(k + 1)] / 2\nColocando o fator comum (k + 1) em evidência:\n= (k + 1)(k + 2) / 2.\nComo chegamos exatamente à fórmula de P(k + 1), o passo indutivo está perfeitamente demonstrado.",
+    "examTip": "Passos do PIF:\n1. Base da Indução: provar para n = 1.\n2. Hipótese de Indução: assumir válido para n = k.\n3. Passo Indutivo: somar o termo seguinte (k + 1) e manipular algebricamente até obter a expressão com (k + 1).",
+    "concept": "Princípio da Indução Finita (PIF)"
+  },
+  {
+    "id": "q31",
+    "themeId": "mod6",
+    "themeName": "Módulo 6: Métodos de Demonstração",
+    "title": "Refutação de Proposições Universais por Contraexemplo",
+    "statement": "Considere a afirmação matemática: 'Para todo número inteiro positivo n, o número n² + n + 41 é um número primo'. Para refutar conclusivamente a universalidade dessa afirmação, qual é o método apropriado e qual valor de n serve como contraexemplo?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Prova por Vacuidade com n = 1"
+      },
+      {
+        "letter": "B",
+        "text": "Contraexemplo com n = 41"
+      },
+      {
+        "letter": "C",
+        "text": "Redução ao absurdo com n = 40"
+      },
+      {
+        "letter": "D",
+        "text": "Indução forte com n = 3"
+      }
+    ],
+    "correct": "B",
+    "explanation": "Para refutar uma declaração universal do tipo '∀x P(x)', NÃO é necessário refazer toda a teoria: basta encontrar UM ÚNICO elemento do universo onde a propriedade falhe (um CONTRAEXEMPLO):\n- Para n = 41:\n n² + n + 41 = 41² + 41 + 41 = 41 · (41 + 1 + 1) = 41 · 43.\n Como 41 · 43 é divisível por 41 e por 43, o resultado é um número composto (NÃO é primo).\nPortanto, n = 41 é um contraexemplo definitivo que refuta a proposição.",
+    "examTip": "Para provar que algo vale para todos (∀), precisamos de uma demonstração formal geral. Para provar que NÃO vale para todos (¬∀), basta um simples contraexemplo!",
+    "concept": "Contraexemplo e Refutação de Quantificador Universal"
+  },
+  {
+    "id": "q32",
+    "themeId": "mod7",
+    "themeName": "Módulo 7: Prática Integrada",
+    "title": "Soma de Conjuntos Discretos e Intervalares",
+    "statement": "Sejam os conjuntos X = {0; 2} e Y = [1; 2] em ℝ. O conjunto soma X + Y, definido por {x + y | x ∈ X e y ∈ Y}, é igual a:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "[1; 4]"
+      },
+      {
+        "letter": "B",
+        "text": "[1; 2] ∪ [3; 4]"
+      },
+      {
+        "letter": "C",
+        "text": "[0; 4]"
+      },
+      {
+        "letter": "D",
+        "text": "[1; 2]"
+      }
+    ],
+    "correct": "B",
+    "explanation": "Calculamos a soma de cada elemento discreto de X com todos os elementos do intervalo contínuo Y:\n1. Para x = 0:\n 0 + Y = {0 + y | y ∈ [1; 2]} = [1; 2].\n2. Para x = 2:\n 2 + Y = {2 + y | y ∈ [1; 2]} = [2 + 1; 2 + 2] = [3; 4].\nO conjunto de todas as somas possíveis é a união dos dois resultados:\n[1; 2] ∪ [3; 4].\nObserve que valores no intervalo aberto (2; 3) jamais podem ser formados por essa soma!",
+    "examTip": "A soma de conjuntos NÃO é a soma dos limites extremos! Somar {0, 2} com [1, 2] deixa um 'buraco' entre 2 e 3. Jamais marque [1; 4] sem testar se o valor 2,5 pode ser obtido.",
+    "concept": "Operações com Conjuntos Contínuos e Discretos"
+  },
+  {
+    "id": "q33",
+    "themeId": "mod7",
+    "themeName": "Módulo 7: Prática Integrada",
+    "title": "Diagrama de Venn com Três Conjuntos",
+    "statement": "Em uma pesquisa com 200 universitários que estudam pelo menos um de três idiomas (Inglês, Espanhol e Francês), apurou-se que:\n- As interseções de pares de idiomas contêm 50, 60 e 70 estudantes;\n- 20 estudantes cursam simultaneamente os três idiomas.\nQuantos estudantes cursam APENAS UM único idioma?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "40"
+      },
+      {
+        "letter": "B",
+        "text": "60"
+      },
+      {
+        "letter": "C",
+        "text": "80"
+      },
+      {
+        "letter": "D",
+        "text": "100"
+      }
+    ],
+    "correct": "B",
+    "explanation": "Vamos decompor as regiões do diagrama de Venn:\n1. Interseção tripla (região central): 20 estudantes.\n2. Regiões de EXATAMENTE DOIS idiomas (subtraindo a tripla de cada par):\n - Par 1: 50 - 20 = 30 estudantes;\n - Par 2: 60 - 20 = 40 estudantes;\n - Par 3: 70 - 20 = 50 estudantes;\n Total que cursa exatamente dois idiomas = 30 + 40 + 50 = 120 estudantes.\n3. Estudantes que cursam mais de um idioma (exatamente dois + exatamente três):\n 120 + 20 = 140 estudantes.\n4. Como todos os 200 estudam pelo menos um idioma, os que estudam APENAS UM idioma são:\n 200 - 140 = 60 estudantes.",
+    "examTip": "No diagrama de Venn de 3 conjuntos, desenhe sempre de dentro para fora: comece pela interseção dos três e desconte-a de cada interseção de pares para achar quem estuda 'apenas dois'.",
+    "concept": "Princípio da Inclusão-Exclusão e Diagrama de Venn"
+  },
+  {
+    "id": "q34",
+    "themeId": "mod7",
+    "themeName": "Módulo 7: Prática Integrada",
+    "title": "Combinação com Repetição (Bolinhas e Traços)",
+    "statement": "Uma doceria oferece 3 marcas distintas de chocolates. De quantas maneiras diferentes um cliente pode comprar 8 chocolates, podendo repetir marcas?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "24"
+      },
+      {
+        "letter": "B",
+        "text": "45"
+      },
+      {
+        "letter": "C",
+        "text": "56"
+      },
+      {
+        "letter": "D",
+        "text": "120"
+      }
+    ],
+    "correct": "B",
+    "explanation": "Trata-se de uma Combinação com Repetição (CR) de p = 8 itens escolhidos entre n = 3 tipos:\nFórmula: CR(n, p) = C(n + p - 1, p).\nAplicando os valores:\nCR(3, 8) = C(3 + 8 - 1, 8) = C(10, 8).\nPela propriedade dos números binomiais complementares: C(10, 8) = C(10, 2) = (10 · 9) / (2 · 1) = 45 maneiras.",
+    "examTip": "Método dos paus e bolas: para separar 8 chocolates entre 3 marcas, precisamos de 2 separadores (|). São 8 bolinhas (o) e 2 barras (|), totalizando 10 posições: C(10, 2) = C(10, 8) = 45.",
+    "concept": "Combinação com Repetição"
+  },
+  {
+    "id": "q35",
+    "themeId": "mod7",
+    "themeName": "Módulo 7: Prática Integrada",
+    "title": "Decisão Lógica em Modelagem de Sistemas",
+    "statement": "Considere as seguintes assertivas sobre modelagem de software:\nAsserção I: Um programa provavelmente correto sempre produz as saídas exatas para qualquer entrada de dados.\nPORQUE\nAsserção II: A verificação formal de programas baseada em cálculo de predicados e pré/pós-condições de Hoare estabelece demonstrações matemáticas sobre a correção do código.\nA respeito dessas asserções, assinale a opção correta:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "As asserções I e II são verdadeiras, e a II é uma justificativa correta da I."
+      },
+      {
+        "letter": "B",
+        "text": "As asserções I e II são verdadeiras, mas a II não é justificativa da I."
+      },
+      {
+        "letter": "C",
+        "text": "A asserção I é falsa, e a asserção II é verdadeira."
+      },
+      {
+        "letter": "D",
+        "text": "A asserção I é verdadeira, e a asserção II é falsa."
+      }
+    ],
+    "correct": "C",
+    "explanation": "1. Análise da Asserção I: FALSA. Um programa 'provavelmente correto' (probabilisticamente testado) NÃO garante saídas certas para todas as entradas; ele pode conter bugs em casos limites não testados. Apenas um programa 'formalmente provado correto' possui essa garantia.\n2. Análise da Asserção II: VERDADEIRA. Métodos formais e lógica de Hoare usam cálculo de predicados (invariantes, pré e pós-condições) para produzir provas dedutivas sobre o comportamento do programa.\nPortanto, a asserção I é falsa e a asserção II é verdadeira.",
+    "examTip": "Atenção com palavras absolutas como 'sempre', 'qualquer' e 'provavelmente'. 'Provavelmente correto' e 'formalmente demonstrado' são conceitos opostos em ciência da computação.",
+    "concept": "Lógica Aplicada à Verificação de Algoritmos"
+  },
+  {
+    "id": "q36",
+    "themeId": "mod7",
+    "themeName": "Módulo 7: Prática Integrada",
+    "title": "Permutação com Repetição (Anagramas)",
+    "statement": "Quantos anagramas distintos podem ser formados com as letras da palavra ARRANJO?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "720"
+      },
+      {
+        "letter": "B",
+        "text": "1.260"
+      },
+      {
+        "letter": "C",
+        "text": "2.520"
+      },
+      {
+        "letter": "D",
+        "text": "5.040"
+      }
+    ],
+    "correct": "B",
+    "explanation": "A palavra ARRANJO possui n = 7 letras no total.\nIdentificação de letras repetidas:\n- Letra A aparece 2 vezes;\n- Letra R aparece 2 vezes;\n- Letras N, J, O aparecem 1 vez cada.\nA fórmula de permutação com repetição é:\nPₙ^(a, b, ...) = n! / (a! · b! ...)\nP₇^(2, 2) = 7! / (2! · 2!) = 5.040 / (2 · 2) = 5.040 / 4 = 1.260 anagramas.",
+    "examTip": "Sempre divida pelo fatorial da quantidade de cada letra repetida. Não subtraia nem divida sem fatorial!",
+    "concept": "Permutação com Repetição"
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "id": "seg_mod1_q1",
+    "themeId": "mod1",
+    "themeName": "Módulo 1: Princípios e Ciclo de Vida da Informação",
+    "enunciado": "(2019 - UniFil - Adaptada) A segurança da informação está relacionada à proteção de um conjunto de dados no sentido de preservar os valores que possuem para uma organização. A propriedade que garante que a informação seja acessível e utilizável sob demanda por uma entidade autorizada refere-se ao pilar da:",
+    "options": [
+      "Confidencialidade",
+      "Disponibilidade",
+      "Integridade",
+      "Autenticidade",
+      "Irretratabilidade"
+    ],
+    "correctIndex": 1,
+    "explanation": "A Disponibilidade é a propriedade que garante que a informação e os sistemas estejam prontamente acessíveis e utilizáveis sempre que um usuário ou processo legítimo e autorizado demandar seu acesso."
+  },
+  {
+    "id": "seg_mod1_q2",
+    "themeId": "mod1",
+    "themeName": "Módulo 1: Princípios e Ciclo de Vida da Informação",
+    "enunciado": "A garantia de que o emissor de uma mensagem ou realizador de uma transação digital não possa negar falsamente a autoria de sua ação é fundamentada pelo princípio da:",
+    "options": [
+      "Confidencialidade",
+      "Elasticidade",
+      "Não-repúdio (Irretratabilidade)",
+      "Disponibilidade",
+      "Interoperabilidade"
+    ],
+    "correctIndex": 2,
+    "explanation": "O Não-repúdio (ou irretratabilidade) impede que uma entidade negue ter sido a autora de uma determinada mensagem ou transação, sendo normalmente garantido por assinaturas digitais com chaves assimétricas privadas."
+  },
+  {
+    "id": "seg_mod1_q3",
+    "themeId": "mod1",
+    "themeName": "Módulo 1: Princípios e Ciclo de Vida da Informação",
+    "enunciado": "No ciclo de vida da informação, qual método de descarte é considerado seguro e adequado para inutilizar permanentemente fitas magnéticas e discos rígidos de servidores que serão descartados?",
+    "options": [
+      "Deleção simples de arquivos para a lixeira do sistema operacional.",
+      "Formatação rápida do sistema de arquivos.",
+      "Desmagnetização (Degaussing) de alta intensidade ou destruição física mecânica.",
+      "Renomeação das pastas para extensões desconhecidas.",
+      "Desconexão temporária do cabo de rede."
+    ],
+    "correctIndex": 2,
+    "explanation": "A formatação ou exclusão simples não remove os dados gravados nos pratos magnéticos. O descarte seguro exige desmagnetização (degaussing) ou trituração física dos dispositivos."
+  },
+  {
+    "id": "seg_mod1_q4",
+    "themeId": "mod1",
+    "themeName": "Módulo 1: Princípios e Ciclo de Vida da Informação",
+    "enunciado": "Um sistema exige para o login a inserção de uma senha secreta e a confirmação através da leitura biométrica da digital do colaborador. Esse mecanismo de segurança é um exemplo genuíno de:",
+    "options": [
+      "Autenticação monofatorial repetida.",
+      "Autenticação Multifator (MFA) combinando 'algo que você sabe' com 'algo que você é'.",
+      "Controle de acesso discricionário fraco.",
+      "Auditoria passiva sem autenticação.",
+      "Identificação anônima criptográfica."
+    ],
+    "correctIndex": 1,
+    "explanation": "O MFA verdadeiro exige a combinação de pelo menos dois fatores de categorias conceituais distintas: neste caso, algo que você sabe (senha) somado a algo que você é (biometria)."
+  },
+  {
+    "id": "seg_mod2_q1",
+    "themeId": "mod2",
+    "themeName": "Módulo 2: Ameaças e Vulnerabilidades",
+    "enunciado": "(IADES – 2019 – CRF-TO – Analista de TI) '[...] é uma fraqueza de um ativo ou grupo de ativos que pode ser explorada por uma ou mais ameaças' (HINTZBERGEN, 2018). A definição apresentada refere-se tecnicamente ao conceito de:",
+    "options": [
+      "Exposição",
+      "Salvaguarda",
+      "Vulnerabilidade",
+      "Risco",
+      "Impacto"
+    ],
+    "correctIndex": 2,
+    "explanation": "A vulnerabilidade é a falha, fraqueza ou brecha de segurança inerente ao sistema que pode ser aproveitada por uma ameaça para quebrar a segurança dos ativos."
+  },
+  {
+    "id": "seg_mod2_q2",
+    "themeId": "mod2",
+    "themeName": "Módulo 2: Ameaças e Vulnerabilidades",
+    "enunciado": "(CESPE – Adaptada) Qual tipo de código malicioso se caracteriza por se apresentar como um programa aparentemente útil ou inofensivo (como um jogo ou ferramenta de sistema), mas que secretamente executa funções maliciosas em segundo plano, como a abertura de portas de comunicação?",
+    "options": [
+      "Cavalo de Troia (Trojan Horse)",
+      "Worm puro de rede",
+      "Macro de planilha legítima",
+      "Patch de segurança do sistema operacional",
+      "Driver de vídeo assinado"
+    ],
+    "correctIndex": 0,
+    "explanation": "O Cavalo de Troia (Trojan) disfarça-se sob uma funcionalidade legítima para induzir o usuário a executá-lo, instalando malwares ocultos e abrindo portas dos fundos (backdoors)."
+  },
+  {
+    "id": "seg_mod2_q3",
+    "themeId": "mod2",
+    "themeName": "Módulo 2: Ameaças e Vulnerabilidades",
+    "enunciado": "Qual a diferença fundamental entre o comportamento de um Vírus de computador e o de um Worm?",
+    "options": [
+      "O vírus não causa danos ao sistema operacional.",
+      "O vírus necessita de um arquivo hospedeiro e da intervenção humana para ser executado e propagado; já o worm é um programa independente que se propaga automaticamente pela rede.",
+      "O worm só funciona se o usuário clicar duas vezes sobre seu ícone.",
+      "O vírus só ataca computadores com Linux.",
+      "Ambos possuem o mesmo código e não possuem diferenças conceituais."
+    ],
+    "correctIndex": 1,
+    "explanation": "Vírus infectam arquivos hospedeiros e requerem ação humana; worms são autônomos, autorreplicantes e exploram ativamente falhas de rede para invadir novos nós sem auxílio humano."
+  },
+  {
+    "id": "seg_mod3_q1",
+    "themeId": "mod3",
+    "themeName": "Módulo 3: Normas de Segurança (ISO/IEC 27000)",
+    "enunciado": "Em relação às normas internacionais de segurança da informação, assinale a afirmação correta sobre a relação entre a ISO/IEC 27001 e a ISO/IEC 27002:",
+    "options": [
+      "A ISO/IEC 27002 é a norma de requisitos auditável e certificável, enquanto a 27001 é apenas um guia informativo.",
+      "A ISO/IEC 27001 define os requisitos formais auditáveis para um SGSI, enquanto a ISO/IEC 27002 fornece o código de prática e as diretrizes detalhadas de implementação dos controles.",
+      "Ambas foram revogadas e substituídas pela LGPD.",
+      "A ISO/IEC 27001 aplica-se exclusivamente a equipamentos de hardware de datacenters.",
+      "A ISO/IEC 27002 proíbe o uso de criptografia na internet."
+    ],
+    "correctIndex": 1,
+    "explanation": "A ISO 27001 é a norma que estabelece os requisitos formais do SGSI (gerando a certificação da empresa), enquanto a ISO 27002 descreve como implementar os controles de segurança recomendados."
+  },
+  {
+    "id": "seg_mod3_q2",
+    "themeId": "mod3",
+    "themeName": "Módulo 3: Normas de Segurança (ISO/IEC 27000)",
+    "enunciado": "Qual documento formal da ISO/IEC 27001 relaciona detalhadamente todos os controles de segurança da informação selecionados pela empresa, documentando as justificativas para inclusões e também para exclusões de controles?",
+    "options": [
+      "Manual de Recursos Humanos",
+      "Declaração de Aplicabilidade (Statement of Applicability - SoA)",
+      "Nota Fiscal de Aquisição de Servidores",
+      "Contrato Social da Organização",
+      "Certificado Digital SSL"
+    ],
+    "correctIndex": 1,
+    "explanation": "A Declaração de Aplicabilidade (SoA) é obrigatória para o SGSI, registrando com clareza quais controles da norma foram adotados e a fundamentação para eventuais controles descartados."
+  },
+  {
+    "id": "seg_mod3_q3",
+    "themeId": "mod3",
+    "themeName": "Módulo 3: Normas de Segurança (ISO/IEC 27000)",
+    "enunciado": "Na versão atualizada da norma ISO/IEC 27002:2022, os 93 controles de segurança foram consolidados e distribuídos em quantos temas essenciais?",
+    "options": [
+      "Em 2 temas (Software e Hardware).",
+      "Em 4 temas (Organizacional, Pessoas, Físico e Tecnológico).",
+      "Em 14 temas com 114 controles.",
+      "Em 1 único tema genérico.",
+      "Em 20 seções independentes."
+    ],
+    "correctIndex": 1,
+    "explanation": "A versão de 2022 da ISO 27002 simplificou a taxonomia em 4 temas modernos: Organizacional (37 controles), Pessoas (8 controles), Físico (14 controles) e Tecnológico (34 controles)."
+  },
+  {
+    "id": "seg_mod4_q1",
+    "themeId": "mod4",
+    "themeName": "Módulo 4: Boas Práticas em Segurança",
+    "enunciado": "Um funcionário de uma organização resolveu adotar o número de sua matrícula corporativa como senha de acesso ao sistema de pagamentos. Qual postura deve ser adotada pela organização para coibir essa conduta?",
+    "options": [
+      "A organização não deve interferir, pois a senha é de foro íntimo do colaborador.",
+      "A organização deve apenas sugerir verbalmente que ele troque se achar conveniente.",
+      "A organização deve implementar regras técnicas automáticas de política de senhas que bloqueiem ativamente o uso de dados pessoais óbvios, exigindo comprimento mínimo e complexidade.",
+      "A organização deve demitir o funcionário imediatamente sem aviso prévio.",
+      "A organização deve remover a exigência de senhas para todos os sistemas."
+    ],
+    "correctIndex": 2,
+    "explanation": "A segurança eficaz não depende apenas de recomendações; deve ser imposta pelo sistema com validações automatizadas de complexidade e bloqueio de informações previsíveis."
+  },
+  {
+    "id": "seg_mod4_q2",
+    "themeId": "mod4",
+    "themeName": "Módulo 4: Boas Práticas em Segurança",
+    "enunciado": "Dentre os itens listados a seguir, selecione a alternativa que apresenta todos os elementos essenciais contidos em um Certificado Digital padrão ICP:",
+    "options": [
+      "Nome do titular, número de série exclusivo, data de expiração/validade, autoridade emissora e chave pública do titular.",
+      "Senha secreta do titular, chave privada do titular e saldo bancário.",
+      "Código-fonte do sistema operacional e foto do computador.",
+      "Endereço IP público dinâmico e histórico de navegação da internet.",
+      "Contrato de trabalho e holerite do funcionário."
+    ],
+    "correctIndex": 0,
+    "explanation": "Um certificado digital autentica a identidade e fornece a chave pública do titular, assinado pela Autoridade Certificadora; ele NUNCA contém a chave privada nem senhas do usuário."
+  },
+  {
+    "id": "seg_mod5_q1",
+    "themeId": "mod5",
+    "themeName": "Módulo 5: Gestão de Risco",
+    "enunciado": "Uma pessoa não autorizada conseguiu invadir fisicamente o data center de uma organização onde estão instalados os servidores centrais. Na terminologia da norma ISO/IEC 27005, a presença dessa pessoa não autorizada é classificada tecnicamente como:",
+    "options": [
+      "Impacto",
+      "Vulnerabilidade",
+      "Controle compensatório",
+      "Ameaça",
+      "Stakeholder legítimo"
+    ],
+    "correctIndex": 3,
+    "explanation": "A pessoa não autorizada (invasor em potencial) é o agente externo que pode explorar fragilidades; portanto, configura uma Ameaça à organização."
+  },
+  {
+    "id": "seg_mod5_q2",
+    "themeId": "mod5",
+    "themeName": "Módulo 5: Gestão de Risco",
+    "enunciado": "Uma empresa contratou uma apólice de seguro de proteção cibernética para cobrir despesas financeiras em caso de eventuais incidentes de vazamento de dados. Essa estratégia de tratamento de risco é classificada como:",
+    "options": [
+      "Mitigação do Risco",
+      "Transferência / Compartilhamento do Risco",
+      "Aceitação passiva do Risco",
+      "Evitação / Eliminação do Risco",
+      "Negação do Risco"
+    ],
+    "correctIndex": 1,
+    "explanation": "O seguro não impede o incidente, mas transfere o impacto financeiro para a seguradora, caracterizando a estratégia formal de Transferência ou Compartilhamento do Risco."
+  },
+  {
+    "id": "seg_mod6_q1",
+    "themeId": "mod6",
+    "themeName": "Módulo 6: Gestão de Continuidade do Negócio",
+    "enunciado": "Em um Plano de Continuidade de Negócios (PCN), a métrica que define o período máximo tolerável de perda de dados (medido pelo intervalo de tempo entre o último backup válido e o momento da parada) é denominada:",
+    "options": [
+      "RTO (Recovery Time Objective)",
+      "RPO (Recovery Point Objective)",
+      "MTBF (Mean Time Between Failures)",
+      "SLA (Service Level Agreement)",
+      "QoS (Quality of Service)"
+    ],
+    "correctIndex": 1,
+    "explanation": "O RPO (Objetivo de Ponto de Recuperação) mede o volume de dados perdidos em termos temporais retroativos; já o RTO mede o tempo para restabelecer os serviços operacionais."
+  },
+  {
+    "id": "seg_mod6_q2",
+    "themeId": "mod6",
+    "themeName": "Módulo 6: Gestão de Continuidade do Negócio",
+    "enunciado": "Qual tipo de site alternativo de contingência oferece o menor tempo de recuperação (minutos) após um desastre, mantendo servidores operacionais com dados sincronizados ativamente, porém com os maiores custos de manutenção?",
+    "options": [
+      "Cold Site",
+      "Warm Site",
+      "Hot Site",
+      "Arquivo Morto",
+      "Mídia Óptica Offline"
+    ],
+    "correctIndex": 2,
+    "explanation": "O Hot Site é um ambiente ativo e espelhado que permite a retomada quase instantânea das operações em caso de queda do data center primário."
+  }
+]

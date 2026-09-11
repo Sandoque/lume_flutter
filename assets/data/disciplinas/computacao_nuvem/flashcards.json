@@ -1,0 +1,116 @@
+[
+  {
+    "id": "fcₙuvem₁",
+    "tema": "Módulo 1",
+    "front": "O que define a característica de 'Autoatendimento sob Demanda' (NIST)?",
+    "back": "O usuário provisiona recursos computacionais (CPU, rede, disco) unilateralmente e de forma automática, sem necessidade de contato ou aprovação humana do provedor."
+  },
+  {
+    "id": "fcₙuvem₂",
+    "tema": "Módulo 1",
+    "front": "Qual a diferença essencial entre IaaS e PaaS?",
+    "back": "Em IaaS o cliente gerencia o Sistema Operacional, patches e runtime; em PaaS o provedor gerencia tudo até o runtime, e o cliente foca apenas no código da aplicação."
+  },
+  {
+    "id": "fcₙuvem₃",
+    "tema": "Módulo 1",
+    "front": "O que diferencia um Hipervisor Tipo 1 (Bare-Metal) de um Tipo 2 (Hosted)?",
+    "back": "O Tipo 1 executa diretamente sobre o hardware físico (ex: ESXi, Hyper-V, KVM), enquanto o Tipo 2 executa em cima de um sistema operacional existente (ex: VirtualBox)."
+  },
+  {
+    "id": "fcₙuvem₄",
+    "tema": "Módulo 1",
+    "front": "O que significa a transição de CapEx para OpEx na computação em nuvem?",
+    "back": "Substituição de grandes investimentos de capital fixo em hardware inicial (CapEx) por despesas operacionais variáveis pagas conforme o uso mensal (OpEx)."
+  },
+  {
+    "id": "fcₙuvem₅",
+    "tema": "Módulo 2",
+    "front": "Qual a diferença entre Escalabilidade Vertical (Scale-Up) e Horizontal (Scale-Out)?",
+    "back": "Vertical: aumenta recursos (RAM/CPU) em uma mesma máquina (limite físico). Horizontal: adiciona novas máquinas em paralelo (resiliência infinita sem downtime)."
+  },
+  {
+    "id": "fcₙuvem₆",
+    "tema": "Módulo 2",
+    "front": "O que representa o conceito de 'Stateless' em arquiteturas elásticas?",
+    "back": "Sistemas sem estado gravado em memória ou disco local; as sessões ficam em bancos de dados/caches centrais, permitindo destruir ou criar nós a qualquer momento."
+  },
+  {
+    "id": "fcₙuvem₇",
+    "tema": "Módulo 2",
+    "front": "Qual a disponibilidade anual de um sistema com SLA de 'Quatro Noves' (99,99%)?",
+    "back": "Permite no máximo aproximadamente 52,6 minutos de inatividade acumulada ao longo de um ano inteiro."
+  },
+  {
+    "id": "fcₙuvem₈",
+    "tema": "Módulo 3",
+    "front": "Qual a regra inegociável do Modelo de Responsabilidade Compartilhada?",
+    "back": "A segurança DA nuvem (hardware, física, hipervisor) é do provedor; a segurança NA nuvem (SO, firewall, credenciais) é do cliente. Os dados são SEMPRE do cliente."
+  },
+  {
+    "id": "fcₙuvem₉",
+    "tema": "Módulo 3",
+    "front": "O que é o Princípio do Menor Privilégio (PoLP)?",
+    "back": "Conceder a cada usuário, sistema ou processo apenas as permissões estritamente indispensáveis para o cumprimento de suas funções imediatas."
+  },
+  {
+    "id": "fcₙuvem₁0",
+    "tema": "Módulo 3",
+    "front": "Qual a diferença entre Security Groups e Network ACLs?",
+    "back": "Security Groups são 'Stateful' (resposta liberada automaticamente). Network ACLs são 'Stateless' (avaliação de regras separadas para entrada e saída)."
+  },
+  {
+    "id": "fcₙuvem₁1",
+    "tema": "Módulo 4",
+    "front": "O que são Zonas de Disponibilidade (AZs) no Azure?",
+    "back": "Locais físicos isolados dentro de uma região, cada um composto por datacenters com energia, refrigeração e rede independentes para evitar indisponibilidade conjunta."
+  },
+  {
+    "id": "fcₙuvem₁2",
+    "tema": "Módulo 4",
+    "front": "Qual a diferença de durabilidade entre LRS e GRS no Azure Storage?",
+    "back": "LRS: 3 cópias no mesmo datacenter (11 noves). GRS: 6 cópias distribuídas entre duas regiões distantes centenas de km (16 noves de durabilidade)."
+  },
+  {
+    "id": "fcₙuvem₁3",
+    "tema": "Módulo 4",
+    "front": "Para que serve a camada Archive (Arquivo Morto) do Azure Blob?",
+    "back": "Para retenção de dados históricos raramente acessados com o menor custo de GB, exigindo processo de reidratação de até 15 horas para leitura."
+  },
+  {
+    "id": "fcₙuvem₁4",
+    "tema": "Módulo 5",
+    "front": "Quantos endereços IP a AWS reserva em qualquer sub-rede /24 e quais são?",
+    "back": "Reserva 5 IPs: .0 (rede), .1 (roteador), .2 (DNS Route 53), .3 (expansão futura) e .255 (broadcast). Sobram 251 IPs utilizáveis."
+  },
+  {
+    "id": "fcₙuvem₁5",
+    "tema": "Módulo 5",
+    "front": "O que são instâncias EC2 Spot?",
+    "back": "Instâncias que aproveitam capacidade ociosa de datacenters AWS com até 90% de desconto, sujeitas a recuperação pela AWS com aviso prévio de 2 minutos."
+  },
+  {
+    "id": "fcₙuvem₁6",
+    "tema": "Módulo 5",
+    "front": "O Amazon S3 suporta hospedagem de sites?",
+    "back": "Sim! Suporta hospedagem nativa e serverless de sites estáticos (HTML, CSS, JS e mídias) sem necessidade de instâncias de servidores web."
+  },
+  {
+    "id": "fcₙuvem₁7",
+    "tema": "Módulo 6",
+    "front": "Qual a grande inovação da VPC no Google Cloud (GCP)?",
+    "back": "É Global por padrão; uma única VPC permite que sub-redes em continentes diferentes conversem por IPs privados diretamente pela rede de fibra óptica do Google."
+  },
+  {
+    "id": "fcₙuvem₁8",
+    "tema": "Módulo 6",
+    "front": "O que torna o BigQuery do Google Cloud uma ferramenta única?",
+    "back": "É um Data Warehouse analítico petabyte-scale totalmente serverless que executa consultas SQL em gigabytes/terabytes em segundos sem gerenciar servidores."
+  },
+  {
+    "id": "fcₙuvem₁9",
+    "tema": "Módulo 6",
+    "front": "Como o Cloud Run se diferencia de máquinas virtuais tradicionais?",
+    "back": "Executa contêineres Docker diretamente sobre requisições HTTP em modo serverless, escalando de zero até milhares de instâncias e cobrando só enquanto processa."
+  }
+]

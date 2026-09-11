@@ -1,0 +1,152 @@
+[
+  {
+    "id": "prog_mod1_q1",
+    "themeId": "mod1",
+    "themeName": "Módulo 1: Fundamentos de C & Super Trunfo",
+    "enunciado": "No desenvolvimento em linguagem C, qual diretiva de pré-processador é indispensável para incluir as funções básicas de entrada e saída, tais como printf() e scanf()?",
+    "options": [
+      "#include <stdlib.h>",
+      "#include <stdio.h>",
+      "#include <string.h>",
+      "#include <math.h>",
+      "#include <conio.h>"
+    ],
+    "correctIndex": 1,
+    "explanation": "A biblioteca <stdio.h> (Standard Input/Output) fornece as declarações fundamentais para operações de entrada e saída padrão no terminal, incluindo printf e scanf."
+  },
+  {
+    "id": "prog_mod1_q2",
+    "themeId": "mod1",
+    "themeName": "Módulo 1: Fundamentos de C & Super Trunfo",
+    "enunciado": "Ao cadastrar cartas do Super Trunfo com grandes populações de países (como a Índia, com mais de 1,4 bilhão de habitantes), qual modificador de tipo deve ser utilizado para evitar overflow numérico em variáveis inteiras positivas?",
+    "options": [
+      "short int",
+      "unsigned long int",
+      "signed char",
+      "float",
+      "bool"
+    ],
+    "correctIndex": 1,
+    "explanation": "O tipo unsigned long int descarta números negativos e estende o alcance para números inteiros gigantescos, permitindo representar com total segurança censos populacionais superiores a bilhões."
+  },
+  {
+    "id": "prog_mod1_q3",
+    "themeId": "mod1",
+    "themeName": "Módulo 1: Fundamentos de C & Super Trunfo",
+    "enunciado": "Em linguagem C, por que é obrigatório utilizar o operador de endereço '&' na função scanf('%d', &idade), mas NÃO se deve utilizá-lo ao ler um array de caracteres com scanf('%s', nome)?",
+    "options": [
+      "Porque variáveis inteiras são alocadas no disco rígido e strings na memória RAM.",
+      "Porque em C o nome de um array de caracteres já decai nativamente para um ponteiro que aponta para o endereço inicial do primeiro elemento na memória.",
+      "Porque o operador & é proibido em qualquer leitura de texto moderno.",
+      "Porque o scanf ignora completamente caracteres digitados sem o &.",
+      "Não há diferença e o uso de & em strings é obrigatório pelo compilador."
+    ],
+    "correctIndex": 1,
+    "explanation": "Em C, o identificador de um array de caracteres já representa o endereço de memória do seu primeiro caractere (&nome[0]); logo, passar o & adicional na leitura de string com %s é redundante e incorreto."
+  },
+  {
+    "id": "prog_mod1_q4",
+    "themeId": "mod1",
+    "themeName": "Módulo 1: Fundamentos de C & Super Trunfo",
+    "enunciado": "Considere o seguinte trecho em C: int populacao = 10; int area = 4; float densidade = (float) populacao / area; Qual é o valor armazenado na variável densidade após a execução?",
+    "options": [
+      "2.00 (pois a divisão entre inteiros descarta as casas decimais)",
+      "2.50 (devido ao casting explícito (float) que força a divisão real)",
+      "0.40",
+      "0.00",
+      "Erro de compilação por tipos incompatíveis"
+    ],
+    "correctIndex": 1,
+    "explanation": "O casting explícito (float) converte temporariamente a variável populacao para float antes da divisão, fazendo com que a operação ocorra em ponto flutuante, resultando exatamente em 2.50."
+  },
+  {
+    "id": "prog_mod2_q1",
+    "themeId": "mod2",
+    "themeName": "Módulo 2: Lógica do Jogo & Estruturas de Decisão",
+    "enunciado": "No jogo Super Trunfo de Cidades, para a quase totalidade dos atributos (População, PIB, Área, Super Poder) vence a carta que apresentar o maior valor. Contudo, qual atributo possui a regra INVERSA por convenção do jogo, onde a carta vendedora é aquela com o MENOR valor?",
+    "options": [
+      "Número de Pontos Turísticos",
+      "Área Territorial",
+      "Densidade Demográfica / Populacional",
+      "PIB per Capita",
+      "Código da Carta"
+    ],
+    "correctIndex": 2,
+    "explanation": "A densidade demográfica expressa a concentração de habitantes por km²; nas regras oficiais do Super Trunfo de Cidades, vence a carta com menor densidade populacional (mais desafogada)."
+  },
+  {
+    "id": "prog_mod2_q2",
+    "themeId": "mod2",
+    "themeName": "Módulo 2: Lógica do Jogo & Estruturas de Decisão",
+    "enunciado": "Qual é a função da instrução 'break;' ao final de cada bloco de 'case' dentro de uma estrutura switch-case em C?",
+    "options": [
+      "Reiniciar o computador do usuário.",
+      "Finalizar e interromper a execução da estrutura switch, evitando o comportamento de queda contínua (fall-through) para os cases subsequentes.",
+      "Imprimir o valor da variável na tela.",
+      "Limpar o buffer do teclado.",
+      "Converter números inteiros em floats."
+    ],
+    "correctIndex": 1,
+    "explanation": "O break encerra a execução do switch após o case correspondente ter sido executado, evitando que o programa continue executando acidentalmente os cases seguintes (fall-through)."
+  },
+  {
+    "id": "prog_mod2_q3",
+    "themeId": "mod2",
+    "themeName": "Módulo 2: Lógica do Jogo & Estruturas de Decisão",
+    "enunciado": "Considere a expressão lógica em C: (carta1.populacao > carta2.populacao) && (carta1.pib > carta2.pib). Sob qual condição o operador '&&' (AND) avaliará essa expressão como VERDADEIRA (1)?",
+    "options": [
+      "Se pelo menos uma das duas comparações for verdadeira.",
+      "Somente se AMBAS as condições forem estritamente verdadeiras.",
+      "Se ambas as condições forem falsas.",
+      "Se o PIB for maior, independentemente da população.",
+      "O operador && só avalia números negativos."
+    ],
+    "correctIndex": 1,
+    "explanation": "O operador lógico conjunção '&&' exige obrigatoriamente que ambos os operandos sejam verdadeiros para que a expressão inteira resulte em 1 (Verdadeiro)."
+  },
+  {
+    "id": "prog_mod3_q1",
+    "themeId": "mod3",
+    "themeName": "Módulo 3: Movimentação de Peças de Xadrez & Loops",
+    "enunciado": "Qual estrutura de repetição em linguagem C garante formalmente que o seu bloco de instruções seja executado PELO MENOS UMA VEZ, independentemente de a condição ser verdadeira ou falsa na primeira iteração?",
+    "options": [
+      "for",
+      "while",
+      "do-while",
+      "switch-case",
+      "goto"
+    ],
+    "correctIndex": 2,
+    "explanation": "O laço do-while realiza o teste condicional apenas ao final do bloco (pós-teste); por isso, ele garante compulsoriamente a execução de pelo menos uma repetição do código interno."
+  },
+  {
+    "id": "prog_mod3_q2",
+    "themeId": "mod3",
+    "themeName": "Módulo 3: Movimentação de Peças de Xadrez & Loops",
+    "enunciado": "Na simulação em C da movimentação do Cavalo no tabuleiro de xadrez (que se desloca em formato de 'L': duas casas em uma direção e uma casa na direção perpendicular), qual técnica de controle de repetição é recomendada para orquestrar essa movimentação multieixo?",
+    "options": [
+      "Laços aninhados (Nested Loops) com controle sequencial de passos.",
+      "Uso exclusivo da instrução return 0.",
+      "Declaração de 64 variáveis globais.",
+      "Exclusão da função main.",
+      "Uso de recursão infinita sem ponto de parada."
+    ],
+    "correctIndex": 0,
+    "explanation": "Os laços aninhados permitem coordenar múltiplos eixos de deslocamento (loop externo para o avanço primário de 2 casas e loop interno para o passo perpendicular de 1 casa), modelando perfeitamente o formato em 'L'."
+  },
+  {
+    "id": "prog_mod3_q3",
+    "themeId": "mod3",
+    "themeName": "Módulo 3: Movimentação de Peças de Xadrez & Loops",
+    "enunciado": "Dentro de um laço de repetição for ou while em C, qual comando interrompe imediatamente apenas o ciclo atual e transfere o fluxo de execução diretamente para a próxima iteração do laço?",
+    "options": [
+      "break",
+      "continue",
+      "exit",
+      "halt",
+      "abort"
+    ],
+    "correctIndex": 1,
+    "explanation": "O comando continue salta o restante do código do ciclo atual e pula direto para o próximo passo/iteração do laço, enquanto o break interrompe o laço por completo."
+  }
+]

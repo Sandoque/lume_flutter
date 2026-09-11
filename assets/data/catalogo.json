@@ -1,0 +1,363 @@
+{
+  "periodos": [
+    {
+      "id": "periodo_1",
+      "nome": "1º Período",
+      "descricao": "Matemática, Redes, Nuvem, Segurança e Programação",
+      "disciplinas": [
+        {
+          "id": "matematica_logica",
+          "nome": "Matemática e Lógica",
+          "codigo": "MAT-101",
+          "descricao": "Conjuntos, gráficos, funções, lógica proposicional, predicados e métodos de demonstração.",
+          "icone": "calculate",
+          "corHex": "#0F766E",
+          "dataPath": "assets/data/disciplinas/matematica_logica",
+          "temas": [
+            {
+              "id": "mod1",
+              "numero": 1,
+              "titulo": "Teoria dos Conjuntos e Princípios de Contagem",
+              "descricao": "Pertinência, intervalos, contagem aditiva/multiplicativa, arranjos e combinações.",
+              "resumoFile": "tema_2_resumo.md",
+              "completoFile": "tema_2_completo.md",
+              "formulasFile": "tema_2_formulas.md",
+              "questoesCount": 6
+            },
+            {
+              "id": "mod2",
+              "numero": 2,
+              "titulo": "Gráficos e Interpretações Gráficas",
+              "descricao": "Plano cartesiano, vértice de parábola, taxa de variação e estudo de sinais.",
+              "resumoFile": "tema_3_resumo.md",
+              "completoFile": "tema_3_completo.md",
+              "formulasFile": "tema_3_formulas.md",
+              "questoesCount": 4
+            },
+            {
+              "id": "mod3",
+              "numero": 3,
+              "titulo": "Aprofundamento de Funções",
+              "descricao": "Domínio real, restrições com radicais, bijeção, função inversa e periodicidade.",
+              "resumoFile": "tema_4_resumo.md",
+              "completoFile": "tema_4_completo.md",
+              "formulasFile": "tema_4_formulas.md",
+              "questoesCount": 5
+            },
+            {
+              "id": "mod4",
+              "numero": 4,
+              "titulo": "Cálculo Proposicional",
+              "descricao": "Conectivos, tabela-verdade, De Morgan, equivalências, regras de inferência e álgebra booleana.",
+              "resumoFile": "tema_5_resumo.md",
+              "completoFile": "tema_5_completo.md",
+              "formulasFile": "tema_5_formulas.md",
+              "questoesCount": 6
+            },
+            {
+              "id": "mod5",
+              "numero": 5,
+              "titulo": "Cálculo de Predicados",
+              "descricao": "Quantificadores universal e existencial, variáveis livres/ligadas, Prolog e sistemas especialistas.",
+              "resumoFile": "tema_6_resumo.md",
+              "completoFile": "tema_6_completo.md",
+              "formulasFile": "tema_6_formulas.md",
+              "questoesCount": 5
+            },
+            {
+              "id": "mod6",
+              "numero": 6,
+              "titulo": "Métodos de Demonstração",
+              "descricao": "Prova direta, contraposição, absurdo, vacuidade, trivial, contraexemplo e indução matemática.",
+              "resumoFile": "tema_7_resumo.md",
+              "completoFile": "tema_7_completo.md",
+              "formulasFile": "tema_7_formulas.md",
+              "questoesCount": 5
+            },
+            {
+              "id": "mod7",
+              "numero": 7,
+              "titulo": "Prática Integrada",
+              "descricao": "Estudos de caso multidisciplinares conectando lógica, contagem e modelagem de sistemas.",
+              "resumoFile": "tema_8_resumo.md",
+              "completoFile": "tema_8_completo.md",
+              "formulasFile": "tema_8_formulas.md",
+              "questoesCount": 5
+            }
+          ]
+        },
+        {
+          "id": "redes_computadores",
+          "nome": "Fundamentos de Redes de Computadores",
+          "codigo": "RED-101",
+          "descricao": "Topologias, modelos OSI e TCP/IP, camadas de aplicação, transporte, rede, enlace e física.",
+          "icone": "network",
+          "corHex": "#0284C7",
+          "dataPath": "assets/data/disciplinas/redes_computadores",
+          "temas": [
+            {
+              "id": "mod1",
+              "numero": 1,
+              "titulo": "Redes de Computadores e a Internet",
+              "descricao": "Borda, acesso, núcleo da rede, atrasos (delay), perda de pacotes e camadas OSI.",
+              "resumoFile": "tema_2_resumo.md",
+              "completoFile": "tema_2_completo.md",
+              "formulasFile": "tema_2_formulas.md",
+              "questoesCount": 8
+            },
+            {
+              "id": "mod2",
+              "numero": 2,
+              "titulo": "Modelos de Referência OSI e TCP/IP",
+              "descricao": "Serviços, protocolos, interfaces, as 7 camadas OSI e a arquitetura em ampulheta do TCP/IP.",
+              "resumoFile": "tema_3_resumo.md",
+              "completoFile": "tema_3_completo.md",
+              "formulasFile": "tema_3_formulas.md",
+              "questoesCount": 6
+            },
+            {
+              "id": "mod3",
+              "numero": 3,
+              "titulo": "Camadas de Aplicação e Transporte",
+              "descricao": "Cliente-servidor, P2P, DNS, HTTP, SMTP/IMAP, UDP vs TCP e three-way handshake.",
+              "resumoFile": "tema_4_resumo.md",
+              "completoFile": "tema_4_completo.md",
+              "formulasFile": "tema_4_formulas.md",
+              "questoesCount": 8
+            },
+            {
+              "id": "mod4",
+              "numero": 4,
+              "titulo": "Camada de Rede e Roteamento",
+              "descricao": "Plano de dados vs controle, endereçamento CIDR, sub-redes, NAT, DHCP, ICMP e BGP.",
+              "resumoFile": "tema_5_resumo.md",
+              "completoFile": "tema_5_completo.md",
+              "formulasFile": "tema_5_formulas.md",
+              "questoesCount": 8
+            },
+            {
+              "id": "mod5",
+              "numero": 5,
+              "titulo": "Camadas de Enlace e Física",
+              "descricao": "Meios guiados/não guiados, enquadramento, bit stuffing, ALOHA, CSMA/CD, Wi-Fi e ARP.",
+              "resumoFile": "tema_6_resumo.md",
+              "completoFile": "tema_6_completo.md",
+              "formulasFile": "tema_6_formulas.md",
+              "questoesCount": 6
+            },
+            {
+              "id": "mod6",
+              "numero": 6,
+              "titulo": "Administração e Segurança em Redes",
+              "descricao": "Tríade CIA, ataques ativos/passivos, APTs, ransomware, DMZ e protocolo SNMP/MIB.",
+              "resumoFile": "tema_7_resumo.md",
+              "completoFile": "tema_7_completo.md",
+              "formulasFile": "tema_7_formulas.md",
+              "questoesCount": 6
+            }
+          ]
+        },
+        {
+          "id": "computacao_nuvem",
+          "nome": "Computação em Nuvem",
+          "codigo": "NUV-101",
+          "descricao": "Modelos IaaS/PaaS/SaaS, arquiteturas, virtualização, segurança e provedores Azure, AWS e GCP.",
+          "icone": "cloud",
+          "corHex": "#6366F1",
+          "dataPath": "assets/data/disciplinas/computacao_nuvem",
+          "temas": [
+            {
+              "id": "mod1",
+              "numero": 1,
+              "titulo": "Fundamentos de Computação em Nuvem",
+              "descricao": "Modelos de serviço (IaaS, PaaS, SaaS), nuvem pública/privada/híbrida e características essenciais NIST.",
+              "resumoFile": "modulo_1_resumo.md",
+              "completoFile": "modulo_1_completo.md",
+              "formulasFile": "modulo_1_formulas.md",
+              "questoesCount": 4
+            },
+            {
+              "id": "mod2",
+              "numero": 2,
+              "titulo": "Arquitetura de Computação em Nuvem",
+              "descricao": "Virtualização, hipervisores bare-metal (Tipo 1) vs hosted (Tipo 2), contêineres e microsserviços.",
+              "resumoFile": "modulo_2_resumo.md",
+              "completoFile": "modulo_2_completo.md",
+              "formulasFile": "modulo_2_formulas.md",
+              "questoesCount": 3
+            },
+            {
+              "id": "mod3",
+              "numero": 3,
+              "titulo": "Segurança em Computação em Nuvem",
+              "descricao": "Modelo de responsabilidade compartilhada, controle de acesso (IAM), menor privilégio e criptografia.",
+              "resumoFile": "modulo_3_resumo.md",
+              "completoFile": "modulo_3_completo.md",
+              "formulasFile": "modulo_3_formulas.md",
+              "questoesCount": 3
+            },
+            {
+              "id": "mod4",
+              "numero": 4,
+              "titulo": "Ambiente Microsoft Azure",
+              "descricao": "Assinaturas, Resource Groups, Azure Virtual Machines, Blob Storage e redes virtuais VNet.",
+              "resumoFile": "modulo_4_resumo.md",
+              "completoFile": "modulo_4_completo.md",
+              "formulasFile": "modulo_4_formulas.md",
+              "questoesCount": 3
+            },
+            {
+              "id": "mod5",
+              "numero": 5,
+              "titulo": "Ambiente Amazon Web Services (AWS)",
+              "descricao": "Regiões, Zonas de Disponibilidade (AZ), instâncias EC2, buckets S3, Amazon VPC e IAM.",
+              "resumoFile": "modulo_5_resumo.md",
+              "completoFile": "modulo_5_completo.md",
+              "formulasFile": "modulo_5_formulas.md",
+              "questoesCount": 4
+            },
+            {
+              "id": "mod6",
+              "numero": 6,
+              "titulo": "Ambiente Google Cloud Platform (GCP)",
+              "descricao": "Compute Engine, Cloud Storage, BigQuery analítico serverless e orquestração de contêineres com GKE.",
+              "resumoFile": "modulo_6_resumo.md",
+              "completoFile": "modulo_6_completo.md",
+              "formulasFile": "modulo_6_formulas.md",
+              "questoesCount": 3
+            }
+          ]
+        },
+        {
+          "id": "seguranca_informacao",
+          "nome": "Introdução a Segurança da Informação",
+          "codigo": "SEG-101",
+          "descricao": "Tríade CIA, normas ISO 27001/27002, políticas de segurança, gestão de risco e continuidade BIA.",
+          "icone": "security",
+          "corHex": "#DC2626",
+          "dataPath": "assets/data/disciplinas/seguranca_informacao",
+          "temas": [
+            {
+              "id": "mod1",
+              "numero": 1,
+              "titulo": "Princípios da Segurança e Ciclo de Vida da Informação",
+              "descricao": "Tríade CIA, autenticidade, não repúdio e fases do ciclo (coleta, armazenamento, manuseio e descarte).",
+              "resumoFile": "modulo_1_resumo.md",
+              "completoFile": "modulo_1_completo.md",
+              "formulasFile": "modulo_1_formulas.md",
+              "questoesCount": 4
+            },
+            {
+              "id": "mod2",
+              "numero": 2,
+              "titulo": "Ameaças e Vulnerabilidades à Segurança da Informação",
+              "descricao": "Engenharia social, phishing, malwares (trojans, ransomware, worms), ameaças internas e externas.",
+              "resumoFile": "modulo_2_resumo.md",
+              "completoFile": "modulo_2_completo.md",
+              "formulasFile": "modulo_2_formulas.md",
+              "questoesCount": 3
+            },
+            {
+              "id": "mod3",
+              "numero": 3,
+              "titulo": "Normas de Segurança da Informação (Família ISO 27000)",
+              "descricao": "Norma ISO/IEC 27001 (SGSI e ciclo PDCA), ISO/IEC 27002 (código de práticas e controles) e conformidade.",
+              "resumoFile": "modulo_3_resumo.md",
+              "completoFile": "modulo_3_completo.md",
+              "formulasFile": "modulo_3_formulas.md",
+              "questoesCount": 3
+            },
+            {
+              "id": "mod4",
+              "numero": 4,
+              "titulo": "Boas Práticas em Segurança da Informação",
+              "descricao": "Política de Segurança da Informação (PSI), autenticação multifator (MFA), gestão de acessos e senhas.",
+              "resumoFile": "modulo_4_resumo.md",
+              "completoFile": "modulo_4_completo.md",
+              "formulasFile": "modulo_4_formulas.md",
+              "questoesCount": 2
+            },
+            {
+              "id": "mod5",
+              "numero": 5,
+              "titulo": "Gestão de Risco",
+              "descricao": "Conceito de risco (Ameaça × Vulnerabilidade × Impacto), análise qualitativa/quantitativa e estratégias de tratamento.",
+              "resumoFile": "modulo_5_resumo.md",
+              "completoFile": "modulo_5_completo.md",
+              "formulasFile": "modulo_5_formulas.md",
+              "questoesCount": 2
+            },
+            {
+              "id": "mod6",
+              "numero": 6,
+              "titulo": "Gestão de Continuidade do Negócio",
+              "descricao": "Plano de Continuidade (PCN), Análise de Impacto (BIA), métricas RTO e RPO, recuperação de desastres (DRP).",
+              "resumoFile": "modulo_6_resumo.md",
+              "completoFile": "modulo_6_completo.md",
+              "formulasFile": "modulo_6_formulas.md",
+              "questoesCount": 2
+            }
+          ]
+        },
+        {
+          "id": "programacao_computadores",
+          "nome": "Introdução a Programação de Computadores",
+          "codigo": "PRG-101",
+          "descricao": "Linguagem C, tipos de dados, estruturas de decisão, loops for/while e projetos Super Trunfo e Xadrez.",
+          "icone": "code",
+          "corHex": "#16A34A",
+          "dataPath": "assets/data/disciplinas/programacao_computadores",
+          "temas": [
+            {
+              "id": "mod1",
+              "numero": 1,
+              "titulo": "Super Trunfo em C: Fundamentos e Tipos de Dados",
+              "descricao": "Variáveis, tipos primitivos (int, float, char, double), especificadores de formato (printf/scanf) e operadores.",
+              "resumoFile": "modulo_1_resumo.md",
+              "completoFile": "modulo_1_completo.md",
+              "formulasFile": "modulo_1_formulas.md",
+              "questoesCount": 4
+            },
+            {
+              "id": "mod2",
+              "numero": 2,
+              "titulo": "Desenvolvendo a Lógica do Jogo & Estruturas de Decisão",
+              "descricao": "Comandos if, if-else, switch-case, operador ternário, operadores lógicos (&&, ||, !) e menus interativos.",
+              "resumoFile": "modulo_2_resumo.md",
+              "completoFile": "modulo_2_completo.md",
+              "formulasFile": "modulo_2_formulas.md",
+              "questoesCount": 3
+            },
+            {
+              "id": "mod3",
+              "numero": 3,
+              "titulo": "Movimentação de Peças de Xadrez & Loops",
+              "descricao": "Estruturas de repetição for, while, do-while, loops aninhados para matrizes/tabuleiro e boas práticas.",
+              "resumoFile": "modulo_3_resumo.md",
+              "completoFile": "modulo_3_completo.md",
+              "formulasFile": "modulo_3_formulas.md",
+              "questoesCount": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "periodo_2",
+      "nome": "2º Período",
+      "descricao": "Estruturas de Dados, POO e Banco de Dados",
+      "disciplinas": [
+        {
+          "id": "banco_dados",
+          "nome": "Banco de Dados Relacional",
+          "codigo": "BD-201",
+          "descricao": "Modelo relacional, SQL, normalização e álgebra relacional (Em breve).",
+          "icone": "storage",
+          "corHex": "#7C3AED",
+          "dataPath": "",
+          "temas": []
+        }
+      ]
+    }
+  ]
+}

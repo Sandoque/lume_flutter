@@ -1,0 +1,98 @@
+[
+  {
+    "id": "fc01",
+    "tema": "Módulo 1",
+    "titulo": "Pertinência (∈) vs. Inclusão (⊆) & Subconjuntos",
+    "frente": "Qual a diferença entre ∈ e ⊆? Quantos subconjuntos tem um conjunto de n elementos?",
+    "verso": "• x ∈ A relaciona um ELEMENTO a um conjunto.\n• A ⊆ B relaciona DOIS CONJUNTOS (todo elemento de A está em B).\n• Subconjuntos (Partes P(A)): 2ⁿ subconjuntos, sempre incluindo o conjunto vazio (∅) e o próprio conjunto.",
+    "dica": "Pegadinha: se A = {1, {2, 3}}, então {2, 3} ∈ A, mas 2 ∉ A e {2, 3} NÃO é subconjunto de A!"
+  },
+  {
+    "id": "fc02",
+    "tema": "Módulo 1",
+    "titulo": "Decisão de Contagem: Arranjo vs. Combinação",
+    "frente": "Como decidir entre Arranjo Simples e Combinação Simples em uma questão?",
+    "verso": "Faça a pergunta de ouro:\n\"A ordem dos elementos escolhidos altera o agrupamento?\"\n• SIM (cargos, senhas, pódios, filas) ➔ ARRANJO: A(n, p) = n! / (n - p)!\n• NÃO (comissões sem cargo, grupos, sorteios) ➔ COMBINAÇÃO: C(n, p) = n! / [p! · (n - p)!]",
+    "dica": "Dividir por p! serve justamente para eliminar a ordem das repetições."
+  },
+  {
+    "id": "fc03",
+    "tema": "Módulo 1",
+    "titulo": "Combinação com Repetição (Paus e Bolas)",
+    "frente": "Como calcular escolhas onde itens podem se repetir e a ordem não importa (ex: marcas de chocolate)?",
+    "verso": "Fórmula da Combinação com Repetição:\nCR(n, p) = C(n + p - 1, p)\nOnde:\n• n = número de tipos/marcas disponíveis\n• p = total de itens comprados/escolhidos\n• Técnica dos paus e bolas: p bolinhas e n - 1 barras separadoras.",
+    "dica": "Exemplo: 8 chocolates de 3 marcas ➔ CR(3, 8) = C(3 + 8 - 1, 8) = C(10, 8) = 45 maneiras."
+  },
+  {
+    "id": "fc04",
+    "tema": "Módulo 1",
+    "titulo": "Princípio da Casa dos Pombos e Pior Caso",
+    "frente": "Como resolver questões de 'número mínimo para garantir com certeza'?",
+    "verso": "Pense no PIOR CASO POSSÍVEL (azar máximo):\n1. Calcule todas as retiradas dos itens que você NÃO quer.\n2. Adicione a quantidade necessária da meta desejada.\n• Casa dos Pombos: se n objetos ocupam m categorias e n > m, pelo menos uma categoria terá ≥ 2 objetos.",
+    "dica": "Garantia absoluta não é probabilidade! Se há 30 verdes e 20 azuis, para garantir 2 azuis: tire 30 verdes + 2 azuis = 32 retiradas."
+  },
+  {
+    "id": "fc05",
+    "tema": "Módulo 2",
+    "titulo": "Vértice de Parábola e Alcance Horizontal",
+    "frente": "Como calcular altura máxima e alcance horizontal de um lançamento parabólico?",
+    "verso": "Para y = ax² + bx (com a < 0):\n• Posição do vértice: x_v = -b / (2a)\n• Altura máxima: y_v = -Δ / (4a) ou y(x_v)\n• Alcance horizontal: distância entre as raízes (onde y = 0, normalmente x = -b/a).",
+    "dica": "Atenção à ordem do par ordenado pedida no enunciado: se pedir (altura máxima; alcance), a resposta é (y_v; alcance), e NÃO (x_v; y_v)!"
+  },
+  {
+    "id": "fc06",
+    "tema": "Módulo 3",
+    "titulo": "Domínio Real: Raiz no Numerador vs. Denominador",
+    "frente": "Quais as restrições para determinar o domínio real de f(x)?",
+    "verso": "1. Denominador de fração: NÃO pode ser nulo (denominador ≠ 0).\n2. Raiz quadrada no numerador: radicando ≥ 0 (admite igual a zero).\n3. Raiz quadrada no DENOMINADOR: radicando > 0 (desigualdade ESTRITA, pois não pode ser negativo nem zero!).",
+    "dica": "f(x) = 1/√(x - 3) ➔ x - 3 > 0 ➔ x > 3 ➔ Domínio = (3; +∞), intervalo aberto!"
+  },
+  {
+    "id": "fc07",
+    "tema": "Módulo 3",
+    "titulo": "Classificação de Funções e Função Inversa",
+    "frente": "Quando uma função admite inversa e o que define Injetora, Sobrejetora e Bijetora?",
+    "verso": "• Injetora: x₁ ≠ x₂ ➔ f(x₁) ≠ f(x₂) (elementos distintos têm imagens distintas).\n• Sobrejetora: Imagem = Contradomínio (todo elemento do contradomínio é atingido).\n• Bijetora: Injetora E Sobrejetora simultaneamente.\n• Inversibilidade: Uma função admite inversa f⁻¹ SE E SOMENTE SE for BIJETORA.",
+    "dica": "O gráfico de f⁻¹(x) é perfeitamente simétrico ao de f(x) em relação à reta bissetriz y = x."
+  },
+  {
+    "id": "fc08",
+    "tema": "Módulo 4",
+    "titulo": "Tabela-Verdade da Condicional & Regra do MANE",
+    "frente": "Qual é a tabela-verdade de p ➔ q e qual é a sua negação lógica?",
+    "verso": "• Tabela de p ➔ q: Falsa APENAS quando a premissa é Verdadeira e a conclusão é Falsa (V ➔ F = F). Em todos os outros casos (V➔V, F➔V, F➔F), é VERDADEIRA.\n• Negação: ¬(p ➔ q) ≡ p ∧ ¬q\n• Regra do MANE: MAntém a primeira (p) E NEga a segunda (¬q).",
+    "dica": "A negação de 'Se chove, levo guarda-chuva' é 'Chove E NÃO levo o guarda-chuva'. NUNCA é outra frase com 'se... então'!"
+  },
+  {
+    "id": "fc09",
+    "tema": "Módulo 4",
+    "titulo": "Leis de De Morgan e Contrapositiva",
+    "frente": "Quais são as equivalências lógicas mais cobradas em prova?",
+    "verso": "1. De Morgan:\n • ¬(p ∧ q) ≡ ¬p ∨ ¬q (negação do 'E' vira 'OU')\n • ¬(p ∨ q) ≡ ¬p ∧ ¬q (negação do 'OU' vira 'E')\n2. Equivalência da Condicional:\n • p ➔ q ≡ ¬p ∨ q\n3. Contrapositiva (mesma tabela-verdade):\n • p ➔ q ≡ ¬q ➔ ¬p",
+    "dica": "A contrapositiva inverte a ordem e nega ambos os lados. 'Se é paulista, é brasileiro' ≡ 'Se não é brasileiro, não é paulista'."
+  },
+  {
+    "id": "fc10",
+    "tema": "Módulo 4",
+    "titulo": "Regras de Inferência: Ponens, Tollens e Silogismo",
+    "frente": "Como aplicar as principais regras de dedução formal?",
+    "verso": "• Modus Ponens (Afirmação do Antecedente):\n Premissas: p, p ➔ q ⊢ Conclusão: q\n• Modus Tollens (Negação do Consequente):\n Premissas: ¬q, p ➔ q ⊢ Conclusão: ¬p\n• Silogismo Disjuntivo:\n Premissas: p ∨ q, ¬p ⊢ Conclusão: q\n• Precedência Booleana: NOT > AND (·) > OR (+).",
+    "dica": "Falácia clássica: de 'q' e 'p ➔ q' NÃO se pode concluir p (falácia da afirmação do consequente)."
+  },
+  {
+    "id": "fc11",
+    "tema": "Módulo 5",
+    "titulo": "Quantificadores e Padrão Prolog",
+    "frente": "Como negar quantificadores e quais as convenções do Prolog?",
+    "verso": "• Negação de Quantificadores:\n ¬∀x P(x) ≡ ∃x ¬P(x) (\"nem todos\" = \"existe algum que não\")\n ¬∃x P(x) ≡ ∀x ¬P(x) (\"nenhum\" = \"todos não são\")\n• Ordem: ∀x ∃y P(x, y) NÃO implica ∃y ∀x P(x, y).\n• Sintaxe Prolog:\n Constantes/átomos/predicados: SEMPRE minúsculos (ex: pai(carlos, mario).)\n Variáveis: SEMPRE maiúsculas (ex: X, Y).",
+    "dica": "Sistemas especialistas: Diagnóstico deduz falhas a partir de sintomas observados; Monitoramento compara fluxos contínuos de sensores com padrões."
+  },
+  {
+    "id": "fc12",
+    "tema": "Módulo 6",
+    "titulo": "Métodos de Demonstração e Princípio da Indução (PIF)",
+    "frente": "Quais os métodos de prova para H ➔ T e os passos da Indução Finita?",
+    "verso": "• Prova Direta: assume H como verdadeira e deduz T.\n• Contraposição: prova ¬T ➔ ¬H.\n• Redução ao Absurdo: assume H ∧ ¬T e deduz uma contradição lógica (C ∧ ¬C).\n• Prova por Vacuidade: a hipótese H é sempre Falsa (F ➔ q ≡ V).\n• Prova Trivial: a tese T é sempre Verdadeira (p ➔ V ≡ V).\n• Indução Finita (PIF): 1º Caso base (n = 1); 2º Hipótese P(k); 3º Provar P(k + 1).",
+    "dica": "Para provar que algo vale para todos (∀), precisa de prova geral. Para REFUTAR uma afirmação universal, basta UM CONTRAEXEMPLO!"
+  }
+]

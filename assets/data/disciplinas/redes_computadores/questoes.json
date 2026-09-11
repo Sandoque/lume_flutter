@@ -1,0 +1,1388 @@
+[
+  {
+    "id": "redes_q01",
+    "themeId": "mod1",
+    "themeName": "Módulo 1: Redes e a Internet",
+    "title": "Três Partes Componentes da Internet",
+    "statement": "Quando definimos a internet quanto aos componentes da rede de computadores, podemos separar a composição das redes em três partes:\n(1) Uma na qual se encontram os hosts, ou nós.\n(2) Uma na qual se encontram as tecnologias para acesso dos nós aos roteadores.\n(3) Uma na qual se encontram os roteadores.\nQual das alternativas a seguir possui corretamente os respectivos nomes específicos dessas partes?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Sistemas intermediários, redes de acesso e núcleo da rede."
+      },
+      {
+        "letter": "B",
+        "text": "Sistemas finais, redes de acesso e núcleo da rede."
+      },
+      {
+        "letter": "C",
+        "text": "Sistemas finais, tecnologias de enlace e comutadores."
+      },
+      {
+        "letter": "D",
+        "text": "Nós de rede, enlaces físicos e sistemas intermediários."
+      },
+      {
+        "letter": "E",
+        "text": "Hosts, redes metropolitanas e backbones globais."
+      }
+    ],
+    "correct": "B",
+    "explanation": "A arquitetura física da internet é dividida em:\n1. Borda ou Sistemas Finais (Hosts/Clientes/Servidores): onde rodam as aplicações.\n2. Redes de Acesso: tecnologias (FTTH, Wi-Fi, Ethernet, 4G/5G) que ligam os hosts ao primeiro roteador (roteador de borda).\n3. Núcleo da Rede (Core): malha de roteadores interconectados responsáveis pela comutação de pacotes.",
+    "examTip": "Lembre-se da tríade clássica do livro do Kurose: Borda (Sistemas Finais) + Acesso + Núcleo (Core).",
+    "concept": "Componentes Fundamentais da Internet"
+  },
+  {
+    "id": "redes_q02",
+    "themeId": "mod1",
+    "themeName": "Módulo 1: Redes e a Internet",
+    "title": "Classificação de ISPs (Provedores)",
+    "statement": "Um provedor de serviço de internet (Internet Service Provider – ISP), que atua em uma região relativamente pequena (não mais que um município), conectando usuários ou provedores dessa região, é denominado:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "ISP regional (ou ISP de acesso)."
+      },
+      {
+        "letter": "B",
+        "text": "ISP de nível 1 (Tier 1)."
+      },
+      {
+        "letter": "C",
+        "text": "ISP de nível 0."
+      },
+      {
+        "letter": "D",
+        "text": "ISP principal."
+      },
+      {
+        "letter": "E",
+        "text": "ISP secundário."
+      }
+    ],
+    "correct": "A",
+    "explanation": "Existem centenas de milhares de ISPs de acesso e regionais aos quais os sistemas finais são conectados diretamente. Os ISPs regionais se conectam a ISPs de Nível 1 (Tier 1) globais, que formam o backbone da internet através de pontos de troca de tráfego (IXP / PTT).",
+    "examTip": "Tier 1 são os grandes provedores transcontinentais com cobertura global. Os locais/municipais são ISPs de acesso ou regionais.",
+    "concept": "Hierarquia de ISPs e Roteamento Global"
+  },
+  {
+    "id": "redes_q03",
+    "themeId": "mod1",
+    "themeName": "Módulo 1: Redes e a Internet",
+    "title": "Buffer Overflow e Descarte de Pacotes",
+    "statement": "A capacidade da fila (buffer) em um roteador é finita. Logo, um pacote pode chegar e encontrar a fila completamente cheia. Sem espaço disponível para armazená-lo, o roteador irá:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Armazenar o pacote na memória secundária."
+      },
+      {
+        "letter": "B",
+        "text": "Atrasar o pacote até liberar espaço."
+      },
+      {
+        "letter": "C",
+        "text": "Encaminhar para outro roteador aleatório."
+      },
+      {
+        "letter": "D",
+        "text": "Avisar o emissor imediatamente sobre o acontecimento."
+      },
+      {
+        "letter": "E",
+        "text": "Descartar o pacote (packet loss)."
+      }
+    ],
+    "correct": "E",
+    "explanation": "Em roteadores de comutação de pacotes (Store-and-Forward), se a taxa de chegada for maior que a taxa de transmissão do enlace de saída, forma-se fila. Se o buffer encher (buffer overflow), o pacote que chega não pode ser armazenado e é sumariamente DESCARTADO.",
+    "examTip": "A perda de pacotes ocorre por falta de memória nos buffers de filas dos roteadores quando há congestionamento.",
+    "concept": "Filas, Congestionamento e Perda de Pacotes"
+  },
+  {
+    "id": "redes_q04",
+    "themeId": "mod1",
+    "themeName": "Módulo 1: Redes e a Internet",
+    "title": "Componentes do Atraso Nodal (Delay)",
+    "statement": "Analise as afirmativas a seguir sobre os atrasos em redes de pacotes:\nI. Atraso de processamento: é o tempo exigido para examinar o cabeçalho do pacote e determinar para onde direcioná-lo.\nII. Atraso de transmissão: é a quantidade de tempo exigida para empurrar (transmitir) todos os bits do pacote para o enlace (L/R).\nIII. Atraso de propagação: é o tempo necessário para propagar um bit desde o início do enlace até o roteador seguinte (d/s).\nEstá(ão) correta(s):",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Apenas I e II"
+      },
+      {
+        "letter": "B",
+        "text": "Apenas I e III"
+      },
+      {
+        "letter": "C",
+        "text": "Apenas II e III"
+      },
+      {
+        "letter": "D",
+        "text": "I, II e III"
+      },
+      {
+        "letter": "E",
+        "text": "Apenas II"
+      }
+    ],
+    "correct": "D",
+    "explanation": "O atraso nodal total é dₙodal = dₚroc + d_fila + d_trans + dₚrop.\n- dₚroc: checagem de erros e rota no cabeçalho (microssegundos).\n- d_trans: L / R (Tamanho do pacote / Taxa de transmissão do enlace).\n- dₚrop: d / s (Distância física / Velocidade de propagação da luz no meio).\nTodas as três afirmativas estão perfeitas.",
+    "examTip": "Não confunda transmissão (empurrar bits para o fio: L/R) com propagação (o bit viajando no meio físico: d/s).",
+    "concept": "Atraso Nodal e Equações de Desempenho"
+  },
+  {
+    "id": "redes_q05",
+    "themeId": "mod1",
+    "themeName": "Módulo 1: Redes e a Internet",
+    "title": "Ordem das 7 Camadas do Modelo OSI",
+    "statement": "Assinale a alternativa que possui todas as camadas na sequência correta do modelo de arquitetura de camadas OSI (da camada mais alta para a mais baixa):",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Apresentação, aplicação, sessão, rede, transporte, enlace, física."
+      },
+      {
+        "letter": "B",
+        "text": "Física, enlace, rede, transporte, apresentação, aplicação, sessão."
+      },
+      {
+        "letter": "C",
+        "text": "Aplicação, apresentação, sessão, transporte, rede, enlace, física."
+      },
+      {
+        "letter": "D",
+        "text": "Física, enlace, rede, transporte, apresentação, sessão, aplicação."
+      },
+      {
+        "letter": "E",
+        "text": "Aplicação, sessão, apresentação, transporte, enlace, rede, física."
+      }
+    ],
+    "correct": "C",
+    "explanation": "A ordem clássica do modelo OSI (Camadas 7 a 1): Aplicação (7), Apresentação (6), Sessão (5), Transporte (4), Rede (3), Enlace (2) e Física (1).",
+    "examTip": "Mnemônico de cima para baixo: 'A Arte Sempre Tem Respostas Em Filosofia' (Aplicação, Apresentação, Sessão, Transporte, Rede, Enlace, Física).",
+    "concept": "Modelo de Referência OSI"
+  },
+  {
+    "id": "redes_q06",
+    "themeId": "mod1",
+    "themeName": "Módulo 1: Redes e a Internet",
+    "title": "Processo de Encapsulamento de Dados",
+    "statement": "Considere o processo de encapsulamento de dados em um sistema final A que enviará dados para B. Qual é a afirmativa correta?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "A camada de transporte passa o segmento à camada de rede, que adiciona informações de cabeçalho, criando um datagrama."
+      },
+      {
+        "letter": "B",
+        "text": "A camada de aplicação recebe datagramas da camada de transporte e adiciona bits físicos."
+      },
+      {
+        "letter": "C",
+        "text": "A camada de enlace cria segmentos ao adicionar cabeçalhos MAC."
+      },
+      {
+        "letter": "D",
+        "text": "O encapsulamento ocorre de baixo para cima, partindo da camada física até a aplicação."
+      },
+      {
+        "letter": "E",
+        "text": "O roteador desencapsula até a camada de aplicação para decidir a rota."
+      }
+    ],
+    "correct": "A",
+    "explanation": "No transmissor, cada camada adiciona seu cabeçalho (Header): Dados (Aplicação) -> Segmento (Transporte) -> Datagrama/Pacote (Rede) -> Quadro/Frame (Enlace) -> Bits (Física). Logo, a camada de rede encapsula o segmento recebido do transporte em um datagrama.",
+    "examTip": "Memorize a PDU de cada camada: Transporte = Segmento; Rede = Datagrama/Pacote; Enlace = Quadro/Frame; Física = Bits.",
+    "concept": "Encapsulamento e PDUs"
+  },
+  {
+    "id": "redes_q07",
+    "themeId": "mod1",
+    "themeName": "Módulo 1: Redes e a Internet",
+    "title": "História: Criação do Protocolo IP",
+    "statement": "Para que os pacotes pudessem ser transmitidos em redes de comutação de pacotes de forma padronizada, a versão definitiva do protocolo IP foi consolidada e padronizada oficialmente na:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Década de 1960"
+      },
+      {
+        "letter": "B",
+        "text": "Década de 1980 (em 1º de janeiro de 1983 - 'Flag Day')"
+      },
+      {
+        "letter": "C",
+        "text": "Década de 1990"
+      },
+      {
+        "letter": "D",
+        "text": "Década de 2000"
+      },
+      {
+        "letter": "E",
+        "text": "Década de 2010"
+      }
+    ],
+    "correct": "B",
+    "explanation": "Embora o projeto ARPANET tenha nascido no final dos anos 1960, a transição oficial para o protocolo TCP/IP ocorreu em 1º de janeiro de 1983 (conhecido como Flag Day), na década de 1980.",
+    "examTip": "1983 é o ano de nascimento formal da Internet moderna com a adoção definitiva do TCP/IP.",
+    "concept": "Evolução Histórica da Internet"
+  },
+  {
+    "id": "redes_q08",
+    "themeId": "mod1",
+    "themeName": "Módulo 1: Redes e a Internet",
+    "title": "Rede Progenitora da Internet",
+    "statement": "A internet que utilizamos hoje passou por diversas evoluções ao longo dos últimos sessenta anos. A rede financiada pela agência de projetos de pesquisa avançada do Departamento de Defesa dos EUA, considerada a progenitora da internet, é a:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "ALOHANet"
+      },
+      {
+        "letter": "B",
+        "text": "NSFNET"
+      },
+      {
+        "letter": "C",
+        "text": "BITNET"
+      },
+      {
+        "letter": "D",
+        "text": "ARPANET"
+      },
+      {
+        "letter": "E",
+        "text": "CSNET"
+      }
+    ],
+    "correct": "D",
+    "explanation": "A ARPANET (Advanced Research Projects Agency Network), criada em 1969 conectando nós universitários (UCLA, Stanford, UC Santa Barbara e Univ. de Utah), foi a primeira rede operacional de comutação de pacotes e o berço da Internet.",
+    "examTip": "ARPA (posteriormente DARPA) deu origem à ARPANET.",
+    "concept": "ARPANET e Origem da Internet"
+  },
+  {
+    "id": "redes_q09",
+    "themeId": "mod2",
+    "themeName": "Módulo 2: Modelos OSI e TCP/IP",
+    "title": "Três Elementos de uma Camada",
+    "statement": "Cada camada de uma arquitetura de redes possui três conceitos fundamentais: serviço, protocolo e interface. A definição correta da relação entre eles é:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Um serviço especifica o que a camada faz para a camada superior; o protocolo define as regras de conversa entre entidades pares; a interface define como a camada acima acessa o serviço."
+      },
+      {
+        "letter": "B",
+        "text": "O protocolo define o hardware utilizado; o serviço é a linguagem de programação; a interface é a tela do usuário."
+      },
+      {
+        "letter": "C",
+        "text": "A interface define as regras para os nós vizinhos; o protocolo é apenas a segurança da rede."
+      },
+      {
+        "letter": "D",
+        "text": "Serviços são definidos pelo roteador; protocolos são exclusivos do switch."
+      },
+      {
+        "letter": "E",
+        "text": "Interface e protocolo são sinônimos no modelo OSI."
+      }
+    ],
+    "correct": "A",
+    "explanation": "Definição formal de Tanenbaum:\n- Serviço: o conjunto de operações que uma camada oferece à camada imediatamente superior.\n- Interface: os pontos de acesso ao serviço (SAP) que definem como a camada superior chama as operações.\n- Protocolo: conjunto de regras que gerenciam o formato e o significado dos pacotes trocados entre entidades pares da MESMA camada em máquinas distintas.",
+    "examTip": "Serviço = vertical (para quem está em cima). Protocolo = horizontal (conversa entre pares iguais).",
+    "concept": "Serviços, Protocolos e Interfaces"
+  },
+  {
+    "id": "redes_q10",
+    "themeId": "mod2",
+    "themeName": "Módulo 2: Modelos OSI e TCP/IP",
+    "title": "Responsabilidades das Camadas OSI",
+    "statement": "No modelo de referência OSI, qual camada é estritamente responsável por garantir o diálogo, controle de turnos (half/full duplex) e pontos de sincronização (checkpoints) entre duas aplicações?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Camada de Transporte"
+      },
+      {
+        "letter": "B",
+        "text": "Camada de Sessão"
+      },
+      {
+        "letter": "C",
+        "text": "Camada de Apresentação"
+      },
+      {
+        "letter": "D",
+        "text": "Camada de Rede"
+      },
+      {
+        "letter": "E",
+        "text": "Camada de Enlace"
+      }
+    ],
+    "correct": "B",
+    "explanation": "A Camada de Sessão (camada 5) permite que usuários em diferentes máquinas estabeleçam sessões entre si, oferecendo controle de diálogo (quem transmite e quando) e gerenciamento de pontos de sincronização (tokens).",
+    "examTip": "Sessão cuida de checkpoints e tokens de diálogo. Apresentação cuida de sintaxe, criptografia e compressão.",
+    "concept": "Camada de Sessão no Modelo OSI"
+  },
+  {
+    "id": "redes_q11",
+    "themeId": "mod2",
+    "themeName": "Módulo 2: Modelos OSI e TCP/IP",
+    "title": "Papel da Camada de Apresentação",
+    "statement": "A camada de apresentação do modelo OSI tem como atribuição principal:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Gerenciar a sintaxe e semântica das informações transmitidas, incluindo conversão de formatos, criptografia e compressão de dados."
+      },
+      {
+        "letter": "B",
+        "text": "Definir as características mecânicas e elétricas dos conectores."
+      },
+      {
+        "letter": "C",
+        "text": "Realizar o roteamento de pacotes fim a fim através de sub-redes."
+      },
+      {
+        "letter": "D",
+        "text": "Controlar a taxa de fluxo entre o emissor e o receptor em nível de bits."
+      },
+      {
+        "letter": "E",
+        "text": "Criar quadros delimitados por flags com verificação de redundância cíclica."
+      }
+    ],
+    "correct": "A",
+    "explanation": "A Camada de Apresentação (camada 6) preocupa-se com o significado e representação dos dados transmitidos (ex.: ASCII vs Unicode, Big-Endian vs Little-Endian, criptografia TLS/SSL e compressão JPEG/MPEG).",
+    "examTip": "Palavras-chave da Apresentação: Formatação, Tradução de Sintaxe, Criptografia e Compressão.",
+    "concept": "Camada de Apresentação"
+  },
+  {
+    "id": "redes_q12",
+    "themeId": "mod2",
+    "themeName": "Módulo 2: Modelos OSI e TCP/IP",
+    "title": "Comparação de Camadas: OSI vs. TCP/IP",
+    "statement": "Diferente do modelo OSI (7 camadas), a arquitetura TCP/IP foi consolidada com quatro (ou cinco) camadas. As funções das camadas de Sessão e Apresentação do modelo OSI na arquitetura TCP/IP são tratadas na:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Camada de Transporte"
+      },
+      {
+        "letter": "B",
+        "text": "Camada de Aplicação"
+      },
+      {
+        "letter": "C",
+        "text": "Camada de Internet"
+      },
+      {
+        "letter": "D",
+        "text": "Camada de Acesso à Rede"
+      },
+      {
+        "letter": "E",
+        "text": "Não são tratadas pelo TCP/IP"
+      }
+    ],
+    "correct": "B",
+    "explanation": "No modelo TCP/IP, não existem camadas separadas de Sessão e Apresentação. Tudo o que o aplicativo precisa em termos de formatação, criptografia ou gerenciamento de sessão é implementado dentro da própria Camada de Aplicação.",
+    "examTip": "TCP/IP absorve Sessão (5) e Apresentação (6) direto na camada de Aplicação.",
+    "concept": "Correspondência OSI e TCP/IP"
+  },
+  {
+    "id": "redes_q13",
+    "themeId": "mod2",
+    "themeName": "Módulo 2: Modelos OSI e TCP/IP",
+    "title": "Filosofia de Projeto do TCP/IP (Ampulheta)",
+    "statement": "A arquitetura TCP/IP é comumente descrita pelo formato de uma 'ampulheta'. Essa metáfora é utilizada porque:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "A camada de transporte possui apenas dois protocolos (TCP e UDP)."
+      },
+      {
+        "letter": "B",
+        "text": "A camada de rede é sustentada por um único protocolo unificador (o IP), sobre o qual operam várias aplicações e sob o qual rodam diversas tecnologias físicas."
+      },
+      {
+        "letter": "C",
+        "text": "Os dados trafegam de forma lenta nos roteadores centrais."
+      },
+      {
+        "letter": "D",
+        "text": "O modelo prioriza redes locais em detrimento de enlaces de longa distância."
+      },
+      {
+        "letter": "E",
+        "text": "O tempo de expiração dos pacotes é medido por um relógio de areia (TTL)."
+      }
+    ],
+    "correct": "B",
+    "explanation": "O conceito de 'cintura fina da ampulheta' (narrow waist) significa que no topo temos centenas de protocolos de aplicação (HTTP, DNS, SMTP, etc.) e na base centenas de tecnologias de enlace (Ethernet, Wi-Fi, Fibra, Celular), mas no centro tudo converge para um protocolo único obrigatório: o IP.",
+    "examTip": "O IP é o protocolo unificador indispensável da Internet.",
+    "concept": "Arquitetura Ampulheta do TCP/IP"
+  },
+  {
+    "id": "redes_q14",
+    "themeId": "mod2",
+    "themeName": "Módulo 2: Modelos OSI e TCP/IP",
+    "title": "Protocolos da Camada de Internet",
+    "statement": "Na arquitetura TCP/IP, qual conjunto de protocolos opera estritamente na camada de Internet (Rede)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "TCP, UDP e SCTP"
+      },
+      {
+        "letter": "B",
+        "text": "IP, ICMP, ARP e protocolos de roteamento (OSPF, BGP)"
+      },
+      {
+        "letter": "C",
+        "text": "HTTP, FTP, SMTP e DNS"
+      },
+      {
+        "letter": "D",
+        "text": "Ethernet, IEEE 802.11 e PPP"
+      },
+      {
+        "letter": "E",
+        "text": "SSH, Telnet e DHCP"
+      }
+    ],
+    "correct": "B",
+    "explanation": "Na camada de Internet do TCP/IP residem o IP (endereçamento e repasse), o ICMP (mensagens de controle e erros como ping), o ARP (mapeamento IP -> MAC) e os protocolos de roteamento dinâmico (OSPF, BGP, RIP).",
+    "examTip": "TCP/UDP estão no Transporte. HTTP/DNS estão na Aplicação.",
+    "concept": "Pilha de Protocolos da Camada Internet"
+  },
+  {
+    "id": "redes_q15",
+    "themeId": "mod3",
+    "themeName": "Módulo 3: Aplicação e Transporte",
+    "title": "Arquitetura Cliente-Servidor vs. P2P",
+    "statement": "Em relação às arquiteturas de desenvolvimento de aplicações de rede, marque a afirmativa verdadeira sobre a arquitetura Peer-to-Peer (P2P):",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Exige um servidor central dedicado com IP estático e sempre ativo."
+      },
+      {
+        "letter": "B",
+        "text": "Apresenta alta autoescalabilidade, pois cada nó (peer) consome recursos mas também compartilha capacidade de processamento e banda com a rede."
+      },
+      {
+        "letter": "C",
+        "text": "Não permite a troca de arquivos entre usuários sem a aprovação de uma autoridade central."
+      },
+      {
+        "letter": "D",
+        "text": "É imune a problemas de segurança e não consome banda de upload dos clientes."
+      },
+      {
+        "letter": "E",
+        "text": "Utiliza exclusivamente o protocolo TCP com criptografia de ponta a ponta obrigatória."
+      }
+    ],
+    "correct": "B",
+    "explanation": "A principal vantagem da arquitetura P2P (como BitTorrent) é a autoescalabilidade (self-scalability): cada novo peer que entra na rede para baixar um arquivo também disponibiliza partes dele para envio aos outros pares, aliviando o tráfego de servidores centrais.",
+    "examTip": "Cliente-servidor sofre com gargalo no servidor conforme a base cresce. P2P ganha capacidade conforme novos nós entram.",
+    "concept": "Arquiteturas de Aplicação: P2P vs Cliente-Servidor"
+  },
+  {
+    "id": "redes_q16",
+    "themeId": "mod3",
+    "themeName": "Módulo 3: Aplicação e Transporte",
+    "title": "Protocolos do Sistema de Correio Eletrônico",
+    "statement": "Um sistema de correio eletrônico utiliza protocolos distintos para envio e recebimento de mensagens. Dentre as alternativas, selecione a que apresenta respectivamente o protocolo padrão para ENVIO (entre cliente e servidor ou entre servidores) e o protocolo para ACESSO/LEITURA de caixas postais mantendo pastas sincronizadas no servidor:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "POP3 e SMTP"
+      },
+      {
+        "letter": "B",
+        "text": "SMTP e IMAP"
+      },
+      {
+        "letter": "C",
+        "text": "HTTP e FTP"
+      },
+      {
+        "letter": "D",
+        "text": "SMTP e SNMP"
+      },
+      {
+        "letter": "E",
+        "text": "DNS e POP3"
+      }
+    ],
+    "correct": "B",
+    "explanation": "- SMTP (Simple Mail Transfer Protocol, porta 25/587): utilizado para EMPURRAR (push) e-mails do cliente para o servidor ou entre servidores.\n- IMAP (Internet Message Access Protocol, porta 143/993): permite ao usuário acessar e gerenciar mensagens organizadas em pastas mantidas diretamente no servidor.\n- POP3 apenas baixa as mensagens para o cliente local.",
+    "examTip": "Envio = SMTP (S-M-T-P: 'Sua Mensagem Tá Partindo'). Leitura sincronizada = IMAP.",
+    "concept": "Protocolos de E-mail: SMTP, IMAP e POP3"
+  },
+  {
+    "id": "redes_q17",
+    "themeId": "mod3",
+    "themeName": "Módulo 3: Aplicação e Transporte",
+    "title": "Multiplexação e Demultiplexação de Portas",
+    "statement": "O endereçamento na camada de transporte é realizado por meio de 'portas' (ports). O processo pelo qual a camada de transporte no destino recebe segmentos da camada de rede e os entrega para o socket da aplicação correta com base no número da porta de destino é denominado:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Multiplexação"
+      },
+      {
+        "letter": "B",
+        "text": "Demultiplexação"
+      },
+      {
+        "letter": "C",
+        "text": "Fragmentação"
+      },
+      {
+        "letter": "D",
+        "text": "Comutação de pacotes"
+      },
+      {
+        "letter": "E",
+        "text": "Controle de congestionamento"
+      }
+    ],
+    "correct": "B",
+    "explanation": "- Multiplexação (no transmissor): coletar dados de vários sockets de aplicação, adicionar cabeçalhos com portas de origem/destino e repassar para a camada de rede.\n- Demultiplexação (no receptor): ler a porta de destino no cabeçalho de transporte e entregar o segmento para o socket correto.",
+    "examTip": "Demultiplexação = entregar no destino para o socket certo. Multiplexação = juntar na origem.",
+    "concept": "Multiplexação e Portas de Transporte"
+  },
+  {
+    "id": "redes_q18",
+    "themeId": "mod3",
+    "themeName": "Módulo 3: Aplicação e Transporte",
+    "title": "Características do Protocolo UDP",
+    "statement": "Sobre o protocolo UDP (User Datagram Protocol), marque a afirmativa correta:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Garante entrega em ordem e retransmissão de segmentos perdidos."
+      },
+      {
+        "letter": "B",
+        "text": "É um protocolo não orientado à conexão, sem handshake inicial, com cabeçalho leve (8 bytes) e que não realiza controle de fluxo nem de congestionamento."
+      },
+      {
+        "letter": "C",
+        "text": "Executa o three-way handshake antes de transmitir dados."
+      },
+      {
+        "letter": "D",
+        "text": "Não possui campo de checksum para verificação de integridade."
+      },
+      {
+        "letter": "E",
+        "text": "É utilizado exclusivamente para transferência de arquivos críticos via FTP."
+      }
+    ],
+    "correct": "B",
+    "explanation": "O UDP é o protocolo de transporte 'sem conexão' e 'melhor esforço'. Ele não cria conexão (zero RTT de setup), possui cabeçalho de apenas 8 bytes (contra 20 do TCP), não retransmite e não reduz a taxa em congestionamento, sendo ideal para DNS, VoIP e streaming em tempo real.",
+    "examTip": "Cabeçalho UDP: 8 bytes (Porta Origem, Porta Destino, Comprimento, Checksum).",
+    "concept": "Protocolo UDP"
+  },
+  {
+    "id": "redes_q19",
+    "themeId": "mod3",
+    "themeName": "Módulo 3: Aplicação e Transporte",
+    "title": "Mecanismos do TCP: Campo Número de Confirmação (ACK)",
+    "statement": "No cabeçalho do protocolo TCP, o campo Número de Confirmação (Acknowledgment Number) carrega:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "O número do último byte recebido com sucesso."
+      },
+      {
+        "letter": "B",
+        "text": "O número do PRÓXIMO byte que o receptor espera receber do transmissor."
+      },
+      {
+        "letter": "C",
+        "text": "O número total de pacotes transmitidos até o momento."
+      },
+      {
+        "letter": "D",
+        "text": "A quantidade de espaço disponível no buffer de recebimento."
+      },
+      {
+        "letter": "E",
+        "text": "O endereço IP do remetente codificado em base64."
+      }
+    ],
+    "correct": "B",
+    "explanation": "O TCP é orientado a fluxo de bytes com confirmações cumulativas. O campo ACK contém o número do PRÓXIMO byte esperado. Por exemplo: se o host recebeu bytes de 0 a 999 com sucesso, ele enviará um ACK com valor 1000.",
+    "examTip": "ACK no TCP é SEMPRE o próximo byte que estou esperando receber!",
+    "concept": "Funcionamento do TCP e Confirmações"
+  },
+  {
+    "id": "redes_q20",
+    "themeId": "mod3",
+    "themeName": "Módulo 3: Aplicação e Transporte",
+    "title": "Three-Way Handshake do TCP",
+    "statement": "Para estabelecer uma conexão confiável entre cliente e servidor, o protocolo TCP utiliza o processo de três vias (Three-Way Handshake). A ordem correta dos pacotes trocados com seus respectivos flags é:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "1. SYN -> 2. SYN-ACK -> 3. ACK"
+      },
+      {
+        "letter": "B",
+        "text": "1. ACK -> 2. SYN -> 3. FIN"
+      },
+      {
+        "letter": "C",
+        "text": "1. SYN -> 2. ACK -> 3. DATA"
+      },
+      {
+        "letter": "D",
+        "text": "1. RST -> 2. SYN -> 3. ACK"
+      },
+      {
+        "letter": "E",
+        "text": "1. HELLO -> 2. WELCOME -> 3. START"
+      }
+    ],
+    "correct": "A",
+    "explanation": "O aperto de mão de três vias do TCP ocorre em três passos:\n1. Cliente envia segmento SYN (com número de sequência inicial x);\n2. Servidor responde com SYN-ACK (com seq y e ack x+1);\n3. Cliente responde com ACK (ack y+1), podendo já carregar dados da aplicação.",
+    "examTip": "Mnemônico: SYN -> SYN-ACK -> ACK.",
+    "concept": "Three-Way Handshake TCP"
+  },
+  {
+    "id": "redes_q21",
+    "themeId": "mod3",
+    "themeName": "Módulo 3: Aplicação e Transporte",
+    "title": "Controle de Fluxo vs. Controle de Congestionamento",
+    "statement": "No protocolo TCP, qual é a diferença fundamental entre Controle de Fluxo e Controle de Congestionamento?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "O controle de fluxo protege a rede contra sobrecarga; o controle de congestionamento protege o transmissor."
+      },
+      {
+        "letter": "B",
+        "text": "O controle de fluxo protege o buffer do receptor contra afogamento pelo transmissor (via Receive Window); o controle de congestionamento protege a malha de roteadores da rede contra excesso de tráfego injetado."
+      },
+      {
+        "letter": "C",
+        "text": "Ambos realizam a mesma função utilizando a mesma janela Congestion Window."
+      },
+      {
+        "letter": "D",
+        "text": "O controle de fluxo utiliza UDP e o controle de congestionamento utiliza TCP."
+      },
+      {
+        "letter": "E",
+        "text": "O controle de fluxo descarta pacotes no destino e o controle de congestionamento duplica a taxa."
+      }
+    ],
+    "correct": "B",
+    "explanation": "- Controle de Fluxo: serviço ponto a ponto (fim a fim) garantido pelo campo rwnd (Receive Window) do cabeçalho TCP para não sobrecarregar o buffer do receptor.\n- Controle de Congestionamento: serviço global para evitar que muitos emissores injetem pacotes em excesso nos roteadores intermediários da rede (via cwnd, Slow Start, Congestion Avoidance).",
+    "examTip": "Fluxo = receptor (rwnd). Congestionamento = rede/roteadores (cwnd).",
+    "concept": "Controle de Fluxo e Congestionamento no TCP"
+  },
+  {
+    "id": "redes_q22",
+    "themeId": "mod3",
+    "themeName": "Módulo 3: Aplicação e Transporte",
+    "title": "Serviço DNS (Domain Name System)",
+    "statement": "O DNS é um serviço essencial da internet que traduz nomes amigáveis (ex: www.google.com) em endereços IP. Sobre o DNS, é correto afirmar:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Utiliza uma base de dados centralizada em um único supercomputador em Washington."
+      },
+      {
+        "letter": "B",
+        "text": "É uma base de dados distribuída e hierárquica (Root Servers, TLD Servers, Servidores Autoritativos) que opera prioritariamente sobre a porta 53 UDP."
+      },
+      {
+        "letter": "C",
+        "text": "Opera na camada de transporte substituindo o protocolo TCP."
+      },
+      {
+        "letter": "D",
+        "text": "Não armazena registros em cache nos servidores locais."
+      },
+      {
+        "letter": "E",
+        "text": "Só funciona com endereços IPv4, sendo incompatível com IPv6."
+      }
+    ],
+    "correct": "B",
+    "explanation": "O DNS opera na camada de aplicação, utilizando uma base distribuída e hierárquica com servidores raiz (13 clusters lógicos), servidores de domínio de topo (TLD: .com, .br, .edu) e servidores autoritativos. Usa UDP na porta 53 para consultas rápidas.",
+    "examTip": "DNS = Porta 53 (UDP para consultas padrão, TCP para transferências de zona entre servidores).",
+    "concept": "Serviço e Protocolo DNS"
+  },
+  {
+    "id": "redes_q23",
+    "themeId": "mod4",
+    "themeName": "Módulo 4: Camada de Rede",
+    "title": "Repasse (Forwarding) vs. Roteamento (Routing)",
+    "statement": "A camada de rede realiza duas funções essenciais: Repasse (Forwarding) e Roteamento (Routing). A distinção correta entre elas é:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "O repasse é a ação local do roteador de transferir um pacote da interface de entrada para a interface de saída apropriada; o roteamento é o processo global de determinação da rota fim a fim pela rede."
+      },
+      {
+        "letter": "B",
+        "text": "O repasse é o cálculo da melhor rota via algoritmo de Dijkstra; o roteamento é a troca física de cabos."
+      },
+      {
+        "letter": "C",
+        "text": "O roteamento ocorre apenas nos hosts clientes; o repasse ocorre apenas nos servidores DNS."
+      },
+      {
+        "letter": "D",
+        "text": "Repasse e roteamento são termos sinônimos utilizados indiferentemente na internet."
+      },
+      {
+        "letter": "E",
+        "text": "O repasse cria os endereços IP e o roteamento define os endereços MAC."
+      }
+    ],
+    "correct": "A",
+    "explanation": "- Repasse (Forwarding / Plano de Dados): operação local rápida de hardware em que o roteador pega o pacote da entrada e joga na saída correta com base na tabela de repasse.\n- Roteamento (Routing / Plano de Controle): processo global coordenado por algoritmos (OSPF, BGP) que constrói e atualiza as tabelas de roteamento ao longo da rede.",
+    "examTip": "Analogia clássica: Roteamento é planejar a viagem no mapa; Repasse é passar por um cruzamento específico.",
+    "concept": "Plano de Dados (Repasse) vs Plano de Controle (Roteamento)"
+  },
+  {
+    "id": "redes_q24",
+    "themeId": "mod4",
+    "themeName": "Módulo 4: Camada de Rede",
+    "title": "Redes de Datagramas vs. Circuitos Virtuais",
+    "statement": "A internet adota o modelo de Redes de Datagramas (sem conexão no plano de rede). Comparando-a com as Redes de Circuitos Virtuais (como ATM ou Frame Relay), é correto afirmar:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Em redes de datagramas, cada pacote carrega o endereço de destino completo e pode seguir caminhos diferentes até o destino."
+      },
+      {
+        "letter": "B",
+        "text": "Em redes de circuitos virtuais não existe fase de estabelecimento de chamada."
+      },
+      {
+        "letter": "C",
+        "text": "Em redes de datagramas os pacotes sempre chegam estritamente na mesma ordem de envio."
+      },
+      {
+        "letter": "D",
+        "text": "Roteadores de datagramas mantêm tabelas de estado de conexão para cada fluxo ativo de usuário."
+      },
+      {
+        "letter": "E",
+        "text": "A internet utiliza circuitos virtuais em todos os seus enlaces de fibra óptica."
+      }
+    ],
+    "correct": "A",
+    "explanation": "Na rede de datagramas da Internet, cada datagrama IP é tratado de forma independente e autônoma, carregando o IP de destino completo. Roteadores intermediários não guardam estado da conexão; se a topologia mudar, pacotes sucessivos podem seguir rotas distintas.",
+    "examTip": "Datagrama = sem conexão na rede, inteligente nas bordas. Circuito Virtual = conexão pré-estabelecida, estado na rede.",
+    "concept": "Datagramas vs Circuitos Virtuais"
+  },
+  {
+    "id": "redes_q25",
+    "themeId": "mod4",
+    "themeName": "Módulo 4: Camada de Rede",
+    "title": "CIDR e Notação de Prefixo de Sub-rede",
+    "statement": "No endereçamento CIDR (Classless Inter-Domain Routing), a notação a.b.c.d/x indica que:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Os primeiros x bits representam a parte de rede (prefixo), e os (32 - x) bits restantes identificam os hosts dentro daquela sub-rede."
+      },
+      {
+        "letter": "B",
+        "text": "O endereço possui x bytes no total."
+      },
+      {
+        "letter": "C",
+        "text": "A rede pertence obrigatoriamente à Classe C."
+      },
+      {
+        "letter": "D",
+        "text": "Apenas x hosts podem ser conectados na rede."
+      },
+      {
+        "letter": "E",
+        "text": "O pacote pode saltar no máximo por x roteadores (TTL)."
+      }
+    ],
+    "correct": "A",
+    "explanation": "No IPv4 (32 bits), a barra /x informa a máscara de sub-rede contínua. Os x bits mais significativos identificam a sub-rede (prefixo de roteamento) e os 32 - x bits identificam os dispositivos locais. O número total de IPs disponíveis para hosts é 2^(32 - x) - 2 (descontando rede e broadcast).",
+    "examTip": "Exemplo: /24 possui 32 - 24 = 8 bits de host -> 2⁸ - 2 = 254 hosts utilizáveis.",
+    "concept": "CIDR e Cálculo de Sub-redes IPv4"
+  },
+  {
+    "id": "redes_q26",
+    "themeId": "mod4",
+    "themeName": "Módulo 4: Camada de Rede",
+    "title": "Mecanismo de NAT (Network Address Translation)",
+    "statement": "A técnica de NAT (Network Address Translation) foi amplamente implantada com o objetivo principal de:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Eliminar a necessidade de roteadores na internet."
+      },
+      {
+        "letter": "B",
+        "text": "Permitir que vários dispositivos em uma rede privada utilizem endereços IP privados locais (RFC 1918) e compartilhem um único endereço IP público válido na internet."
+      },
+      {
+        "letter": "C",
+        "text": "Converter pacotes IPv4 diretamente em conexões ópticas de camada física."
+      },
+      {
+        "letter": "D",
+        "text": "Criptografar todo o tráfego que transita na rede local."
+      },
+      {
+        "letter": "E",
+        "text": "Substituir o protocolo DNS em redes domésticas."
+      }
+    ],
+    "correct": "B",
+    "explanation": "Com o esgotamento dos endereços IPv4, o NAT (junto com NAPT/PAT) permitiu que residências e empresas usassem blocos privados (ex: 192.168.0.0/16 ou 10.0.0.0/8) internamente. O roteador NAT reescreve o IP e porta de origem dos pacotes saindo para a Internet.",
+    "examTip": "NAT mapeia (IP Privado : Porta Privada) <-> (IP Público : Porta Pública) em uma tabela de tradução.",
+    "concept": "NAT e Conservação de Endereços IPv4"
+  },
+  {
+    "id": "redes_q27",
+    "themeId": "mod4",
+    "themeName": "Módulo 4: Camada de Rede",
+    "title": "Protocolo DHCP (Configuração Dinâmica)",
+    "statement": "O protocolo DHCP (Dynamic Host Configuration Protocol) foi desenvolvido para automatizar a configuração de rede dos dispositivos. Ele opera em quatro etapas fundamentais, conhecidas pela sigla DORA, que representam:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Discover, Offer, Request, Acknowledgment"
+      },
+      {
+        "letter": "B",
+        "text": "Delete, Open, Route, Allocate"
+      },
+      {
+        "letter": "C",
+        "text": "Detect, Operate, Resolve, Accept"
+      },
+      {
+        "letter": "D",
+        "text": "Data, Output, Receive, Answer"
+      },
+      {
+        "letter": "E",
+        "text": "Direct, Online, Repeat, Apply"
+      }
+    ],
+    "correct": "A",
+    "explanation": "O ciclo do DHCP (DORA):\n1. DHCP Discover: cliente envia broadcast procurando um servidor DHCP.\n2. DHCP Offer: servidor oferece um IP disponível com máscara, gateway e DNS.\n3. DHCP Request: cliente solicita formalmente o IP oferecido.\n4. DHCP ACK (Acknowledgment): servidor confirma a concessão (lease) do endereço.",
+    "examTip": "Mnemônico: D-O-R-A (Discover -> Offer -> Request -> ACK). Opera sobre UDP portas 67 (servidor) e 68 (cliente).",
+    "concept": "Protocolo DHCP e Ciclo DORA"
+  },
+  {
+    "id": "redes_q28",
+    "themeId": "mod4",
+    "themeName": "Módulo 4: Camada de Rede",
+    "title": "Protocolo ICMP e Notificação de Erros",
+    "statement": "Quando um datagrama IP não pode ser entregue porque um roteador não encontra rota para o destino ou o tempo de vida (TTL) chega a zero, qual protocolo é encarregado de reportar essa ocorrência à máquina de origem?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "ARP"
+      },
+      {
+        "letter": "B",
+        "text": "ICMP (Internet Control Message Protocol)"
+      },
+      {
+        "letter": "C",
+        "text": "IGMP"
+      },
+      {
+        "letter": "D",
+        "text": "SNMP"
+      },
+      {
+        "letter": "E",
+        "text": "TCP"
+      }
+    ],
+    "correct": "B",
+    "explanation": "O ICMP é usado por hosts e roteadores para comunicar informações de nível de rede, como mensagens de erro ('Destino Inalcançável', 'TTL Expirado no Trânsito') e testes de conectividade ('Echo Request / Echo Reply' utilizados pelos comandos ping e traceroute).",
+    "examTip": "Ping e Traceroute usam ICMP. Mensagem de erro de rede = ICMP.",
+    "concept": "Protocolo ICMP e Diagnóstico"
+  },
+  {
+    "id": "redes_q29",
+    "themeId": "mod4",
+    "themeName": "Módulo 4: Camada de Rede",
+    "title": "Algoritmos de Roteamento: Vetor de Distância vs. Estado de Enlace",
+    "statement": "Em relação aos algoritmos de roteamento da camada de rede, marque a correta associação:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "O algoritmo de Estado de Enlace (Link-State) utiliza o algoritmo de Dijkstra e exige que cada roteador conheça a topologia completa da rede; o Vetor de Distância (Distance-Vector) utiliza Bellman-Ford e troca informações apenas com vizinhos imediatos."
+      },
+      {
+        "letter": "B",
+        "text": "O OSPF utiliza Bellman-Ford e o RIP utiliza Dijkstra."
+      },
+      {
+        "letter": "C",
+        "text": "Roteamento estático calcula rotas automaticamente quando um enlace é rompido."
+      },
+      {
+        "letter": "D",
+        "text": "O BGP é um protocolo de Estado de Enlace utilizado dentro de pequenas redes locais."
+      },
+      {
+        "letter": "E",
+        "text": "O protocolo RIP permite redes com até 255 saltos de distância."
+      }
+    ],
+    "correct": "A",
+    "explanation": "- Link-State (ex: OSPF): global, usa Dijkstra, cada roteador tem o mapa completo da rede (inundação de LSAs).\n- Distance-Vector (ex: RIP): descentralizado, iterativo, usa Bellman-Ford, cada roteador conversa apenas com vizinhos diretos (máximo 15 saltos no RIP; 16 = infinito).",
+    "examTip": "Link-State = Dijkstra / OSPF. Distance-Vector = Bellman-Ford / RIP.",
+    "concept": "Algoritmos de Roteamento Dinâmico"
+  },
+  {
+    "id": "redes_q30",
+    "themeId": "mod4",
+    "themeName": "Módulo 4: Camada de Rede",
+    "title": "Roteamento Hierárquico e Sistemas Autônomos (AS)",
+    "statement": "À medida que a internet cresceu para centenas de milhões de redes, tornou-se inviável armazenar todos os destinos em tabelas planas de roteadores. A solução adotada foi o Roteamento Hierárquico baseado em Sistemas Autônomos (AS). O protocolo padrão utilizado para roteamento INTERDOMÍNIO (entre diferentes ASs) na internet global é o:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "RIP"
+      },
+      {
+        "letter": "B",
+        "text": "OSPF"
+      },
+      {
+        "letter": "C",
+        "text": "BGP (Border Gateway Protocol)"
+      },
+      {
+        "letter": "D",
+        "text": "IS-IS"
+      },
+      {
+        "letter": "E",
+        "text": "ICMP"
+      }
+    ],
+    "correct": "C",
+    "explanation": "O BGP (atualmente BGP-4) é o protocolo padrão da internet para roteamento entre sistemas autônomos (Inter-AS / EGP). Ele é baseado em vetores de caminhos (Path Vector) e permite aplicar políticas econômicas e de tráfego entre provedores.",
+    "examTip": "Dentro do AS (Intra-AS) = OSPF ou RIP. Entre ASs diferentes (Inter-AS) = BGP.",
+    "concept": "Roteamento Hierárquico e Protocolo BGP"
+  },
+  {
+    "id": "redes_q31",
+    "themeId": "mod5",
+    "themeName": "Módulo 5: Enlace e Camada Física",
+    "title": "Meios de Transmissão Guiados e Não Guiados",
+    "statement": "Na camada física, os meios de transmissão são classificados em guiados e não guiados. Assinale a afirmativa correta:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "A fibra óptica monomodo possui núcleo mais largo que a multimodo e suporta distâncias mais curtas."
+      },
+      {
+        "letter": "B",
+        "text": "O cabo de par trançado utiliza o trançamento dos pares de fios com o objetivo específico de reduzir a interferência eletromagnética (crosstalk)."
+      },
+      {
+        "letter": "C",
+        "text": "O espectro de radiofrequência é um meio guiado imune a ruídos atmosféricos."
+      },
+      {
+        "letter": "D",
+        "text": "Cabos coaxiais transmitem pulsos de luz e fibras ópticas transmitem sinais elétricos."
+      },
+      {
+        "letter": "E",
+        "text": "Meios não guiados oferecem maior taxa de transmissão que fibras ópticas submarinas."
+      }
+    ],
+    "correct": "B",
+    "explanation": "O cabo de par trançado (UTP/STP) tem fios trançados em hélice porque a corrente que passa em um fio cancela a radiação eletromagnética do outro, reduzindo drasticamente a diafonia (crosstalk) e interferências externas.",
+    "examTip": "Par trançado = cancelamento de ruído por indução simétrica. Fibra monomodo = feixe de laser único para longas distâncias.",
+    "concept": "Meios de Transmissão Física"
+  },
+  {
+    "id": "redes_q32",
+    "themeId": "mod5",
+    "themeName": "Módulo 5: Enlace e Camada Física",
+    "title": "Técnicas de Enquadramento na Camada de Enlace",
+    "statement": "Para que a camada de enlace entregue dados à camada física, os bits precisam ser organizados em Quadros (Frames). Qual técnica de enquadramento insere uma sequência especial de bits (ex: 01111110) no início e no fim do quadro, utilizando inserção de bits (bit stuffing) para evitar que o padrão apareça nos dados?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Contagem de caracteres"
+      },
+      {
+        "letter": "B",
+        "text": "Preenchimento de bytes com bytes de escape (byte stuffing)"
+      },
+      {
+        "letter": "C",
+        "text": "Preenchimento de bits (bit stuffing com flags delimitadoras)"
+      },
+      {
+        "letter": "D",
+        "text": "Violação de codificação da camada física"
+      },
+      {
+        "letter": "E",
+        "text": "Verificação de paridade transversal"
+      }
+    ],
+    "correct": "C",
+    "explanation": "No enquadramento por inserção de bits (Bit Stuffing, usado no HDLC e PPP), cada quadro começa e termina com a flag 01111110 (0x7E). Sempre que o transmissor encontra cinco bits '1' consecutivos no payload, ele insere automaticamente um bit '0' extra, evitando que os dados sejam confundidos com a flag.",
+    "examTip": "Cinco 1s consecutivos -> transmissor enfia um 0. No receptor, o 0 é retirado.",
+    "concept": "Enquadramento e Bit Stuffing"
+  },
+  {
+    "id": "redes_q33",
+    "themeId": "mod5",
+    "themeName": "Módulo 5: Enlace e Camada Física",
+    "title": "Controle de Erro: Protocolo Stop-and-Wait ARQ",
+    "statement": "No protocolo de controle de erros Stop-and-Wait ARQ (com envio de confirmações ACK e temporizadores de timeout), o tamanho mínimo do campo de número de sequência necessário no cabeçalho do quadro para evitar confusão de duplicatas é de:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "1 bit (alternando entre 0 e 1)"
+      },
+      {
+        "letter": "B",
+        "text": "8 bits (1 byte)"
+      },
+      {
+        "letter": "C",
+        "text": "16 bits"
+      },
+      {
+        "letter": "D",
+        "text": "32 bits"
+      },
+      {
+        "letter": "E",
+        "text": "Não necessita de número de sequência"
+      }
+    ],
+    "correct": "A",
+    "explanation": "No Stop-and-Wait, o transmissor envia um quadro e para até receber o ACK correspondente. Se um ACK atrasar ou for perdido e ocorrer retransmissão, basta 1 bit de sequência (números 0 e 1) para o receptor distinguir se o quadro recebido é uma cópia duplicada do anterior ou um quadro novo.",
+    "examTip": "Stop-and-Wait só precisa de 1 bit de número de sequência (0 ou 1).",
+    "concept": "Protocolo Stop-and-Wait ARQ"
+  },
+  {
+    "id": "redes_q34",
+    "themeId": "mod5",
+    "themeName": "Módulo 5: Enlace e Camada Física",
+    "title": "Subcamada MAC: Protocolo ALOHA",
+    "statement": "O protocolo ALOHA, desenvolvido na Universidade do Havaí nos anos 1970, foi pioneiro no acesso a meios compartilhados. Sobre o ALOHA Puro e o ALOHA Slotted (ranhurado), é correto afirmar:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "O ALOHA Puro atinge 100% de eficiência teórica no canal."
+      },
+      {
+        "letter": "B",
+        "text": "No ALOHA Puro as estações transmitem assim que têm dados, gerando frequentes colisões e eficiência máxima de apenas ~18,4%; o ALOHA Slotted divide o tempo em intervalos discretos, dobrando a eficiência máxima para ~36,8%."
+      },
+      {
+        "letter": "C",
+        "text": "O ALOHA Slotted não permite colisões sob nenhuma circunstância."
+      },
+      {
+        "letter": "D",
+        "text": "O ALOHA é um protocolo determinístico baseado em passagem de ficha (token passing)."
+      },
+      {
+        "letter": "E",
+        "text": "Ambos exigem que as estações escutem a portadora antes de transmitir (carrier sense)."
+      }
+    ],
+    "correct": "B",
+    "explanation": "- ALOHA Puro: transmite a qualquer momento. Eficiência máxima: 1 / (2e) ≈ 18,4%.\n- ALOHA Ranhurado (Slotted): transmissões sincronizadas no início de slots de tempo. O período vulnerável cai pela metade e a eficiência dobra para 1 / e ≈ 36,8%.\nNenhum deles escuta o canal antes de enviar.",
+    "examTip": "Puro = 18,4% (1/2e). Ranhurado/Slotted = 36,8% (1/e).",
+    "concept": "Protocolos ALOHA Puro e Slotted"
+  },
+  {
+    "id": "redes_q35",
+    "themeId": "mod5",
+    "themeName": "Módulo 5: Enlace e Camada Física",
+    "title": "Protocolos CSMA: CSMA/CD vs. CSMA/CA",
+    "statement": "A evolução do ALOHA deu origem aos protocolos CSMA (Carrier Sense Multiple Access), que escutam o canal antes de transmitir ('ouvir antes de falar'). A respeito do CSMA/CD e CSMA/CA, marque a afirmativa correta:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "O CSMA/CD (Collision Detection) é utilizado em redes Ethernet cabeadas clássicas; quando detecta colisão, aborta a transmissão e aguarda tempo aleatório (Binary Exponential Backoff). O CSMA/CA (Collision Avoidance) é utilizado no Wi-Fi para evitar colisões no ar."
+      },
+      {
+        "letter": "B",
+        "text": "O Wi-Fi utiliza detecção de colisão (CD) porque as antenas conseguem transmitir e ouvir colisões no ar simultaneamente."
+      },
+      {
+        "letter": "C",
+        "text": "O CSMA/CD não interrompe a transmissão quando uma colisão ocorre."
+      },
+      {
+        "letter": "D",
+        "text": "Switches full-duplex modernos sofrem mais colisões CSMA/CD do que hubs antigos."
+      },
+      {
+        "letter": "E",
+        "text": "O CSMA/CA não utiliza quadros de controle como RTS e CTS."
+      }
+    ],
+    "correct": "A",
+    "explanation": "- CSMA/CD (Ethernet IEEE 802.3): escuta enquanto transmite. Se detectar colisão, emite sinal de reforço (jamming) e para imediatamente.\n- CSMA/CA (Wi-Fi IEEE 802.11): rádios sem fio não conseguem detectar colisão enquanto transmitem (energia transmitida mascara sinal recebido). Por isso, usa prevenção com temporizadores IFS, backoff e opcionalmente RTS/CTS.",
+    "examTip": "Cabo = CD (Detecção). Sem fio (Wi-Fi) = CA (Prevenção / Avoidance).",
+    "concept": "CSMA/CD (Ethernet) e CSMA/CA (Wi-Fi)"
+  },
+  {
+    "id": "redes_q36",
+    "themeId": "mod5",
+    "themeName": "Módulo 5: Enlace e Camada Física",
+    "title": "Endereço MAC e Protocolo ARP",
+    "statement": "O endereço físico de enlace (MAC address) gravado na placa de rede possui 48 bits (6 bytes). Quando um host precisa enviar um pacote IP para outro host na mesma rede local, mas conhece apenas o endereço IP de destino, qual protocolo ele utiliza para descobrir o endereço MAC correspondente?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "DHCP"
+      },
+      {
+        "letter": "B",
+        "text": "DNS"
+      },
+      {
+        "letter": "C",
+        "text": "ARP (Address Resolution Protocol)"
+      },
+      {
+        "letter": "D",
+        "text": "RARP"
+      },
+      {
+        "letter": "E",
+        "text": "NAT"
+      }
+    ],
+    "correct": "C",
+    "explanation": "O ARP (Address Resolution Protocol) traduz endereços de camada de rede (IP) em endereços de camada de enlace (MAC). Ele envia uma requisição em broadcast na rede local perguntando 'Quem tem o IP x.x.x.x?', e o dono responde em unicast informando seu MAC.",
+    "examTip": "ARP = 'Tenho o IP, quero o MAC'. DNS = 'Tenho o nome de domínio, quero o IP'.",
+    "concept": "Endereço MAC e Protocolo ARP"
+  },
+  {
+    "id": "redes_q37",
+    "themeId": "mod6",
+    "themeName": "Módulo 6: Segurança e Administração",
+    "title": "Ataques Ativos vs. Ataques Passivos",
+    "statement": "Os ataques a redes de computadores são classificados pedagogicamente em Passivos e Ativos. Qual das alternativas apresenta um exemplo típico de ataque PASSIVO?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Modificação de mensagens em trânsito e injeção de pacotes falsificados."
+      },
+      {
+        "letter": "B",
+        "text": "Sniffing (escuta / captura de pacotes) e análise de tráfego de rede sem alteração do conteúdo dos dados."
+      },
+      {
+        "letter": "C",
+        "text": "Ataque de Negação de Serviço Distribuído (DDoS) para derrubar um servidor web."
+      },
+      {
+        "letter": "D",
+        "text": "Invasão de banco de dados e sequestro de arquivos via Ransomware."
+      },
+      {
+        "letter": "E",
+        "text": "Spoofing de endereço IP para forjar identidade de administrador."
+      }
+    ],
+    "correct": "B",
+    "explanation": "- Ataque Passivo: o atacante apenas monitora, escuta ou analisa o tráfego sem alterar mensagens ou recursos do sistema (ex.: interceptação, sniffing com Wireshark). É difícil de detectar, e a melhor defesa é a Criptografia.\n- Ataque Ativo: há alteração de dados, falsificação ou degradação do serviço (DDoS, Spoofing, Man-in-the-Middle).",
+    "examTip": "Ataque passivo não altera os dados; apenas espiona. Remédio essencial: Criptografia!",
+    "concept": "Classificação de Ataques: Ativos vs Passivos"
+  },
+  {
+    "id": "redes_q38",
+    "themeId": "mod6",
+    "themeName": "Módulo 6: Segurança e Administração",
+    "title": "Ameaças Avançadas: APT (Advanced Persistent Threat)",
+    "statement": "Uma das ameaças mais perigosas no cenário corporativo e governamental moderno é a chamada APT (Advanced Persistent Threat). Ela se caracteriza por:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Ataques automatizados aleatórios e rápidos executados por script kiddies."
+      },
+      {
+        "letter": "B",
+        "text": "Ataques direcionados, furtivos, sofisticados e de longa duração, frequentemente patrocinados por grupos organizados ou Estados, que buscam permanecer indetectados na rede para exfiltrar dados sensíveis."
+      },
+      {
+        "letter": "C",
+        "text": "Vírus que apenas desliga o monitor da máquina do usuário."
+      },
+      {
+        "letter": "D",
+        "text": "Falhas provocadas por superaquecimento de roteadores em datacenters."
+      },
+      {
+        "letter": "E",
+        "text": "Técnicas de spam enviadas em massa por e-mail."
+      }
+    ],
+    "correct": "B",
+    "explanation": "Uma APT é um ataque contínuo e altamente planejado onde invasores com muitos recursos (frequentemente cibercriminosos profissionais ou agências estatais) se infiltram na rede de uma organização específica e operam por meses ou anos sem serem descobertos.",
+    "examTip": "APT = Persistente, Furtivo, Focado em alvo específico e com alta sofisticação técnica.",
+    "concept": "Ameaças Cibernéticas e APTs"
+  },
+  {
+    "id": "redes_q39",
+    "themeId": "mod6",
+    "themeName": "Módulo 6: Segurança e Administração",
+    "title": "Ataques de Ransomware (WannaCry)",
+    "statement": "Em maio de 2017, um ataque global de ransomware paralisou hospitais, operadoras de telecomunicações e empresas em mais de 150 países, explorando uma vulnerabilidade no protocolo SMB do Windows através do exploit EternalBlue. Esse ataque histórico ficou conhecido como:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Stuxnet"
+      },
+      {
+        "letter": "B",
+        "text": "WannaCry"
+      },
+      {
+        "letter": "C",
+        "text": "Conficker"
+      },
+      {
+        "letter": "D",
+        "text": "ILOVEYOU"
+      },
+      {
+        "letter": "E",
+        "text": "Heartbleed"
+      }
+    ],
+    "correct": "B",
+    "explanation": "O WannaCry foi um dos ransomwares mais destrutivos da história. Ele criptografava os arquivos das vítimas, exigia resgate em Bitcoin e se propagava como worm explorando a falha do SMBv1 (MS17-010).",
+    "examTip": "Ransomware sequestra arquivos criptografando o disco e exigindo resgate.",
+    "concept": "Malwares e Ransomware"
+  },
+  {
+    "id": "redes_q40",
+    "themeId": "mod6",
+    "themeName": "Módulo 6: Segurança e Administração",
+    "title": "Arquitetura com DMZ (Zona Desmilitarizada)",
+    "statement": "Em projetos de segurança de redes corporativas com firewalls, o que é uma Zona Desmilitarizada (DMZ)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Uma rede isolada onde os computadores não possuem senhas de acesso."
+      },
+      {
+        "letter": "B",
+        "text": "Uma sub-rede intermediária e controlada por firewall que hospeda servidores de serviços públicos (Web, DNS, E-mail), separando-os da rede interna corporativa segura."
+      },
+      {
+        "letter": "C",
+        "text": "Um tipo de cabo de rede com blindagem de grau militar."
+      },
+      {
+        "letter": "D",
+        "text": "Uma área onde o uso de criptografia é proibido por normas governamentais."
+      },
+      {
+        "letter": "E",
+        "text": "Uma ferramenta que substitui os sistemas antivírus dos computadores."
+      }
+    ],
+    "correct": "B",
+    "explanation": "A DMZ (Demilitarized Zone) é uma sub-rede perimetral posicionada entre a internet não confiável e a rede interna confidencial. Se um servidor público na DMZ (ex: Apache) for comprometido, o firewall impede que o invasor alcance diretamente as máquinas internas da corporação.",
+    "examTip": "Servidores públicos (Web, E-mail) ficam na DMZ; estações de trabalho e bancos de dados ficam na rede interna!",
+    "concept": "Topologia de Segurança e DMZ"
+  },
+  {
+    "id": "redes_q41",
+    "themeId": "mod6",
+    "themeName": "Módulo 6: Segurança e Administração",
+    "title": "Protocolo SNMP (Gerenciamento de Redes)",
+    "statement": "O protocolo padrão da arquitetura TCP/IP utilizado para monitorar e gerenciar dispositivos de rede (roteadores, switches, servidores, impressoras) é o SNMP (Simple Network Management Protocol). Sobre sua estrutura, marque a correta:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "É composto por Gerente (NMS), Agentes rodando nos dispositivos gerenciados, e a MIB (Management Information Base) como base de dados estruturada de variáveis."
+      },
+      {
+        "letter": "B",
+        "text": "Opera exclusivamente sobre o protocolo TCP na porta 80."
+      },
+      {
+        "letter": "C",
+        "text": "Não permite a emissão de alarmes não solicitados pelos dispositivos."
+      },
+      {
+        "letter": "D",
+        "text": "A MIB é uma linguagem de programação usada para compilar firmwares de roteadores."
+      },
+      {
+        "letter": "E",
+        "text": "O SNMP só monitora consumo de energia elétrica de nobreaks."
+      }
+    ],
+    "correct": "A",
+    "explanation": "A arquitetura do SNMP é composta por:\n- Estação de Gerenciamento (NMS);\n- Agente SNMP (software rodando no roteador/switch);\n- MIB (Management Information Base): repositório hierárquico estruturado em árvore (OIDs) contendo contadores de tráfego, status de portas, erros e CPU;\n- Mensagens: GetRequest, SetRequest, GetResponse e TRAP (alerta de evento crítico assíncrono).",
+    "examTip": "SNMP: NMS + Agente + MIB + Traps (avisos não solicitados do agente para o gerente).",
+    "concept": "Gerência de Redes e Protocolo SNMP"
+  },
+  {
+    "id": "redes_q42",
+    "themeId": "mod6",
+    "themeName": "Módulo 6: Segurança e Administração",
+    "title": "A Tríade CIA (Segurança da Informação)",
+    "statement": "Os três princípios fundamentais da segurança da informação conhecidos como a Tríade CIA correspondem a:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Conectividade, Interoperabilidade e Acesso"
+      },
+      {
+        "letter": "B",
+        "text": "Confidencialidade, Integridade e Disponibilidade"
+      },
+      {
+        "letter": "C",
+        "text": "Comutação, Identificação e Autenticação"
+      },
+      {
+        "letter": "D",
+        "text": "Criptografia, Isolamento e Auditoria"
+      },
+      {
+        "letter": "E",
+        "text": "Computação, Internet e Aplicação"
+      }
+    ],
+    "correct": "B",
+    "explanation": "A Tríade CIA é o pilar da segurança:\n- Confidencialidade (Confidentiality): garantir que a informação só seja acessada por pessoas/entidades autorizadas (criptografia, controle de acesso).\n- Integridade (Integrity): assegurar que os dados não foram alterados ou corrompidos indevidamente (hashes, assinaturas digitais).\n- Disponibilidade (Availability): garantir que os sistemas e redes estejam acessíveis e operacionais quando solicitados pelos usuários autorizados (redundância, proteção contra DDoS).",
+    "examTip": "Tríade CIA = Confidencialidade + Integridade + Disponibilidade.",
+    "concept": "Tríade CIA de Segurança"
+  }
+]
