@@ -11,6 +11,14 @@
 
 ---
 
+## 📱 Demonstração & Telas
+
+| Início & Progresso | Módulos & Simulado | Leitura & Teoria | Treino & Questões |
+| :---: | :---: | :---: | :---: |
+| <img src="assets/images/preview-1.jpg" width="220" alt="Tela Inicial e Progresso" /> | <img src="assets/images/preview-2.jpg" width="220" alt="Módulos de Estudo e Simulado" /> | <img src="assets/images/preview-3.jpg" width="220" alt="Leitura Teórica e Fórmulas" /> | <img src="assets/images/preview-4.jpg" width="220" alt="Treino Interativo de Questões" /> |
+
+---
+
 ## 📖 Visão Geral do Produto
 
 O **Lume** é um aplicativo móvel e multiplataforma de alto desempenho projetado especificamente para estudantes de graduação (Ciência da Computação, Engenharia de Software, Sistemas de Informação, Redes e áreas correlatas).
